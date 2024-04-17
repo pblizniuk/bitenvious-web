@@ -1,6 +1,6 @@
 import Project from '@/app/_components/project'
 import Link from 'next/link'
-import { getData } from '@/hooks/fetch_page'
+import { getData } from '@/utils/fetch_page'
 
 
 const Projects = async () => {

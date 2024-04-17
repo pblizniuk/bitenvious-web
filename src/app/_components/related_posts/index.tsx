@@ -1,4 +1,4 @@
-import { getData } from '@/hooks/fetch_page'
+import { getData } from '@/utils/fetch_page'
 import Link from 'next/link'
 import StrapiImage from '@/app/_components/strapi_image'
 import TitleSectionWidget from '@/app/_widgets/title_section'

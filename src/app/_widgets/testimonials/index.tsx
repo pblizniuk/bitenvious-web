@@ -1,4 +1,4 @@
-import { getData } from '@/hooks/fetch_page'
+import { getData } from '@/utils/fetch_page'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import test from 'node:test';

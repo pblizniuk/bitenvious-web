@@ -1,4 +1,4 @@
-import { getData } from '@/hooks/fetch_page'
+import { getData } from '@/utils/fetch_page'
 import { Metadata } from 'next'
 import PageLoad from '@/app/_animations/page_load'
 import PostsWidget from '@/app/_widgets/posts'

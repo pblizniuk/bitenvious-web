@@ -1,7 +1,7 @@
-import { getData } from '@/hooks/fetch_page'
+import { getData } from '@/utils/fetch_page'
 import PageTitle from '@/app/_components/page_title'
 import PageLoad from '../_animations/page_load'
-import { blockRenderer } from '@/hooks/block_renderer'
+import { blockRenderer } from '@/utils/block_renderer'
 
 export const metadata = {
   title: 'Services',

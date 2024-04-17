@@ -1,4 +1,4 @@
-import { getData } from '@/hooks/fetch_page'
+import { getData } from '@/utils/fetch_page'
 import { Metadata } from 'next'
 import { BlocksRenderer, type BlocksContent } from '@strapi/blocks-react-renderer'
 import StrapiImage from '@/app/_components/strapi_image'

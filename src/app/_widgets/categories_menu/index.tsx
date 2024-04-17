@@ -1,5 +1,5 @@
 import Icon from '@/app/_components/icons'
-import { getData } from '@/hooks/fetch_page'
+import { getData } from '@/utils/fetch_page'
 import { categoryHelper } from '@/lib/utils'
 
 type Props = {

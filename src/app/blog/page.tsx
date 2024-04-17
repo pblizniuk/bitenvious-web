@@ -1,5 +1,5 @@
 
-import { getData } from '@/hooks/fetch_page'
+import { getData } from '@/utils/fetch_page'
 import PageTitle from '@/app/_components/page_title'
 import TitleSectionWidget from '@/app/_widgets/title_section'
 import CTAWidget from '@/app/_widgets/cta'
