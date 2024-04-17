@@ -1,0 +1,49 @@
+{
+  "name": "bitenvious-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "lint": "next lint",
+    "prettier": "prettier --write --ignore-unknown .",
+    "prettier:check": "prettier --check --ignore-unknown .",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.9.6",
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@strapi/blocks-react-renderer": "^1.0.1",
+    "@tsparticles/engine": "^3.3.0",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.3.0",
+    "clsx": "^2.1.0",
+    "dotenv": "^16.4.5",
+    "embla-carousel-react": "^8.0.0",
+    "framer-motion": "^11.0.27",
+    "graphql": "^15.8.0",
+    "next": "14.1.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-fontawesome": "^1.7.1",
+    "swiper": "^11.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@vercel/style-guide": "^5.0.1",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
+    "eslint-config-prettier": "9.0.0",
+    "postcss": "^8",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.12",
+    "tailwindcss": "^3.3.0",
+    "tailwindcss-animated": "^1.0.1",
+    "typescript": "^5"
+  }
+}
