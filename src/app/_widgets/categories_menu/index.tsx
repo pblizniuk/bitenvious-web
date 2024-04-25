@@ -16,6 +16,7 @@ const CategoriesMenu = async (props:Props) => {
       <h2 className='mb-6 text-2xl font-normal md:text-5xl text-center'>{title}</h2>
       <div className='grid md:grid-cols-5 gap-4'>
         {data && data.map((category, i) => {
+          console.log(category)
           const { Name, slug, description } = category
           const { categoryIcon, categoryColor } = categoryHelper(category.id)
           return (

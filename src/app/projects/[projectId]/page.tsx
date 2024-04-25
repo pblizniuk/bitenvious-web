@@ -35,7 +35,7 @@ export default async function ProjectDetails(props: Props) {
 
   const formattedprojectYear = new Date(projectYear).toLocaleDateString('en-US', { year: 'numeric' })
   const classes = clsx('text-xl font-thin text-white md:mt-4 md:block md:text-3xl')
-console.dir(data, { depth: 1 })
+
   return (
     <main>
       <section className={`m-auto flex h-[80vh] w-screen bg-gradient-to-br overflow-clip ${introGradientColor ?? ''}`}>
@@ -63,7 +63,6 @@ console.dir(data, { depth: 1 })
                 sizes="100vw"
                 style={{ width: '100%', height: 'auto' }}
                 loading="lazy"
-                layout="responsive"
                 className='object-contain drop-shadow-md'
               />
             </Parallax>

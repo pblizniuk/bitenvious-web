@@ -57,7 +57,6 @@ export default async function PostDetails(props: Props) {
                 sizes="100vw"
                 style={{ width: '100%', height: 'auto' }}
                 loading="lazy"
-                layout="responsive"
                 className='parallax object-contain rounded-md'
               />
             </Parallax>

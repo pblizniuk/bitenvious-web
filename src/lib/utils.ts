@@ -39,7 +39,7 @@ export function flattenAttributes(data: any): any {
 }
 
 export function getStrapiURL() {
-  return process.env.NEXT_PUBLIC_STRAPI_URL ?? "http://localhost:1337";
+  return process.env.NEXT_PUBLIC_STRAPI_URL ?? "https://kind-hodgkin.216-225-194-227.plesk.page";
 }
 
 export function getStrapiMedia(url: string | null) {
@@ -65,11 +65,11 @@ export function categoryHelper(categoryId: number) {
     categoryGradient = 'from-orange-500 to-red-600';
     categoryIcon = 'brandIdentity'
     categoryColor = 'text-orange-500'
-  } else if (categoryId === 6) {
+  } else if (categoryId === 4) {
     categoryGradient = 'from-blue-500 to-indigo-600';
     categoryIcon = 'development'
     categoryColor = 'text-blue-500'
-  } else if (categoryId === 7) {
+  } else if (categoryId === 5) {
     categoryGradient = 'from-stone-500 to-stone 600';
     categoryIcon = 'other'
     categoryColor = 'text-stone-500'
