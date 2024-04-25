@@ -139,6 +139,7 @@ h6 {
   p {
     @apply mb-4 md:mb-8;
   }
+
   & h2 {
     @apply text-2xl md:text-3xl/snug font-medium mb-4 md:mb-8 md:block
   }
@@ -161,6 +162,16 @@ h6 {
 
   & img {
     @apply w-full h-auto mb-8 md:mb-16;
+  }
+
+  li {
+    @apply mb-4 md:mb-8;
+  }
+
+  ol {
+    & li {
+      @apply list-decimal list-inside;
+    }
   }
 }
 

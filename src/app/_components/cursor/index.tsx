@@ -26,29 +26,29 @@ const Cursor = () => {
     }
 
     const onMouseEnter = (event: MouseEvent) => {
-      console.log('onMouseEnter')
       setIsHovering(true)
     }
 
     const onMouseLeave = (event: MouseEvent) => {
-      console.log('onMouseLeave')
       setIsHovering(false)
     }
 
     document.addEventListener('mousemove', onMouseMove)
+    // console.log('mounting')
     document.querySelectorAll('a, button').forEach((el) => {
       el.addEventListener('mouseenter', onMouseEnter)
       el.addEventListener('mouseleave', onMouseLeave)
     })
 
     return () => {
+      // console.log('unmounting')
       document.removeEventListener('mousemove', onMouseMove)
       document.querySelectorAll('a, button').forEach((el) => {
         el.removeEventListener('mouseenter', onMouseEnter)
         el.removeEventListener('mouseleave', onMouseLeave)
       })
     }
-  }, [cursorSize, isHovering, mouse.x, mouse.y])
+  }, [cursorSize, isHovering])
 
   return (
     <motion.div className='cursor hidden lg:block fixed bg-white top-1/2 left-1/2 z-50 mix-blend-difference rounded-full pointer-events-none h-7 w-7' animate={{ width: cursorSize, height: cursorSize }} style={{ left: smoothMouse.x, top: smoothMouse.y }} />

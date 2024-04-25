@@ -6,7 +6,7 @@ const Logos = () => {
 
   return (
     <div className='logos mt-auto sm:grid sm:grid-cols-2'>
-      <ul className='grid grid-cols-7 pb-6 md:col-start-2'>
+      <ul className='grid grid-cols-8 pb-6 md:col-start-2'>
         <li className={listClasses}>
           <Icon
             name='reactjs'
@@ -58,6 +58,14 @@ const Logos = () => {
         <li className={listClasses}>
           <Icon
             name='chatgpt'
+            color='white'
+            size='50'
+            className={iconClasses}
+          />
+        </li>
+        <li className={listClasses}>
+          <Icon
+            name='css3'
             color='white'
             size='50'
             className={iconClasses}

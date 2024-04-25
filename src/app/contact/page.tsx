@@ -1,10 +1,12 @@
-import PageLoad from '../_animations/page_load'
-import PageTitle from '../_components/page_title'
+import PageLoad from '@/app/_animations/page_load'
+import PageTitle from '@/app/_components/page_title'
+import ContactForm from '@/app/_components/contact_form'
+import CalendlyEmbed from '@/app/_components/calendly_embed'
 
 export default function Contact() {
   const pageTitleContent = {
     Title: 'Contact Us',
-    Description: 'Want to talk? We\'re all ears',
+    Description: 'Want to talk? Let\'s chat now',
   }
 
   return (
@@ -28,7 +30,7 @@ export default function Contact() {
             <div className='pr-8 md:col-span-2'>
               <div className='sm:grid md:grid-cols-2'>
                 <div className='border-l border-t p-8 lg:border-t-0 lg:pt-24 text-md md:text-lg'>
-                  <h3 className='mb-3 font-bold text-stone-700 lg:text-xl'>
+                  <h3 className='mb-3 font-medium text-stone-700 lg:text-xl'>
                     Email
                   </h3>
                   <div className='mb-4 flex flex-col last:mb-0 xl:flex-row xl:items-end xl:gap-3'>
@@ -42,7 +44,7 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className='border-l border-t p-8 lg:border-t-0 lg:pt-24'>
-                  <h3 className='mb-3 font-bold text-stone-700 lg:text-xl'>
+                  <h3 className='mb-3 font-medium text-stone-700 lg:text-xl'>
                     Phone
                   </h3>
                   <div className='mb-4 flex flex-col last:mb-0 xl:flex-row xl:items-end xl:gap-3'>
@@ -56,7 +58,7 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className='border-l border-t p-8 sm:col-span-2'>
-                  <h3 className='mb-3 text-lg font-bold text-stone-700 lg:text-xl'>
+                  <h3 className='mb-3 text-lg font-medium text-stone-700 lg:text-xl'>
                     We&apos;re eager to talk with you!
                   </h3>
                   <p className='text-lg'>
@@ -95,58 +97,30 @@ export default function Contact() {
             <div className='pr-8 md:col-span-2'>
               <div className={`border-l border-t p-8 `}>
                 <div className='mx-auto max-w-screen-md px-4 py-8 lg:py-16'>
-                  <form action='#' className='sm:grid md:grid-cols-2 gap-x-4 gap-y-5 items-start'>
-                    <div>
-                      <input
-                        type='text'
-                        id='name'
-                        className='focus:ring-primary-500 focus:border-primary-500 focus:ring-primary-500 focus:border-primary-500 shadow-sm-light block  w-full rounded-lg border border-gray-500 p-3 text-sm placeholder-gray-400 shadow-sm'
-                        placeholder='Name*'
-                        required
-                      />
-                    </div>
-                    <div>
-                      <input
-                        type='email'
-                        id='email'
-                        className='focus:ring-primary-500 focus:border-primary-500 focus:ring-primary-500 focus:border-primary-500 shadow-sm-light block  w-full rounded-lg border  border-gray-500 p-3  text-sm placeholder-gray-400 shadow-sm'
-                        placeholder='Email*'
-                        required
-                      />
-                    </div>
-                    <div>
-                      <input
-                        type='tel'
-                        id='phone'
-                        className='focus:ring-primary-500 focus:border-primary-500 focus:ring-primary-500 focus:border-primary-500 shadow-sm-light block  w-full rounded-lg border  border-gray-500 p-3  text-sm placeholder-gray-400 shadow-sm'
-                        placeholder='Phone*'
-                        required
-                      />
-                    </div>
-                    <div>
-                      <input
-                        type='text'
-                        id='company'
-                        className='focus:ring-primary-500 focus:border-primary-500 focus:ring-primary-500 focus:border-primary-500 shadow-sm-light block  w-full rounded-lg border  border-gray-500 p-3  text-sm placeholder-gray-400 shadow-sm'
-                        placeholder='Company'
-                        required
-                      />
-                    </div>
-                    <div className='sm:col-span-2'>
-                      <textarea
-                        id='message'
-                        rows={6}
-                        className='focus:ring-primary-500 focus:border-primary-500 focus:ring-primary-500 focus:border-primary-500 shadow-sm-light block  w-full rounded-lg border  border-gray-500 p-3  text-sm placeholder-gray-400 shadow-sm'
-                        placeholder='Message*'
-                      ></textarea>
-                    </div>
-                    <button
-                      type='submit'
-                      className='text-lg block transform rounded-full border-2 border-gray-900 bg-gray-900 px-8 py-4 font-medium text-white shadow transition duration-300 hover:scale-105'
-                    >
-                      Send message
-                    </button>
-                  </form>
+                  <ContactForm />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className='m-auto max-w-[1340px] sm:grid md:grid-cols-3'>
+            <div className='border-t p-8 pt-16 lg:pt-24 lg:text-right'>
+              <div className='top-32 lg:sticky'>
+                <h2 className='mb-6 text-2xl font-medium lg:text-3xl'>
+                  Schedule a Meeting
+                </h2>
+                <div className='text-lg font-light lg:text-xl'>
+                  <p>
+                    Let's chat! Schedule a meeting with us today to discuss your digital needs and take the first step towards transforming your online presence.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className='pr-8 md:col-span-2'>
+              <div className={`border-l border-t py-8`}>
+                <div className='mx-auto max-w-screen-lg'>
+                  <CalendlyEmbed url="https://calendly.com/paulblizniuk/30min" />
                 </div>
               </div>
             </div>

@@ -29,8 +29,10 @@ const config: Config = {
         'out-expo': 'cubic-bezier(0.19, 1, 0.22, 1)',
       },
       animation: {
-        'pulse-subtle': 'pulse-subtle 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;',
+        'pulse-subtle': 'pulse-subtle 10s cubic-bezier(0.4, 0, 0.6, 1) infinite;',
         blob: 'blob 8s infinite',
+        levitate: 'levitate infinite',
+        'levitate-reverse': 'levitate-reverse infinite',
       },
       keyframes: {
         'pulse-subtle': {
@@ -55,6 +57,28 @@ const config: Config = {
           },
           '100%': {
             transform: 'translate(0px, 0px) scale(1)',
+          },
+        },
+        levitate: {
+          '0%': {
+            transform: 'translate(0px, 0px)',
+          },
+          '50%': {
+            transform: 'translate(0px, -15px)',
+          },
+          '100%': {
+            transform: 'translate(0px, 0px)',
+          },
+        },
+        'levitate-reverse': {
+          '0%': {
+            transform: 'translate(0px, 0px)',
+          },
+          '50%': {
+            transform: 'translate(0px, 15px)',
+          },
+          '100%': {
+            transform: 'translate(0px, 0px)',
           },
         },
       }

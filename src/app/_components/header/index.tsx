@@ -8,7 +8,7 @@ import Sidebar from '@/app/_components/sidebar'
 
 const Header = () => {
   const pathname = usePathname()
-  const isBlog = pathname.indexOf('/blog/') !== -1 && pathname.indexOf('/category/') === -1
+  const isBlog = pathname.indexOf('/blog/') !== -1
   const navItemClasses = 'menu__link font-semibold text-lg text-white transition-all duration-500 group-[.scrolled]:text-black group-[.is-blog]:text-black'
 
   return (
@@ -84,7 +84,7 @@ const Header = () => {
               <div className='flex items-center gap-8'>
                 <div className='hidden sm:flex md:block'>
                   <Link
-                    className='block rounded-full border border-white bg-transparent px-4 py-2 text-white shadow transition-all duration-500 group-[.scrolled]:border-stone-900 group-[.scrolled]:bg-stone-900 group-[.is-blog]:border-stone-900 group-[.is-blog]:bg-stone-900 font-semibold text-lg hover:bg-stone-50 hover:text-stone-900 ease-in-out hover:shadow-lg hover:scale-105 group-[.scrolled]:hover:bg-stone-50 group-[.scrolled]:hover:text-stone-900 group-[.is-blog]:hover:bg-stone-50 group-[.is-blog]:hover:text-stone-900'
+                    className='block rounded-full border border-white bg-transparent px-4 py-2 text-white shadow transition-all duration-500 group-[.scrolled]:border-stone-900 group-[.scrolled]:bg-stone-900 group-[.is-blog]:border-stone-900 group-[.is-blog]:bg-stone-900 font-semibold text-lg ease-in-out hover:shadow-lg hover:scale-105 group-[.scrolled]'
                     href='/contact'
                   >
                     Get in Touch

@@ -11,7 +11,7 @@ const PostsWidget = (props: PostsWidgetProps) => {
 
   return (
     <section className="posts px-8 my-8 md:my-16">
-      <div className="gap-16 max-w-[1440px] mx-auto grid md:grid-cols-2 gap-x-8">
+      <div className="max-w-[1440px] mx-auto grid md:grid-cols-2 md:gap-16">
         <div className="left">
         {leftSide && leftSide.map((post, i) => (
           <Post key={i} post={post} />

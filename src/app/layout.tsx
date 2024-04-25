@@ -42,8 +42,8 @@ export default function RootLayout({
     <html lang='en' className='max-w-full overflow-x-hidden'>
       <head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        {/* <meta name='description' content={metadata.description} />
-        <title>{metadata.title}</title> */}
+        {/* <title>{metadata.title}</title>
+        <meta name='description' content={metadata.description || ''} /> */}
         <link rel='icon' href='/favicon.ico' />
         <link
           rel='icon'
@@ -73,13 +73,8 @@ export default function RootLayout({
         src='https://unpkg.co/gsap@3/dist/gsap.min.js'
       /> */}
       <body
-        className={`bg-stone-50 dark:bg-stone-500 overflow-x-clip ${montserrat.className} ${montserrat.variable} ${outfit.variable}  ${rockSalt.variable} min-h-screen text-stone-900 relative`}
+        className={`bg-stone-50 overflow-x-clip ${montserrat.className} ${montserrat.variable} ${outfit.variable}  ${rockSalt.variable} min-h-screen text-stone-900 relative`}
       >
-        {/* <div className="cursor-circle circle-big">
-          <svg height="30" width="30">
-            <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
-          </svg>
-        </div> */}
         <Cursor />
         <Header />
         {children}

@@ -38,7 +38,7 @@ const CoreTeamWidget = () => {
                 height='200'
                 className='transition-all duration-700 grayscale group-hover:grayscale-0 relative z-20 rotate-12'
               />
-              <div className='animate-pulse absolute end-0 top-0 z-10 h-[200px] w-[200px] rounded-full bg-stone-800 dark:bg-white object-contain opacity-30 blur-3xl'></div>
+              <div className='animate-pulse absolute end-0 top-0 z-10 h-[200px] w-[200px] rounded-full bg-stone-800 object-contain opacity-30 blur-3xl'></div>
               </div>
             </div> */}
           </div>
@@ -52,7 +52,7 @@ const CoreTeamWidget = () => {
                 height='200'
                 className='transition-all duration-700 grayscale group-hover:grayscale-0 relative z-20 -rotate-45'
               />
-              <div className='animate-pulse absolute end-0 top-0 z-10 h-[200px] w-[200px] rounded-full bg-stone-800 dark:bg-white object-contain opacity-30 blur-3xl'></div>
+              <div className='animate-pulse absolute end-0 top-0 z-10 h-[200px] w-[200px] rounded-full bg-stone-800 object-contain opacity-30 blur-3xl'></div>
               </div>
             </div> */}
           </div>
@@ -102,7 +102,7 @@ const CoreTeamWidget = () => {
                 height='200'
                 className='transition-all duration-700 grayscale group-hover:grayscale-0 relative z-20 '
               />
-              <div className='animate-pulse absolute end-0 top-0 z-10 h-[200px] w-[200px] rounded-full bg-stone-800 dark:bg-white object-contain opacity-30 blur-3xl'></div>
+              <div className='animate-pulse absolute end-0 top-0 z-10 h-[200px] w-[200px] rounded-full bg-stone-800 object-contain opacity-30 blur-3xl'></div>
               </div>
             </div> */}
           </div>

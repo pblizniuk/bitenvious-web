@@ -11,6 +11,7 @@ import development from './development'
 import design from './design'
 import other from './other'
 import brandIdentity from './brand_identity'
+import css3 from './css3'
 
 type IconProps = {
   name: string
@@ -41,6 +42,7 @@ const Icon = (props: IconProps) => {
       {name === 'design' && design({ ...props, ...sizing }, )}
       {name === 'other' && other({ ...props, ...sizing }, )}
       {name === 'brandIdentity' && brandIdentity({ ...props, ...sizing }, )}
+      {name === 'css3' && css3({ ...props, ...sizing }, )}
     </>
   )
 }

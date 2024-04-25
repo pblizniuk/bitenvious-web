@@ -5,7 +5,7 @@ const Footer = () => {
   const year = new Date().getFullYear()
   const navItemClasses = 'menu__link font-semibold text-lg text-white transition-all duration-500'
   return (
-    <footer className='bg-gradient-to-r from-stone-800 to-stone-900 dark:from-stone-700 dark:to-stone-800 relative w-full'>
+    <footer className='bg-gradient-to-r from-stone-800 to-stone-900 relative w-full'>
       <Image
         src='/assets/ghost-logo.png'
         alt='logo background'
@@ -75,7 +75,7 @@ const Footer = () => {
           <button
             id="theme-toggle"
             type="button"
-            className="text-stone-900 dark:text-stone-400 focus:outline-none rounded-lg text-sm p-2.5"
+            className="text-stone-900 focus:outline-none rounded-lg text-sm p-2.5"
           >
             <svg
               id="theme-toggle-dark-icon"
@@ -105,7 +105,7 @@ const Footer = () => {
           {/* <!-- Dark mode switcher end --> */}
         </div>
         <div className='my-8 sm:mx-auto lg:my-16' />
-        <span className='text-md block text-stone-200 sm:text-center dark:text-stone-200'>
+        <span className='text-md block text-stone-200 sm:text-center'>
           © {year}{' '}
           <a href='https://bitenvio.us/' className='hover:underline'>
             BitEnvious™

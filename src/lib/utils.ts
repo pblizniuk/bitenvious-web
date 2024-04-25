@@ -49,7 +49,6 @@ export function getStrapiMedia(url: string | null) {
   return `${getStrapiURL()}${url}`;
 }
 
-
 export function categoryHelper(categoryId: number) {
   let categoryGradient;
   let categoryColor;

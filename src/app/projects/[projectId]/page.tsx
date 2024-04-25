@@ -7,6 +7,7 @@ import Link from 'next/link'
 import TwoColumnAdvanced from '@/app/_widgets/two_column_advanced'
 import Parallax from '@/app/_animations/parallax'
 import PageLoad from '@/app/_animations/page_load'
+import { blockRenderer } from '@/utils/block_renderer'
 
 type Props = {
   params: {
@@ -28,13 +29,13 @@ export default async function ProjectDetails(props: Props) {
   const { projectId } = params
   const endpoint = `/api/projects/${projectId}?populate=deep,2`;
   const data = await getData(endpoint)
-  const { title, subTitle, projectInfo, clientName, projectUrl, servicesProvided, technologiesUsed, projectYear, heroImage, introGradientColor } = data
+  const { title, subTitle, projectInfo, clientName, projectUrl, servicesProvided, technologiesUsed, projectYear, heroImage, introGradientColor, dynamicContent } = data
   const services = servicesProvided?.split(',') || []
   const blocksContent: BlocksContent = projectInfo
 
   const formattedprojectYear = new Date(projectYear).toLocaleDateString('en-US', { year: 'numeric' })
   const classes = clsx('text-xl font-thin text-white md:mt-4 md:block md:text-3xl')
-
+console.dir(data, { depth: 1 })
   return (
     <main>
       <section className={`m-auto flex h-[80vh] w-screen bg-gradient-to-br overflow-clip ${introGradientColor ?? ''}`}>
@@ -63,7 +64,7 @@ export default async function ProjectDetails(props: Props) {
                 style={{ width: '100%', height: 'auto' }}
                 loading="lazy"
                 layout="responsive"
-                className='object-contain drop-shadow-md transition-all ease-out-expo duration-500'
+                className='object-contain drop-shadow-md'
               />
             </Parallax>
             </PageLoad>
@@ -96,7 +97,7 @@ export default async function ProjectDetails(props: Props) {
             </div>
           </div>
         </section>
-
+        {dynamicContent.map((block) => blockRenderer(block))}
         {/* <section className='projects-intro'>
           <TwoColumnAdvanced />
         </section> */}
