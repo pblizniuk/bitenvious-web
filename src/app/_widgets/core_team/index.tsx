@@ -9,7 +9,7 @@ const CoreTeamWidget = () => {
           description='The primary team responsible for making everything possible.'
         />
         <div className='m-auto max-w-[1340px] sm:grid md:grid-cols-2 lg:grid-cols-3 mb-8 lg:mb-16 p-6 bg-stone-100 rounded-2xl'>
-          <div className='border-b p-6 pl-px pt-px'>
+          <div className='border-b pb-6 md:p-6 pl-px pt-px'>
             <div className='rounded-xl overflow-hidden h-full w-full'>
               <Image
                 src='/assets/pb.jpg'
@@ -64,7 +64,7 @@ const CoreTeamWidget = () => {
               <dt><strong>Location: </strong>Knoxville, TN</dt>
             </dl>
           </div>
-          <div className='border-b p-6 pr-px'>
+          <div className='border-b py-6 md:p-6 pr-px'>
             <div className='rounded-xl overflow-hidden h-full w-full'>
               <Image
                 src='/assets/mp.jpg'
@@ -75,7 +75,7 @@ const CoreTeamWidget = () => {
               />
             </div>
           </div>
-          <div className='p-6'>
+          <div className='py-6 md:p-6'>
           <div className='rounded-xl overflow-hidden h-full w-full'>
               <Image
                 src='/assets/nc.jpg'

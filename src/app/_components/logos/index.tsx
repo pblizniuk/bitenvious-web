@@ -2,11 +2,11 @@ import Icon from '../../_components/icons'
 
 const Logos = () => {
   const iconClasses = 'h-[35px] w-[35px] fill-current text-white md:h-[45px] md:w-[45px] mix-blend-overlay transition-all'
-  const listClasses = 'px-4'
+  const listClasses = ''
 
   return (
     <div className='logos mt-auto sm:grid sm:grid-cols-2'>
-      <ul className='grid grid-cols-8 pb-6 md:col-start-2'>
+      <ul className='grid grid-cols-8 md:col-start-2 gap-2 col-span-2'>
         <li className={listClasses}>
           <Icon
             name='reactjs'

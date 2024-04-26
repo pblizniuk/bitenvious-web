@@ -42,19 +42,14 @@ export function ImageCarousel(props: CarouselProps) {
         <Swiper
           freeMode={true}
           grabCursor={true}
-          centeredSlides={true}
-          slidesPerView='auto'
+            slidesPerView={2}
           loop={true}
-          // loopAdditionalSlides={3}
           modules={[Keyboard, FreeMode]}
           className="overflow-hidden transition-transform  translate-x-36 [&.swiper-initialized]:translate-x-0 duration-[1500ms] out-expo delay-100"
           keyboard={{
             enabled: true
           }}
           breakpoints={{
-            640: {
-              slidesPerView: 2
-            },
             768: {
               slidesPerView: 3
             },

@@ -16,7 +16,7 @@ const Author = (props:AuthorProps) => {
   const { name, photo, categoryGradient } = props
 
   return (
-    <div className="relative border mb-8 rounded-md mr-12">
+    <div className="relative border mb-8 rounded-md lg:mr-12">
       <div className='flex flex-col content-center items-center mt-8 mb-4'>
         <StrapiImage
           src={photo?.formats?.medium?.url}

@@ -1,6 +1,5 @@
 import { getData } from '@/utils/fetch_page'
 import { Metadata } from 'next'
-import { BlocksRenderer, type BlocksContent } from '@strapi/blocks-react-renderer'
 import StrapiImage from '@/app/_components/strapi_image'
 import RelatedPosts from '@/app/_components/related_posts'
 import PageLoad from '@/app/_animations/page_load'
@@ -8,6 +7,7 @@ import Link from 'next/link'
 import { categoryHelper } from '@/lib/utils'
 import Parallax from '@/app/_animations/parallax'
 import Author from '@/app/_components/author'
+import BlocksRendererClient from '@/app/_components/block_renderer_client'
 
 type Props = {
   params: {
@@ -31,22 +31,21 @@ export default async function PostDetails(props: Props) {
   const data = await getData(endpoint)
   const { title, content, heroImage, timeToRead, publishedDate, author, category, id } = data
   const { categoryGradient } = categoryHelper(category?.id)
-  const blocksContent: BlocksContent = content
   const formattedPublishedDate = new Date(publishedDate).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })
   return (
     <PageLoad offset={100}>
       <main>
-        <section className='m-auto flex min-h-[40vh] w-screen overflow-clip'>
-          <div className='mx-auto mt-auto mb-[150px] size-full max-w-screen-lg'>
+        <section className='m-auto flex md:min-h-[40vh] w-screen overflow-clip'>
+          <div className='mx-auto mt-auto mb-8 md:mb-[150px] size-full max-w-screen-lg px-4'>
             <div className='text-center'>
-              <h1 className='text-2xl font-normal md:text-5xl mt-48'>
+              <h1 className='text-2xl font-normal md:text-5xl mt-32 md:mt-48'>
                 {title}
               </h1>
             </div>
           </div>
         </section>
         <section className="post-showcase">
-          <div className='mx-auto max-w-[1340px] overflow-clip max-h-[50vh] md:mt-[-100px] rounded-md drop-shadow-md'>
+          <div className='mx-auto max-w-[1340px] overflow-clip max-h-80 md:max-h-[50vh] md:mt-[-100px] rounded-md drop-shadow-md'>
             <Parallax>
               <StrapiImage
                 src={heroImage?.formats?.xxlarge?.url}
@@ -62,27 +61,27 @@ export default async function PostDetails(props: Props) {
             </Parallax>
           </div>
         </section>
-        <div className='m-auto max-w-[1340px] sm:grid md:grid-cols-4'>
-          <div className='p-8 pt-16 lg:pt-24 relative'>
+        <div className='m-auto max-w-[1340px] sm:grid md:grid-cols-3 lg:grid-cols-4'>
+          <div className='p-2 my-8 md:p-8 md:pt-16 lg:pt-24 relative'>
             <div className='top-32 lg:sticky'>
               {author && (
                 <Author {...author} categoryGradient={categoryGradient} />
               )}
               <div className='ml-4'>
                 {timeToRead && (
-                  <div className='mb-8'>
+                  <div className='mb-2 md:mb-8'>
                     <div>Read time:</div>
-                    <div className='mb-2 text-lg font-medium lg:text-xl'>{`${timeToRead} min`}</div>
+                    <div className='md:mb-2 text-md font-medium lg:text-xl'>{`${timeToRead} min`}</div>
                   </div>
                 )}
                 {publishedDate && (
-                  <div className='mb-8'>
+                  <div className='mb-2 md:mb-8'>
                     <div>Date:</div>
-                    <div className='mb-2 text-lg font-medium lg:text-xl'>{formattedPublishedDate}</div>
+                    <div className='md:mb-2 text-md font-medium lg:text-xl'>{formattedPublishedDate}</div>
                   </div>
                 )}
                 {category && (
-                  <div className='mb-8'>
+                  <div className='mb-2 md:mb-8'>
                     <div>Category:</div>
                     <div className='my-2 text-lg font-medium lg:text-xl'>
                       <Link href={`/blog/category/${category.slug}`}>
@@ -96,9 +95,9 @@ export default async function PostDetails(props: Props) {
               </div>
             </div>
           </div>
-          <div className='pr-8 md:col-span-3'>
-            <div className='blog-detail py-16 lg:py-24'>
-              <BlocksRenderer content={blocksContent} />
+          <div className='px-2 md:px-8 md:col-span-2 lg:col-span-3'>
+            <div className='blog-detail md:py-16 lg:py-24'>
+              <BlocksRendererClient content={content} />
             </div>
           </div>
         </div>

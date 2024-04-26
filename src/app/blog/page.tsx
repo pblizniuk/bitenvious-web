@@ -22,8 +22,8 @@ export default async function Blog() {
 
   const ctaContent = {
     Title: 'Are you ready to take your idea to the next level?',
-    ButtonText: 'Let\'s Talk',
-    ImageURL: '/assets/bits-colors.png',
+    ButtonText: 'Connect with Our Team',
+    ButtonLink: '/contact',
   }
 
   return (

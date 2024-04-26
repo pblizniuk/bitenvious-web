@@ -68,8 +68,8 @@ const HomePageHero = (props: Props) => {
   const { Title, Description, url } = props
   return (
     // <ParticlesWrapper>
-    <div className='flex relative w-screen overflow-hidden flex-col bg-gradient-to-br from-stone-800 to-stone-900 pt-60'>
-      <div className='m-auto max-w-[1460px] sm:grid md:grid-cols-2 lg:grid-cols-3'>
+    <div className='flex relative w-screen overflow-hidden flex-col bg-gradient-to-br from-stone-800 to-stone-900 pt-32 md:pt-60'>
+      <div className='md:m-auto max-w-[1460px] sm:grid md:grid-cols-2 lg:grid-cols-3'>
         <div className='p-4 md:p-8 lg:py-24 lg:col-span-2'>
           <div className='mx-auto max-w-3xl'>
             <motion.div
@@ -108,14 +108,14 @@ const HomePageHero = (props: Props) => {
             >
               <Link
                 href='contact'
-                className='relative inline-block transform rounded-full border border-stone-50 bg-transparent px-8 py-4 text-white shadow w-2/4 text-center font-semibold text-lg hover:bg-stone-50 hover:text-stone-900 transition-all duration-500 ease-in-out hover:shadow-lg hover:scale-105'
+                className='relative inline-block transform rounded-full border border-stone-50 bg-transparent px-8 py-4 text-white shadow lg:w-2/4 text-center font-semibold text-lg hover:bg-stone-50 hover:text-stone-900 transition-all duration-500 ease-in-out hover:shadow-lg hover:scale-105'
               >
                 Get Started Today
               </Link>
             </motion.div>
           </div>
         </div>
-        <div className='relative m-auto w-full p-8 text-center md:p-12 md:text-right lg:my-24 lg:px-16'>
+        <div className='relative m-auto w-full text-center md:p-12 md:text-right lg:my-24 lg:px-16 flex justify-center md:block'>
 
           {/* <div className='relative h-[360px] w-[360px] z-30'>
             <StrapiImage
@@ -170,7 +170,7 @@ const HomePageHero = (props: Props) => {
       {/* <div className="absolute -bottom-36 right-48 w-96 h-96 bg-lime-400 rounded-full blur-3xl opacity-50 z-0 animate-blob mix-hard-light"></div>
       <div className="absolute -bottom-36 right-36 w-96 h-96 bg-orange-400 rounded-full blur-3xl opacity-50 z-0 animate-blob mix-hard-light"></div>
       <div className="absolute -bottom-36 -right-0 w-96 h-96 bg-pink-400 rounded-full blur-3xl opacity-50 z-0 animate-blob mix-hard-light"></div> */}
-      <div className='ml-auto mt-auto flex max-w-[1460px] basis-full flex-col self-end p-3'>
+      <div className='md:ml-auto mt-auto flex max-w-[1460px] basis-full flex-col lg:self-end p-3'>
         <Logos />
       </div>
     </div>

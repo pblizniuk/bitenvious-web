@@ -18,8 +18,8 @@ const ProductScroll = (props: ProductScrollProps) => {
 
   return (
     <section className='section-cta pb-16 lg:pb-24 overflow-hidden w-full'>
-      <div className='m-auto relative overflow-x-scroll max-w-none be-scroll snap-mandatory snap-x pb-8 border-t border-b ease-in-view transition-transform  translate-x-36 [&.visible]:translate-x-0 duration-[1500ms] out-expo delay-100
-    '>
+      <div className='m-auto relative overflow-x-scroll max-w-none be-scroll snap-mandatory snap-x pb-8 border-t border-b
+    '> {/* ease-in-view transition-transform  translate-x-36 [&.visible]:translate-x-0 duration-[1500ms] out-expo delay-100} */}
         <div className='flex flex-row pt-8'>
           {productScroll?.length && productScroll.map((item) => {
             const pills = item.Categories.split(', ')

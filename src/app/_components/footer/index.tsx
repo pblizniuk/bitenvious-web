@@ -6,20 +6,10 @@ const Footer = () => {
   const navItemClasses = 'menu__link font-semibold text-lg text-white transition-all duration-500'
   return (
     <footer className='bg-gradient-to-r from-stone-800 to-stone-900 relative w-full'>
-      <Image
-        src='/assets/ghost-logo.png'
-        alt='logo background'
-        width={0}
-        height={0}
-        sizes="100vw"
-        style={{ width: '50%', height: 'auto' }}
-        loading="lazy"
-        className='absolute block bottom-0 left-0 z-0 opacity-10 height-full'
-      />
       <div className='mx-auto w-full max-w-screen-xl p-4 md:py-16'>
         <div className='sm:flex sm:items-center sm:justify-between'>
           <a
-            href='https://bitenvio.us/'
+            href='/'
             className='relative mb-4 flex items-center space-x-3 sm:mb-0 rtl:space-x-reverse'
           >
             <Image
@@ -35,44 +25,44 @@ const Footer = () => {
               BitEnvious
             </span>
           </a>
-          <nav aria-label='Global' className='menu hidden md:block'>
-          <ul className='menu__list flex flex-wrap items-center gap-10 text-base before:bg-white group-[.scrolled]:before:bg-gradient-to-r from-purple-700 to-pink-600'>
-                <li>
-                  <Link
-                    className={navItemClasses}
-                    href='/about'
-                  >
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className={navItemClasses}
-                    href='/services'
-                  >
-                    Services
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className={navItemClasses}
-                    href='/projects'
-                  >
-                    Projects
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className={navItemClasses}
-                    href='/blog'
-                  >
-                    Blog
-                  </Link>
-                </li>
-              </ul>
+          <nav aria-label='Global' className='menu'>
+            <ul className='menu__list flex flex-wrap items-center gap-10 text-base before:bg-white group-[.scrolled]:before:bg-gradient-to-r from-purple-700 to-pink-600'>
+              <li>
+                <Link
+                  className={navItemClasses}
+                  href='/about'
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className={navItemClasses}
+                  href='/services'
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className={navItemClasses}
+                  href='/projects'
+                >
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className={navItemClasses}
+                  href='/blog'
+                >
+                  Blog
+                </Link>
+              </li>
+            </ul>
           </nav>
           {/* <!-- Dark mode switcher --> */}
-          <button
+          {/* <button
             id="theme-toggle"
             type="button"
             className="text-stone-900 focus:outline-none rounded-lg text-sm p-2.5"
@@ -101,17 +91,17 @@ const Footer = () => {
                 clipRule="evenodd"
               ></path>
             </svg>
-          </button>
+          </button> */}
           {/* <!-- Dark mode switcher end --> */}
         </div>
         <div className='my-8 sm:mx-auto lg:my-16' />
-        <span className='text-md block text-stone-200 sm:text-center'>
+        <div className='text-sm block text-stone-200 text-center'>
           © {year}{' '}
-          <a href='https://bitenvio.us/' className='hover:underline'>
+          <Link href='/' className='hover:underline'>
             BitEnvious™
-          </a>
-          . All Rights Reserved.
-        </span>
+          </Link>
+          .&nbsp;All Rights Reserved.
+        </div>
       </div>
     </footer>
   )

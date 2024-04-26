@@ -1,13 +1,13 @@
 import { getData } from '@/utils/fetch_page'
 import { Metadata } from 'next'
 import clsx from 'clsx'
-import { BlocksRenderer, type BlocksContent } from '@strapi/blocks-react-renderer'
 import StrapiImage from '@/app/_components/strapi_image'
 import Link from 'next/link'
 import TwoColumnAdvanced from '@/app/_widgets/two_column_advanced'
 import Parallax from '@/app/_animations/parallax'
 import PageLoad from '@/app/_animations/page_load'
 import { blockRenderer } from '@/utils/block_renderer'
+import BlocksRendererClient from '@/app/_components/block_renderer_client'
 
 type Props = {
   params: {
@@ -31,7 +31,6 @@ export default async function ProjectDetails(props: Props) {
   const data = await getData(endpoint)
   const { title, subTitle, projectInfo, clientName, projectUrl, servicesProvided, technologiesUsed, projectYear, heroImage, introGradientColor, dynamicContent } = data
   const services = servicesProvided?.split(',') || []
-  const blocksContent: BlocksContent = projectInfo
 
   const formattedprojectYear = new Date(projectYear).toLocaleDateString('en-US', { year: 'numeric' })
   const classes = clsx('text-xl font-thin text-white md:mt-4 md:block md:text-3xl')
@@ -92,7 +91,7 @@ export default async function ProjectDetails(props: Props) {
               </div>
             </div>
             <div className='project-detail col-span-3 md:px-12 lg:px-16'>
-              <BlocksRenderer content={blocksContent} />
+              <BlocksRendererClient content={projectInfo} />
             </div>
           </div>
         </section>

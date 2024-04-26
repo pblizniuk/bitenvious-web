@@ -70,11 +70,11 @@ export function categoryHelper(categoryId: number) {
     categoryIcon = 'development'
     categoryColor = 'text-blue-500'
   } else if (categoryId === 5) {
-    categoryGradient = 'from-stone-500 to-stone 600';
+    categoryGradient = 'from-stone-500 to-stone-600';
     categoryIcon = 'other'
     categoryColor = 'text-stone-500'
   }  else {
-    categoryGradient = 'from-stone-500 to-stone 600';
+    categoryGradient = 'from-stone-500 to-stone-600';
     categoryIcon = 'other'
     categoryColor = 'text-stone-500'
   }

@@ -24,13 +24,16 @@ const TwoColumnAdvanced = (props: Props) => {
               <h2 className='block text-4xl font-normal md:text-5xl mb-8 leading-loose'>{title}</h2>
               <h3 className='md:hidden text-2xl font-normal md:text-3xl mb-8'>{subtitle}</h3>
               <p className='mb-8 md:text-lg leading-relaxed'>
-                {content}</p>
-              <Link
-                className='rounded-full border-2 px-6 py-3 text-xl font-semibold text-white shadow border-gray-900 bg-gray-900 self-start mb-auto'
-                href={url}
-              >
-                {buttonText}
-              </Link>
+                {content}
+              </p>
+              {url && (
+                <Link
+                  className='rounded-full border-2 px-6 py-3 text-xl font-semibold text-white shadow border-gray-900 bg-gray-900 self-start mb-auto'
+                  href={url}
+                >
+                  {buttonText}
+                </Link>
+              )}
             </div>
           </div>
         )

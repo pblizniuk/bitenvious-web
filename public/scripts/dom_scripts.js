@@ -81,22 +81,22 @@ function callback(entries) {
     }
   });
 }
-function initObserver() {
-  var observer = new IntersectionObserver(callback);
-  var items = document.querySelectorAll('.ease-in-view');
-  for(var i in items) {
-    if(!items.hasOwnProperty(i)) {
-      continue;
-    }
-    observer.observe(items[i]);
-  }
-}
+// function initObserver() {
+//   var observer = new IntersectionObserver(callback);
+//   var items = document.querySelectorAll('.ease-in-view');
+//   for(var i in items) {
+//     if(!items.hasOwnProperty(i)) {
+//       continue;
+//     }
+//     observer.observe(items[i]);
+//   }
+// }
 
-if (window.IntersectionObserver) {
-  initObserver();
-} else {
-  console.log("IntersectionObserver not supported.");
-}
+// if (window.IntersectionObserver) {
+//   initObserver();
+// } else {
+//   console.log("IntersectionObserver not supported.");
+// }
 
 // dark mode switcher
 

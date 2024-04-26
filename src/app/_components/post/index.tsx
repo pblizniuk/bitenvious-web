@@ -13,7 +13,7 @@ const Post = ({ post }) => {
     <div>
       <Link
         href={postUrl}
-        className="group block relative mb-16 after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-br from-black to-transparent after:opacity-80 rounded-md overflow-hidden cursor-pointer shadow-md shadow-stone-300">
+        className="group block relative mb-4 md:mb-8 lg:mb-16 after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-br from-black to-transparent after:opacity-80 rounded-md overflow-hidden cursor-pointer shadow-md shadow-stone-300">
         <StrapiImage
           src={url}
           alt={title}
@@ -24,13 +24,13 @@ const Post = ({ post }) => {
           loading="lazy"
           className="block w-full transform overflow-hidden group-hover:scale-110 transition-all duration-[5000ms]"
         />
-        <div className="absolute inset-0 p-8 text-white flex flex-col z-10">{/* ease-in-view transition-all translate-y-12  [&.visible]:translate-y-0 out-expo duration-500 */}
+        <div className="absolute inset-0 p-4 md:p-8 text-white flex flex-col z-10">{/* ease-in-view transition-all translate-y-12  [&.visible]:translate-y-0 out-expo duration-500 */}
           <div className="relative">
-            <h3 className="text-2xl md;text-3xl lg:text-4xl mb-3">{title}</h3>
-            <p className="text-lg md:text-xl">{formattedDate}</p>
+            <h3 className="text-xl md;text-3xl lg:text-4xl mb-3">{title}</h3>
+            <p className="text-sm md:text-xl">{formattedDate}</p>
           </div>
           <div className="mt-auto">
-            {category.Name && <span className={`bg-gradient-to-br ${categoryGradient} py-1 px-4 rounded-sm text-white text-lg md:text-xl mr-2`}>{category.Name}</span>}
+            {category.Name && <span className={`bg-gradient-to-br ${categoryGradient} py-1 px-4 rounded-sm text-white text-md md:text-xl mr-2`}>{category.Name}</span>}
           </div>
         </div>
       </Link>
