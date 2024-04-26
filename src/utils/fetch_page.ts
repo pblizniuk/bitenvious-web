@@ -3,7 +3,7 @@ import { flattenAttributes } from "@/lib/utils"
 
 export async function getData(endpoint: string) {
   const apiPath = `${env.NEXT_PUBLIC_STRAPI_URL}${endpoint}`
-  const response = await fetch(apiPath)
+  const response = await fetch(apiPath, { cache: 'no-store' })
 
   if (!response.ok) {
     throw new Error('Failed to fetch page data')
