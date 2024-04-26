@@ -12,7 +12,7 @@ const Header = () => {
   const isBlogCategory = pathname.indexOf('/blog/category/') !== -1
   const isBlogDetail = pathname.indexOf('/blog/') !== -1 && pathname.indexOf('/blog/category/') === -1
   const navItemClasses = 'menu__link font-semibold text-lg text-white transition-all duration-500 group-[.scrolled]:text-black group-[.is-blog]:text-black'
-console.log({isBlogCategory}, {isBlogDetail}, {isBlogHome})
+
   return (
     <>
       <header className={`${isBlogDetail ? 'is-blog' : ''} group fixed z-40 w-full bg-transparent transition-all duration-500 md:pt-12 [&.scrolled]:bg-white [&.scrolled]:pt-0 [&.scrolled]:shadow-md`}>
