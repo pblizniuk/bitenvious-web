@@ -8,13 +8,15 @@ import Sidebar from '@/app/_components/sidebar'
 
 const Header = () => {
   const pathname = usePathname()
-  const isBlog = pathname.indexOf('/blog/') !== -1
+  const isBlogHome = pathname === '/blog'
+  const isBlogCategory = pathname.indexOf('/blog/category/') !== -1
+  const isBlogDetail = pathname.indexOf('/blog/') !== -1 && pathname.indexOf('/blog/category/') === -1
   const navItemClasses = 'menu__link font-semibold text-lg text-white transition-all duration-500 group-[.scrolled]:text-black group-[.is-blog]:text-black'
-
+console.log({isBlogCategory}, {isBlogDetail}, {isBlogHome})
   return (
     <>
-      <header className={`${isBlog ? 'is-blog' : ''} group fixed z-40 w-full bg-transparent transition-all duration-500 md:pt-12 [&.scrolled]:bg-white [&.scrolled]:pt-0 [&.scrolled]:shadow-md`}>
-        <ScrollIndicator showScrollIndicator={isBlog} />
+      <header className={`${isBlogDetail ? 'is-blog' : ''} group fixed z-40 w-full bg-transparent transition-all duration-500 md:pt-12 [&.scrolled]:bg-white [&.scrolled]:pt-0 [&.scrolled]:shadow-md`}>
+        <ScrollIndicator showScrollIndicator={isBlogDetail} />
         <div className='mx-auto max-w-[1800px] p-2 sm:px-6 lg:px-8'>
           <div className='flex h-16 items-center justify-between'>
             <div className='flex-1 md:flex md:items-center md:gap-12'>
@@ -38,7 +40,7 @@ const Header = () => {
                       className='fill-white transition-all group-[.scrolled]:fill-black'
                     />
                   </span>
-                  {isBlog && (
+                  {(isBlogDetail || isBlogHome || isBlogCategory) && (
                     <div className='absolute text-xs md:text-xs inline-block px-2 py-px bg-gradient-to-br from-pink-500 to-fuchsia-600 rounded-sm right-0 -bottom-2 text-white uppercase font-semibold'>Blog</div>
                   )}
                 </div>
