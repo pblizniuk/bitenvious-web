@@ -31,7 +31,7 @@ export const generateMetadata = async (props: Props) => {
       title: `${title} | BitEnvious Blog`,
       description: `Post detail for ${title}`,
       type: 'article',
-      url: `https://www.bitenvio.us/blog${slug}`,
+      url: `https://www.bitenvio.us/blog/${slug}`,
       images: [
         {
           url: `${getStrapiURL()}${heroImage?.formats?.xlarge?.url}`, // Must be an absolute URL
@@ -42,7 +42,6 @@ export const generateMetadata = async (props: Props) => {
           url: `${getStrapiURL()}${heroImage?.formats?.medium?.url}`, // Must be an absolute URL
           width: heroImage?.formats?.medium?.width,
           height: heroImage?.formats?.medium?.height,
-          alt: 'My custom alt',
         },
       ],
       article: {
