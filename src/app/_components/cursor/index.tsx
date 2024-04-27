@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import { motion, useMotionValue, useSpring } from 'framer-motion'
+import { usePathname } from 'next/navigation'
 
 const Cursor = () => {
   const mouse = {
@@ -17,6 +18,7 @@ const Cursor = () => {
 
   const [isHovering, setIsHovering] = useState(false)
   const cursorSize = !isHovering ? 28 : 96
+  const pathname = usePathname();
 
   useEffect(() => {
     const onMouseMove = (event: MouseEvent) => {
@@ -49,6 +51,11 @@ const Cursor = () => {
       })
     }
   }, [cursorSize, isHovering])
+
+  useEffect(() => {
+    setIsHovering(false)
+  }, [pathname])
+
 
   return (
     <motion.div className='cursor hidden lg:block fixed bg-white top-1/2 left-1/2 z-50 mix-blend-difference rounded-full pointer-events-none h-7 w-7' animate={{ width: cursorSize, height: cursorSize }} style={{ left: smoothMouse.x, top: smoothMouse.y }} />

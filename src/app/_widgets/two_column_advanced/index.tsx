@@ -13,7 +13,7 @@ const TwoColumnAdvanced = (props: Props) => {
   const { item } = props
 
   return (
-    <div className='mx-auto max-w-[1340px] sm:grid lg:grid-cols-2 mb-16 lg:mb-32'>
+    <div className='mx-auto max-w-[1340px] sm:grid lg:grid-cols-2 mb-8 lg:mb-16'>
       {item?.map((item, i) => {
         const { title, subtitle, content, url, buttonText } = item
 

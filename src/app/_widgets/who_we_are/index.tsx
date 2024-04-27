@@ -28,7 +28,7 @@ const WhoWeAreWidget = (props: Props) => {
             <div className='animate-pulse absolute end-0 top-0 z-10 h-[250px] w-[250px] rounded-full bg-stone-800 object-contain opacity-40 blur-3xl'></div>
           </div>
           <span
-            className={`pl-3 font-rock-salt text-4xl md:text-6xl font-extrabold transition-all text-black`}
+            className={`pl-3 font-rock-salt text-4xl md:text-6xl transition-all text-black`}
           >
             BitEnvious
           </span>

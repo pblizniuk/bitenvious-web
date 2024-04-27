@@ -5,9 +5,10 @@ import {
   faFacebook,
   faXTwitter,
   faLinkedin
-} from "@fortawesome/free-brands-svg-icons";
+} from "@fortawesome/free-brands-svg-icons"
 import { faLink } from '@fortawesome/free-solid-svg-icons'
-import { usePathname } from 'next/navigation';
+import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 
 const ShareButtons = () => {
   const pathname = usePathname();
@@ -27,30 +28,30 @@ const ShareButtons = () => {
     <div>
       <div>Share:</div>
       <div className='my-2 grid grid-cols-4 gap-1'>
-        <a
+        <Link
           href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(href)}`}
           rel="noreferrer"
           target='_blank'
           className="facebook social"
           >
           <FontAwesomeIcon icon={faFacebook} size="2x" className='text-stone-600' />
-        </a>
-        <a
+        </Link>
+        <Link
         href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(href)}`}
         rel="noreferrer"
         target='_blank'
         className="twitter social"
         >
           <FontAwesomeIcon icon={faXTwitter} size="2x" className='text-stone-600' />
-        </a>
-        <a
+        </Link>
+        <Link
           href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(href)}`}
           rel="noreferrer"
           target='_blank'
           className="youtube social"
           >
           <FontAwesomeIcon icon={faLinkedin} size="2x" className='text-stone-600' />
-        </a>
+        </Link>
         <span
         className='relative cursor-pointer'
           rel="noreferrer"

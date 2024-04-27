@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className='bg-gradient-to-r from-stone-800 to-stone-900 relative w-full'>
       <div className='mx-auto w-full max-w-screen-xl p-4 md:py-16'>
         <div className='sm:flex sm:items-center sm:justify-between'>
-          <a
+          <Link
             href='/'
             className='relative mb-4 flex items-center space-x-3 sm:mb-0 rtl:space-x-reverse'
           >
@@ -20,11 +20,11 @@ const Footer = () => {
               className='transition-all duration-500 hover:grayscale'
             />
             <span
-              className='pl-3 font-rock-salt text-2xl font-extrabold text-stone-50 transition-all'
+              className='pl-3 font-rock-salt text-2xl text-stone-50 transition-all'
             >
               BitEnvious
             </span>
-          </a>
+          </Link>
           <nav aria-label='Global' className='menu'>
             <ul className='menu__list flex flex-wrap items-center gap-10 text-base before:bg-white group-[.scrolled]:before:bg-gradient-to-r from-purple-700 to-pink-600'>
               <li>

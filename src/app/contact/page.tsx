@@ -2,6 +2,7 @@ import PageLoad from '@/app/_animations/page_load'
 import PageTitle from '@/app/_components/page_title'
 import ContactForm from '@/app/_components/contact_form'
 import CalendlyEmbed from '@/app/_components/calendly_embed'
+import Link from 'next/link'
 
 export default function Contact() {
   const pageTitleContent = {
@@ -34,13 +35,13 @@ export default function Contact() {
                     Email
                   </h3>
                   <div className='mb-4 flex flex-col last:mb-0 xl:flex-row xl:items-end xl:gap-3'>
-                    <a
+                    <Link
                       href='mailto:info@bitenvio.us'
                       target=''
                       className='x-link fs-p link-contact leading-6'
                     >
                       info@bitenvio.us
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className='border-l border-t p-4 md:p-8 lg:border-t-0 lg:pt-24'>
@@ -48,13 +49,13 @@ export default function Contact() {
                     Phone
                   </h3>
                   <div className='mb-4 flex flex-col last:mb-0 xl:flex-row xl:items-end xl:gap-3'>
-                    <a
+                    <Link
                       href='tel:+18478770375'
                       target=''
                       className='leading-6'
                     >
                       847.877.0375
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className='border-l border-t p-4 md:p-8 sm:col-span-2'>

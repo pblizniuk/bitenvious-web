@@ -1,6 +1,7 @@
 import Icon from '@/app/_components/icons'
 import { getData } from '@/utils/fetch_page'
 import { categoryHelper } from '@/lib/utils'
+import Link from 'next/link'
 
 type Props = {
   title?: string
@@ -19,7 +20,7 @@ const CategoriesMenu = async (props:Props) => {
           const { Name, slug, description } = category
           const { categoryIcon, categoryColor } = categoryHelper(category.id)
           return (
-            <a href={`/blog/category/${slug}`} key={i} className="category-item p-4 border rounded-md flex">
+            <Link href={`/blog/category/${slug}`} key={i} className="category-item p-4 border rounded-md flex">
                 <div className="category-item-inner">
                   <div className="category-item-icon inline-block">
                     <Icon name={categoryIcon} size='24' className={`h-24 w-24 mb-8 ${categoryColor}`} strokeWidth='.3' />
@@ -29,7 +30,7 @@ const CategoriesMenu = async (props:Props) => {
                     <h4 className="">{description}</h4>
                   </div>
                 </div>
-              </a>
+              </Link>
           )
         })}
       </div>
