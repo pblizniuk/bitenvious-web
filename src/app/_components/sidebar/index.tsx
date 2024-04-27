@@ -25,7 +25,7 @@ const Sidebar = () => {
       </svg>
 
       <div
-        className={`top-0 right-0 w-full bg-gradient-to-br from-stone-900 to-stone-700 p-10 fixed h-full z-40 ease-in-out duration-300 ${showSidebar ? "translate-x-0 " : "translate-x-full overflow-hidden"
+        className={`top-0 right-0 w-full bg-gradient-to-br from-stone-900 to-stone-700 py-4 px-3 fixed h-full z-40 ease-in-out duration-300 ${showSidebar ? "translate-x-0 " : "translate-x-full overflow-hidden"
           }`}
       >
         <div className={`relative flex items-center max-w-[225px] transition-all ${showSidebar ? "opacity-100 duration-500 delay-300" : "opacity-0"}`}>
@@ -48,7 +48,7 @@ const Sidebar = () => {
           </span>
         </div>
         <button
-          className="flex text-4xl text-pink-600 items-center cursor-pointer z-40 fixed right-10 top-6"
+          className="flex text-5xl text-pink-600 items-center cursor-pointer z-40 fixed right-4 top-3"
           onClick={() => setShowSidebar(!showSidebar)}
         >
           x
@@ -83,7 +83,7 @@ const Sidebar = () => {
                   Projects
                 </Link>
               </li>
-              <li className={`${navItemListClasses} delay-400`}>
+              <li className={`${navItemListClasses} delay-500`}>
                 <Link
                   className={navItemClasses}
                   href='/blog'
@@ -92,7 +92,7 @@ const Sidebar = () => {
                   Blog
                 </Link>
               </li>
-              <li className={`${navItemListClasses} delay-400`}>
+              <li className={`${navItemListClasses} delay-700`}>
                 <div className='sm:hidden'>
                   <Link
                     className='block rounded-full border bg-transparent px-6 py-3 text-white shadow transition-all duration-500  border-white font-semibold text-lg text-center'

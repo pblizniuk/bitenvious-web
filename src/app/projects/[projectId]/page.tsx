@@ -51,7 +51,7 @@ export default async function ProjectDetails(props: Props) {
             </div>
           </div>
           </PageLoad>
-          <div className='col-span-2 pt-24'>
+          <div className='col-span-2 pt-24 w-[300vw] md:w-full -translate-x-1/2 md:translate-x-0'>
             <PageLoad offset={-40}>
             <Parallax>
               <StrapiImage
