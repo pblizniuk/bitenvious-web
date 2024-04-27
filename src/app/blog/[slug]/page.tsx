@@ -81,13 +81,6 @@ export const generateMetadata = async (props: Props) => {
         section: category?.Name,
         tags: [category?.Name],
       },
-    },
-    twitter: {
-      card: 'summary_large_image',
-      site: 'https://www.bitenvio.us',
-      title: `${title} | BitEnvious Blog`,
-      description: `Post detail for ${title}`,
-      image: `${getStrapiURL()}${heroImage?.formats?.xlarge?.url}`,
     }
   }
 }
