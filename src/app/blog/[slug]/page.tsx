@@ -33,18 +33,19 @@ export const generateMetadata = async (props: Props) => {
       type: 'article',
       url: `https://www.bitenvio.us/blog/${slug}`,
       images: [
+        // {
+        //   url: `${getStrapiURL()}${heroImage?.formats?.xxlarge?.url}`,
+        //   secure_url: `${getStrapiURL()}${heroImage?.formats?.xxlarge?.url}`,
+        //   width: heroImage?.formats?.xxlarge?.width,
+        //   height: heroImage?.formats?.xxlarge?.height,
+        // },
         {
-          url: `${getStrapiURL()}${heroImage?.formats?.xxlarge?.url}`,
-          secure_url: `${getStrapiURL()}${heroImage?.formats?.xxlarge?.url}`,
-          width: heroImage?.formats?.xxlarge?.width,
-          height: heroImage?.formats?.xxlarge?.height,
+          url: `${getStrapiURL()}${heroImage?.formats?.xlarge?.url}`,
+          secure_url: `${getStrapiURL()}${heroImage?.formats?.xlarge?.url}`,
+          width: heroImage?.formats?.xlarge?.width,
+          height: heroImage?.formats?.xlarge?.height,
         },
         // {
-        //   url: `${getStrapiURL()}${heroImage?.formats?.xlarge?.url}`,
-        //   secure_url: `${getStrapiURL()}${heroImage?.formats?.xlarge?.url}`,
-        //   width: heroImage?.formats?.xlarge?.width,
-        //   height: heroImage?.formats?.xlarge?.height,
-        // },{
         //   url: `${getStrapiURL()}${heroImage?.formats?.large?.url}`,
         //   secure_url: `${getStrapiURL()}${heroImage?.formats?.large?.url}`,
         //   width: heroImage?.formats?.large?.width,
