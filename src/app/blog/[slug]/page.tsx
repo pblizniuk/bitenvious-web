@@ -9,6 +9,7 @@ import Parallax from '@/app/_animations/parallax'
 import Author from '@/app/_components/author'
 import BlocksRendererClient from '@/app/_components/block_renderer_client'
 import SocialShare from '@/app/_components/social_share'
+import { getStrapiURL } from '@/lib/utils'
 
 type Props = {
   params: {
@@ -30,15 +31,15 @@ export const generateMetadata = async (props: Props) => {
       title: `${title} | BitEnvious Blog`,
       description: `Post detail for ${title}`,
       type: 'article',
-      url: `https://bitenvio.us/blog/${slug}`,
+      url: `https://www.bitenvio.us/blog${slug}`,
       images: [
         {
-          url: `https://bitenvio.us${heroImage?.formats?.xlarge?.url}`, // Must be an absolute URL
+          url: `${getStrapiURL()}${heroImage?.formats?.xlarge?.url}`, // Must be an absolute URL
           width: heroImage?.formats?.xlarge?.width,
           height: heroImage?.formats?.xlarge?.height,
         },
         {
-          url: `https://bitenvio.us${heroImage?.formats?.medium?.url}`, // Must be an absolute URL
+          url: `${getStrapiURL()}${heroImage?.formats?.medium?.url}`, // Must be an absolute URL
           width: heroImage?.formats?.medium?.width,
           height: heroImage?.formats?.medium?.height,
           alt: 'My custom alt',
@@ -53,10 +54,10 @@ export const generateMetadata = async (props: Props) => {
     },
     twitter: {
       card: 'summary_large_image',
-      site: 'https://bitenvio.us',
+      site: 'https://www.bitenvio.us',
       title: `${title} | BitEnvious Blog`,
       description: `Post detail for ${title}`,
-      image: heroImage?.formats?.xxlarge?.url,
+      image: `${getStrapiURL()}${heroImage?.formats?.xlarge?.url}`,
     }
   }
 }
