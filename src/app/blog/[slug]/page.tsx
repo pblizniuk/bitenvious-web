@@ -34,14 +34,38 @@ export const generateMetadata = async (props: Props) => {
       url: `https://www.bitenvio.us/blog/${slug}`,
       images: [
         {
+          url: `${getStrapiURL()}${heroImage?.formats?.xxlarge?.url}`, // Must be an absolute URL
+          width: heroImage?.formats?.xxlarge?.width,
+          height: heroImage?.formats?.xxlarge?.height,
+        },
+        {
           url: `${getStrapiURL()}${heroImage?.formats?.xlarge?.url}`, // Must be an absolute URL
           width: heroImage?.formats?.xlarge?.width,
           height: heroImage?.formats?.xlarge?.height,
+        },{
+          url: `${getStrapiURL()}${heroImage?.formats?.large?.url}`, // Must be an absolute URL
+          width: heroImage?.formats?.large?.width,
+          height: heroImage?.formats?.large?.height,
         },
         {
           url: `${getStrapiURL()}${heroImage?.formats?.medium?.url}`, // Must be an absolute URL
           width: heroImage?.formats?.medium?.width,
           height: heroImage?.formats?.medium?.height,
+        },
+        {
+          url: `${getStrapiURL()}${heroImage?.formats?.small?.url}`, // Must be an absolute URL
+          width: heroImage?.formats?.small?.width,
+          height: heroImage?.formats?.small?.height,
+        },
+        {
+          url: `${getStrapiURL()}${heroImage?.formats?.xsmall?.url}`, // Must be an absolute URL
+          width: heroImage?.formats?.xsmall?.width,
+          height: heroImage?.formats?.xsmall?.height,
+        },
+        {
+          url: `${getStrapiURL()}${heroImage?.formats?.thumbnail?.url}`, // Must be an absolute URL
+          width: heroImage?.formats?.thumbnail?.width,
+          height: heroImage?.formats?.thumbnail?.height,
         },
       ],
       article: {
