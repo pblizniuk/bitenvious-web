@@ -23,10 +23,10 @@ const Author = (props:AuthorProps) => {
           alt={name}
           width={110}
           height={110}
-          className=' rounded-full border-2 border-white shadow-lg relative z-10'
+          className='bg-white rounded-full border-2 border-white shadow-lg relative z-10'
         />
         <h4 className='mt-4 text-stone-600'>Post by:</h4>
-        <p className='text-lg font-medium lg:text-xl'>{name}</p>
+        <p className='text-lg font-medium lg:text-lg font-rock-salt'>{name}</p>
         <div className={`absolute bg-gradient-to-br ${categoryGradient} h-2/5 top-2 left-2 right-2 z-0 rounded-md`}></div>
       </div>
     </div>

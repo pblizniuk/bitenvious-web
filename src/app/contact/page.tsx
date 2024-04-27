@@ -27,9 +27,9 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-            <div className='pr-8 md:col-span-2'>
+            <div className='md:pr-8 md:col-span-2'>
               <div className='sm:grid md:grid-cols-2'>
-                <div className='border-l border-t p-8 lg:border-t-0 lg:pt-24 text-md md:text-lg'>
+                <div className='border-l border-t p-4 md:p-8 lg:border-t-0 lg:pt-24 text-md md:text-lg'>
                   <h3 className='mb-3 font-medium text-stone-700 lg:text-xl'>
                     Email
                   </h3>
@@ -43,7 +43,7 @@ export default function Contact() {
                     </a>
                   </div>
                 </div>
-                <div className='border-l border-t p-8 lg:border-t-0 lg:pt-24'>
+                <div className='border-l border-t p-4 md:p-8 lg:border-t-0 lg:pt-24'>
                   <h3 className='mb-3 font-medium text-stone-700 lg:text-xl'>
                     Phone
                   </h3>
@@ -57,7 +57,7 @@ export default function Contact() {
                     </a>
                   </div>
                 </div>
-                <div className='border-l border-t p-8 sm:col-span-2'>
+                <div className='border-l border-t p-4 md:p-8 sm:col-span-2'>
                   <h3 className='mb-3 text-lg font-medium text-stone-700 lg:text-xl'>
                     We&apos;re eager to talk with you!
                   </h3>
@@ -94,8 +94,8 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-            <div className='pr-8 md:col-span-2'>
-              <div className={`border-l border-t p-8 `}>
+            <div className='md:pr-8 md:col-span-2'>
+              <div className={`border-l border-t p-4 md:p-8 `}>
                 <div className='mx-auto max-w-screen-md px-4 py-8 lg:py-16'>
                   <ContactForm />
                 </div>
@@ -117,7 +117,7 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-            <div className='pr-8 md:col-span-2'>
+            <div className='md:pr-8 md:col-span-2'>
               <div className={`border-l border-t py-8`}>
                 <div className='mx-auto max-w-screen-lg'>
                   <CalendlyEmbed url="https://calendly.com/paulblizniuk/30min" />

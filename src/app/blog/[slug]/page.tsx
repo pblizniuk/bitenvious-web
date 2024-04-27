@@ -8,6 +8,7 @@ import { categoryHelper } from '@/lib/utils'
 import Parallax from '@/app/_animations/parallax'
 import Author from '@/app/_components/author'
 import BlocksRendererClient from '@/app/_components/block_renderer_client'
+import SocialShare from '@/app/_components/social_share'
 
 type Props = {
   params: {
@@ -92,6 +93,7 @@ export default async function PostDetails(props: Props) {
                     </div>
                   </div>
                 )}
+                <SocialShare />
               </div>
             </div>
           </div>

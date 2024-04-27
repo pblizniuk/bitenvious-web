@@ -71,7 +71,7 @@ export default async function ProjectDetails(props: Props) {
       </section>
       <PageLoad offset={50}>
         <section className='projects-intro'>
-          <div className='mx-auto max-w-[1340px] sm:grid md:grid-cols-4 gap-5 my-12 lg:my-24 relative'>
+          <div className='mx-auto max-w-[1340px] sm:grid md:grid-cols-4 gap-5 my-12 lg:my-24 relative px-4 md:p-0'>
             <div className='sidebar '>
               <div className="top-32 lg:sticky">
                 <h4 className='text-2xl mb-2'>Client</h4>

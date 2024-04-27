@@ -9,7 +9,7 @@ const Projects = async () => {
 
   return (
     <section className="projects">
-        <div className='m-auto mt:12 lg:mt-24 max-w-[1340px] sm:grid md:grid-cols-2 gap-8 lg:gap-16 '>
+        <div className='m-auto mt:12 lg:mt-24 max-w-[1340px] sm:grid md:grid-cols-2 gap-8 lg:gap-16 p-4'>
           {data?.length > 0 && data.map((project, i) => (
             <Project key={i} project={project} />
           ))}

@@ -71,7 +71,7 @@ export const ContactForm = () => {
   ) : (
     <motion.form
     onSubmit={onSubmit}
-    className='sm:grid md:grid-cols-2 gap-8 items-start'
+    className='grid md:grid-cols-2 gap-4 md:gap-8 items-start'
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     exit={{ opacity: 0 }}

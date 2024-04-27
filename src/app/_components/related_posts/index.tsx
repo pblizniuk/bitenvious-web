@@ -25,7 +25,7 @@ if (data.length === 0) { return null }
       <TitleSectionWidget
           title={`More on ${categoryName}`}
         />
-      <div className='grid md:grid-cols-3 gap-8'>
+      <div className='grid md:grid-cols-3 gap-2 md:gap-8 m-4'>
         {data && data.map((post, i) => {
           const { title, heroImage, publishedDate, category } = post
           const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
@@ -35,7 +35,7 @@ if (data.length === 0) { return null }
             <Link
               key={i}
               href={postUrl}
-              className="group block relative mb-8 after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-br from-black to-transparent after:opacity-80 rounded-md overflow-hidden cursor-pointer shadow-md shadow-stone-300"> {}
+              className="group block relative after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-br from-black to-transparent after:opacity-80 rounded-md overflow-hidden cursor-pointer shadow-md shadow-stone-300"> {}
               <StrapiImage
                 src={url}
                 alt={title}
@@ -45,10 +45,10 @@ if (data.length === 0) { return null }
                 loading="lazy"
                 className="transform h-full w-full overflow-hidden group-hover:scale-110 transition-all duration-500 object-cover"
               />
-              <div className="absolute inset-0 p-8 text-white flex flex-col z-10">
+              <div className="absolute inset-0 p-4 md:p-8 text-white flex flex-col z-10">
                 <div className="relative">
-                  <h3 className="text-2xl font-semibold mb-3">{title}</h3>
-                  <p className="font-sm font-light">{formattedDate}</p>
+                  <h3 className="text-md lg:text-xl mb-3">{title}</h3>
+                  <p className="text-sm lg:text-lg font-sm font-light">{formattedDate}</p>
                 </div>
                 <div className="mt-auto">
                   {category && <span key={i} className={`bg-gradient-to-br ${categoryGradient} py-1 px-4 rounded-sm text-white mr-2`}>{category.Name}</span>}
