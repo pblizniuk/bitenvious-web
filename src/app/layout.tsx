@@ -31,6 +31,13 @@ const rockSalt = Rock_Salt({
 export const metadata: Metadata = {
   title: 'Digital Marketing Alliance | Bitenvio.us',
   description: 'Full Spectrum Digital Marketing Alliance',
+  openGraph: {
+    title: 'Digital Marketing Alliance | Bitenvio.us',
+    description: 'Full Spectrum Digital Marketing Alliance',
+    url: 'https://bitenvio.us',
+    locale: 'en_US',
+    type: 'website',
+  },
 }
 
 export default function RootLayout({

@@ -16,12 +16,48 @@ type Props = {
   }
 }
 
-export const generateMetadata = (props: Props): Metadata => {
+export const generateMetadata = async (props: Props) => {
   const { params } = props
   const { slug } = params
+  const endpoint = `/api/posts/${slug}?populate=deep,3`;
+  const data = await getData(endpoint)
+  const { title, heroImage, publishedDate, author, category } = data
+
   return {
-    title: slug,
-    description: `Post detail for ${slug}`,
+    title: `${title} | BitEnvious Blog`,
+    description: `Post detail for ${title}`,
+    openGraph: {
+      title: `${title} | BitEnvious Blog`,
+      description: `Post detail for ${title}`,
+      type: 'article',
+      url: `https://bitenvio.us/blog/${slug}`,
+      images: [
+        {
+          url: `https://bitenvio.us${heroImage?.formats?.xlarge?.url}`, // Must be an absolute URL
+          width: heroImage?.formats?.xlarge?.width,
+          height: heroImage?.formats?.xlarge?.height,
+        },
+        {
+          url: `https://bitenvio.us${heroImage?.formats?.medium?.url}`, // Must be an absolute URL
+          width: heroImage?.formats?.medium?.width,
+          height: heroImage?.formats?.medium?.height,
+          alt: 'My custom alt',
+        },
+      ],
+      article: {
+        publishedTime: publishedDate,
+        authors: [author?.Name],
+        section: category?.Name,
+        tags: [category?.Name],
+      },
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: 'https://bitenvio.us',
+      title: `${title} | BitEnvious Blog`,
+      description: `Post detail for ${title}`,
+      image: heroImage?.formats?.xxlarge?.url,
+    }
   }
 }
 
