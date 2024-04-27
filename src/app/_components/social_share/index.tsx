@@ -9,7 +9,7 @@ import {
 import { faLink } from '@fortawesome/free-solid-svg-icons'
 import { usePathname } from 'next/navigation';
 
-const ShareButtons = ({ params }) => {
+const ShareButtons = () => {
   const pathname = usePathname();
   const href = `https://www.bitenvio.us${pathname}`
 
