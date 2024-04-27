@@ -110,7 +110,7 @@ export default async function PostDetails(props: Props) {
           <div className='mx-auto max-w-[1340px] overflow-clip max-h-80 md:max-h-[50vh] md:mt-[-100px] rounded-md drop-shadow-md'>
             <Parallax>
               <StrapiImage
-                src={heroImage?.formats?.xxlarge?.url}
+                src={heroImage?.formats?.xxlarge?.url ? heroImage?.formats?.xxlarge?.url : heroImage?.formats?.xlarge?.url}
                 alt={heroImage?.alternativeText || title}
                 aria-description={heroImage?.caption || title}
                 width={0}
