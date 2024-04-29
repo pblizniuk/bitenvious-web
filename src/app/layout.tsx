@@ -8,6 +8,8 @@ import './globals.css'
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import Cursor from './_components/cursor'
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 
 config.autoAddCss = false;
 const montserrat = Montserrat({
@@ -86,6 +88,7 @@ export default function RootLayout({
         {children}
         <Footer />
       </body>
+      <GoogleAnalytics gaId="G-VL1NC8VSSJ" />
     </html>
   )
 }
