@@ -7,7 +7,7 @@ const Post = ({ post }) => {
   const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })
   const { url } = heroImage.formats.medium
   const postUrl = `/blog/${post.slug}`
-  const { categoryGradient } = categoryHelper(category?.id)
+  const { categoryGradient } = categoryHelper(category?.slug)
 
   return (
     <div>

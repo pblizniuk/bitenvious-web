@@ -53,27 +53,27 @@ export function getStrapiMedia(url: string | null) {
   return `${getStrapiURL()}${url}`;
 }
 
-export function categoryHelper(categoryId: number) {
+export function categoryHelper(slug: string) {
   let categoryGradient;
   let categoryColor;
   let categoryIcon;
-  if (categoryId === 1) {
+  if (slug === 'digital-marketing') {
     categoryGradient = 'from-pink-500 to-fuchsia-600';
     categoryIcon = 'digitalMarketing'
     categoryColor = 'text-pink-500'
-  } else if (categoryId === 2) {
+  } else if (slug === 'design') {
     categoryGradient = 'from-lime-500 to-green-600';
     categoryIcon = 'design'
     categoryColor = 'text-lime-500'
-  } else if (categoryId === 3) {
+  } else if (slug === 'brand-identity') {
     categoryGradient = 'from-orange-500 to-red-600';
     categoryIcon = 'brandIdentity'
     categoryColor = 'text-orange-500'
-  } else if (categoryId === 4) {
+  } else if (slug === 'development') {
     categoryGradient = 'from-blue-500 to-indigo-600';
     categoryIcon = 'development'
     categoryColor = 'text-blue-500'
-  } else if (categoryId === 5) {
+  } else if (slug === 'other') {
     categoryGradient = 'from-stone-500 to-stone-600';
     categoryIcon = 'other'
     categoryColor = 'text-stone-500'

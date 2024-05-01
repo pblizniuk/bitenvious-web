@@ -92,7 +92,7 @@ export default async function PostDetails(props: Props) {
   const endpoint = `/api/posts/${slug}?populate=deep,3`;
   const data = await getData(endpoint)
   const { title, content, heroImage, timeToRead, publishedDate, author, category, id } = data
-  const { categoryGradient } = categoryHelper(category?.id)
+  const { categoryGradient } = categoryHelper(category?.slug)
   const formattedPublishedDate = new Date(publishedDate).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })
   return (
     <PageLoad offset={100}>

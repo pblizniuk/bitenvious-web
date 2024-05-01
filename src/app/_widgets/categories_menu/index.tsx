@@ -18,7 +18,7 @@ const CategoriesMenu = async (props:Props) => {
       <div className='grid md:grid-cols-5 gap-4'>
         {data && data.map((category, i) => {
           const { Name, slug, description } = category
-          const { categoryIcon, categoryColor } = categoryHelper(category.id)
+          const { categoryIcon, categoryColor } = categoryHelper(category.slug)
           return (
             <Link href={`/blog/category/${slug}`} key={i} className="category-item p-4 border rounded-md flex">
                 <div className="category-item-inner">

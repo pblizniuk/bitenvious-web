@@ -17,7 +17,7 @@ const RelatedPosts = async (props: RelatedPostsProps) => {
   const categoryName = parentCategory.Name
   const endpoint = `/api/posts?filters[$and][0][category][Name][$eq]=${categoryName}&filters[$and][0][id][$ne]=${parentPostId}&pagination[pageSize]=3&populate=deep,2`
   const { data } = await getData(endpoint)
-  const { categoryGradient } = categoryHelper(parentCategory.id)
+  const { categoryGradient } = categoryHelper(parentCategory.slug)
 
 if (data.length === 0) { return null }
   return (
