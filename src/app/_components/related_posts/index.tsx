@@ -7,6 +7,7 @@ import { categoryHelper } from '@/lib/utils'
 type RelatedPostsProps = {
   category: {
     Name: string,
+    slug: string,
     id: number
   },
   parentPostId: string
