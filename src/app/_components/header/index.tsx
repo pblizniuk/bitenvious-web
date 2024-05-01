@@ -5,6 +5,7 @@ import Icon from '@/app/_components/icons'
 import { usePathname } from 'next/navigation'
 import ScrollIndicator from '@/app/_components/scroll_indicator'
 import Sidebar from '@/app/_components/sidebar'
+import { getIsLocalAPI } from '@/lib/utils'
 
 const Header = () => {
   const pathname = usePathname()
@@ -43,6 +44,9 @@ const Header = () => {
                   {(isBlogDetail || isBlogHome || isBlogCategory) && (
                     <div className='absolute text-xs md:text-xs inline-block px-2 py-px bg-gradient-to-br from-pink-500 to-fuchsia-600 rounded-sm right-0 -bottom-2 text-white uppercase font-semibold'>Blog</div>
                   )}
+                  {/* {getIsLocalAPI() && (
+                    <div className='absolute text-xs md:text-xs inline-block px-2 py-px bg-gradient-to-br from-red-500 to-red-600 rounded-sm right-0 -bottom-2 text-white uppercase font-semibold'>Local</div>
+                  )} */}
                 </div>
               </Link>
             </div>

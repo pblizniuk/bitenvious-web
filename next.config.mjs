@@ -8,6 +8,11 @@ const nextConfig = {
         pathname: '/uploads/**/*',
       },
       {
+        protocol: 'https',
+        hostname: 'bitenvio.us',
+        pathname: '/uploads/**/*',
+      },
+      {
         protocol: 'http',
         hostname: 'localhost',
         port: '1337',

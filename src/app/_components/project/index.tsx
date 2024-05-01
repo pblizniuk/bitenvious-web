@@ -5,8 +5,8 @@ const Project = ({ project }) => {
   const { title, slug, servicesProvided, technologiesUsed, teaserImage, introGradientColor } = project
   const technologies = technologiesUsed?.split(', ')
   return (
-    <div className='group project-tile mb-8 lg:mb-16'>
-      <Link href={`/projects/${slug}`} className={`block relative  after:content-[""] after:absolute after:inset-0 after:bg-gradient-to-br ${introGradientColor} after:opacity-0 group-hover:after:opacity-70 rounded-md overflow-hidden cursor-pointer shadow-md shadow-stone-300 after:transition-all after:duration-1000`}>
+    <div className='group project-tile mb-16'>
+      <Link href={`/projects/${slug}`} className={`block relative  after:content-[""] after:absolute after:inset-0 after:bg-gradient-to-br ${introGradientColor} after:opacity-0 group-hover:after:opacity-70 rounded-md overflow-hidden cursor-pointer shadow-md shadow-stone-300 after:transition-all after:duration-1000 mb-8`}>
         <StrapiImage
           src={teaserImage?.formats?.medium?.url}
           alt={title}
@@ -27,9 +27,9 @@ const Project = ({ project }) => {
       </Link>
       <div className="product-info">
         <Link href={`/projects/${slug}`}>
-          <div className='text-xl font-normal md:text-3xl my-8 leading-loose'>{title}</div>
+          <div className='text-xl font-normal md:text-3xl mb-4 leading-loose'>{title}</div>
         </Link>
-        <div className='text-lg md:text-xl my-8'>{servicesProvided}</div>
+        <div className='text-lg md:text-xl mb-4'>{servicesProvided}</div>
         <div className='mt-8'>{technologies.length && technologies.map((technology, i) => (
           <span key={i} className="inline-block border border-stone-500 bg-opacity-60 py-1 px-4 rounded-full text-stone-500 mr-2">
             {technology}

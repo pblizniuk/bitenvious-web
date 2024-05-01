@@ -8,7 +8,7 @@ type TitleSectionProps = {
 
 const TitleSectionWidget = (props: TitleSectionProps) => {
   const { title, description, classNames } = props
-  const classes = clsx('mt-6 max-w-4xl text-xl font-light lg:text-2xl', classNames)
+  const classes = clsx('mt-6 max-w-4xl text-lg font-light lg:text-xl', classNames)
   const customDescription = description?.replace('BitEnvious', '<span class="font-rock-salt">BitEnvious</span>') || ''
 
   return (

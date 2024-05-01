@@ -42,6 +42,10 @@ export function getStrapiURL() {
   return process.env.NEXT_PUBLIC_STRAPI_URL ?? "https://kind-hodgkin.216-225-194-227.plesk.page";
 }
 
+export function getIsLocalAPI() {
+  return process.env.IS_LOCAL_API ?? false;
+}
+
 export function getStrapiMedia(url: string | null) {
   if (url == null) return null;
   if (url.startsWith("data:")) return url;

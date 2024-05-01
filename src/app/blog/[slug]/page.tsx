@@ -159,7 +159,7 @@ export default async function PostDetails(props: Props) {
             </div>
           </div>
           <div className='px-2 md:px-8 md:col-span-2 lg:col-span-3'>
-            <div className='blog-detail md:py-16 lg:py-24'>
+            <div className='blog-detail block-renderer md:py-16 lg:py-24'>
               <BlocksRendererClient content={content} />
             </div>
           </div>

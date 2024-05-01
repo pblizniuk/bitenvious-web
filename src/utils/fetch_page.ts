@@ -1,8 +1,9 @@
 import { env } from 'process'
 import { flattenAttributes } from "@/lib/utils"
+import { getStrapiURL } from "@/lib/utils"
 
 export async function getData(endpoint: string) {
-  const apiPath = `${env.NEXT_PUBLIC_STRAPI_URL}${endpoint}`
+  const apiPath = `${getStrapiURL()}${endpoint}`
   const response = await fetch(apiPath, { cache: 'no-store' })
 
   if (!response.ok) {
