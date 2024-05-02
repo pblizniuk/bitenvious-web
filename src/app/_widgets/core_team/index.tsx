@@ -32,7 +32,7 @@ const CoreTeamWidget = () => {
           <div className='about-logo group relative flex items-center justify-center w-full h-full'>
             <div className="relative">
               <Image
-                src='/assets/logo-xl.png'
+                src='/assets/logo-xl-new.png'
                 alt='logo'
                 width='150'
                 height='150'
@@ -46,7 +46,7 @@ const CoreTeamWidget = () => {
         <div className='about-logo group relative flex items-center justify-center w-full h-full'>
             <div className="relative">
               <Image
-                src='/assets/logo-xl.png'
+                src='/assets/logo-xl-new.png'
                 alt='logo'
                 width='150'
                 height='150'
@@ -98,7 +98,7 @@ const CoreTeamWidget = () => {
         <div className='about-logo group relative flex items-center justify-center w-full h-full'>
             <div className="relative">
               <Image
-                src='/assets/logo-xl.png'
+                src='/assets/logo-xl-new.png'
                 alt='logo'
                 width='150'
                 height='150'
