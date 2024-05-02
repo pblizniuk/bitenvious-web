@@ -52,7 +52,7 @@ if (data.length === 0) { return null }
                   <p className="text-sm lg:text-lg font-sm font-light">{formattedDate}</p>
                 </div>
                 <div className="mt-auto">
-                  {category && <span key={i} className={`bg-gradient-to-br ${categoryGradient} py-1 px-4 rounded-sm text-white mr-2`}>{category.Name}</span>}
+                  {category && <span key={i} className={`bg-gradient-to-br ${categoryGradient} py-1 px-4 rounded-sm text-white mr-2 whitespace-nowrap`}>{category.Name}</span>}
                 </div>
               </div>
             </Link>

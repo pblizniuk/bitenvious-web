@@ -5,7 +5,7 @@ type AuthorProps = {
   categoryGradient: string
   photo: {
     formats: {
-      medium: {
+      xsmall: {
         url: string
       }
     }
@@ -19,7 +19,7 @@ const Author = (props:AuthorProps) => {
     <div className="relative border mb-8 rounded-md lg:mr-12">
       <div className='flex flex-col content-center items-center mt-8 mb-4'>
         <StrapiImage
-          src={photo?.formats?.medium?.url}
+          src={photo?.formats?.xsmall?.url}
           alt={name}
           width={110}
           height={110}

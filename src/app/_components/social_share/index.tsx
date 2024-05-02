@@ -57,7 +57,7 @@ const ShareButtons = () => {
           rel="noreferrer"
           >
             <span
-              className={`absolute -top-16 whitespace-nowrap p-2 bg-lime-400 text-white text-md rounded-sm ${copied ? 'visible' : 'invisible'}`}
+              className={`absolute -top-12 right-[50%] translate-x-1/2 whitespace-nowrap p-2 bg-lime-400 text-white text-md rounded-sm ${copied ? 'visible' : 'invisible'}`}
             >Link copied</span>
           <FontAwesomeIcon icon={faLink} size="2x" className='text-stone-600' onClick={copyToClipboard}/>
         </span>

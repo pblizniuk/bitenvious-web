@@ -124,41 +124,43 @@ export default async function PostDetails(props: Props) {
           </div>
         </section>
         <div className='m-auto max-w-[1340px] sm:grid md:grid-cols-3 lg:grid-cols-4'>
-          <div className='p-2 my-8 md:p-8 md:pt-16 lg:pt-24 relative'>
+          <div className='my-8 p-8 md:pt-16 lg:pt-24 relative'>
             <div className='top-32 lg:sticky'>
               {author && (
                 <Author {...author} categoryGradient={categoryGradient} />
               )}
-              <div className='ml-4'>
-                {timeToRead && (
-                  <div className='mb-2 md:mb-8'>
-                    <div>Read time:</div>
-                    <div className='md:mb-2 text-md font-medium lg:text-xl'>{`${timeToRead} min`}</div>
-                  </div>
-                )}
-                {publishedDate && (
-                  <div className='mb-2 md:mb-8'>
-                    <div>Date:</div>
-                    <div className='md:mb-2 text-md font-medium lg:text-xl'>{formattedPublishedDate}</div>
-                  </div>
-                )}
-                {category && (
-                  <div className='mb-2 md:mb-8'>
-                    <div>Category:</div>
-                    <div className='my-2 text-lg font-medium lg:text-xl'>
-                      <Link href={`/blog/category/${category.slug}`}>
-                        <span className={`bg-gradient-to-tl ${categoryGradient} py-1 px-4 rounded-sm text-white mr-2`}>
-                          {category.Name}
-                        </span>
-                      </Link>
+              <div>
+                <div className='flex gap-8 md:block'>
+                  {timeToRead && (
+                    <div className='mb-2 md:mb-8'>
+                      <div>Read time:</div>
+                      <div className='md:mb-2 text-md font-medium lg:text-xl'>{`${timeToRead} min`}</div>
                     </div>
-                  </div>
-                )}
+                  )}
+                  {publishedDate && (
+                    <div className='mb-2 md:mb-8'>
+                      <div>Date:</div>
+                      <div className='md:mb-2 text-md font-medium lg:text-xl'>{formattedPublishedDate}</div>
+                    </div>
+                  )}
+                  {category && (
+                    <div className='mb-2 md:mb-8'>
+                      <div>Category:</div>
+                      <div className='my-2 text-lg font-medium lg:text-xl'>
+                        <Link href={`/blog/category/${category.slug}`}>
+                          <span className={`bg-gradient-to-tl ${categoryGradient} py-1 px-4 rounded-sm text-white mr-2 whitespace-nowrap`}>
+                            {category.Name}
+                          </span>
+                        </Link>
+                      </div>
+                    </div>
+                  )}
+                </div>
                 <SocialShare />
               </div>
             </div>
           </div>
-          <div className='px-2 md:px-8 md:col-span-2 lg:col-span-3'>
+          <div className='px-8 md:col-span-2 lg:col-span-3'>
             <div className='blog-detail block-renderer md:py-16 lg:py-24'>
               <BlocksRendererClient content={content} />
             </div>

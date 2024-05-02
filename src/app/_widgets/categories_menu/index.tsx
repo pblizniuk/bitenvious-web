@@ -21,11 +21,11 @@ const CategoriesMenu = async (props:Props) => {
           const { categoryIcon, categoryColor } = categoryHelper(category.slug)
           return (
             <Link href={`/blog/category/${slug}`} key={i} className="category-item p-4 border rounded-md flex">
-                <div className="category-item-inner">
+                <div className="category-item-inner flex md:block justify-center items-center gap-2">
                   <div className="category-item-icon inline-block">
-                    <Icon name={categoryIcon} size='24' className={`h-24 w-24 mb-8 ${categoryColor}`} strokeWidth='.3' />
+                    <Icon name={categoryIcon} size='24' className={`h-12 w-12 md:h-24 md:w-24 md:mb-8 ${categoryColor}`} strokeWidth='.3' />
                   </div>
-                  <div className='flex flex-col mt-auto'>
+                  <div className='md:flex md:flex-col md:mt-auto'>
                     <h3 className="text-lg md:text-xl">{Name}</h3>
                     <h4 className="">{description}</h4>
                   </div>

@@ -30,7 +30,7 @@ export default function Contact() {
             </div>
             <div className='md:pr-8 md:col-span-2'>
               <div className='sm:grid md:grid-cols-2'>
-                <div className='border-l border-t p-4 md:p-8 lg:border-t-0 lg:pt-24 text-md md:text-lg'>
+                <div className='border-l border-t p-8 lg:border-t-0 lg:pt-24 text-md md:text-lg'>
                   <h3 className='mb-3 font-medium text-stone-700 lg:text-xl'>
                     Email
                   </h3>
@@ -44,7 +44,7 @@ export default function Contact() {
                     </Link>
                   </div>
                 </div>
-                <div className='border-l border-t p-4 md:p-8 lg:border-t-0 lg:pt-24'>
+                <div className='border-l border-t p-8 lg:border-t-0 lg:pt-24'>
                   <h3 className='mb-3 font-medium text-stone-700 lg:text-xl'>
                     Phone
                   </h3>
@@ -58,7 +58,7 @@ export default function Contact() {
                     </Link>
                   </div>
                 </div>
-                <div className='border-l border-t p-4 md:p-8 sm:col-span-2'>
+                <div className='border-l border-t p-8 sm:col-span-2'>
                   <h3 className='mb-3 text-lg font-medium text-stone-700 lg:text-xl'>
                     We&apos;re eager to talk with you!
                   </h3>

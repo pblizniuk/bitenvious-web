@@ -95,12 +95,14 @@ const Footer = () => {
           {/* <!-- Dark mode switcher end --> */}
         </div>
         <div className='my-8 sm:mx-auto lg:my-16' />
-        <div className='text-sm block text-stone-200 text-center'>
+        <div className='text-sm block text-stone-500 text-center'>
           © {year}{' '}
           <Link href='/' className='hover:underline'>
-            BitEnvious™
+            BitEnvious, LLC
           </Link>
           .&nbsp;All Rights Reserved.
+          <br />
+          Proudly made in God's Country, TN
         </div>
       </div>
     </footer>

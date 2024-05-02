@@ -70,14 +70,14 @@ const HomePageHero = (props: Props) => {
     // <ParticlesWrapper>
     <div className='flex relative w-screen overflow-hidden flex-col bg-gradient-to-br from-stone-800 to-stone-900 pt-32 md:pt-60'>
       <div className='md:m-auto max-w-[1460px] sm:grid md:grid-cols-2 lg:grid-cols-3'>
-        <div className='p-4 md:p-8 lg:py-24 lg:col-span-2'>
+        <div className='p-8 lg:py-24 lg:col-span-2'>
           <div className='mx-auto max-w-3xl'>
             <motion.div
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{
                 ease: "easeInOut",
-                duration: 0.5
+                duration: 0.3
               }}
             >
               <h1 className='text-3xl font-medium  md:text-5xl/tight mb-4 md:mb-8 bg-gradient-to-b from-stone-50 to-stone-300 bg-clip-text text-transparent'>
@@ -89,8 +89,8 @@ const HomePageHero = (props: Props) => {
               animate={{ y: 0, opacity: 1 }}
               transition={{
                 ease: "easeInOut",
-                duration: 0.5,
-                delay: 0.3
+                duration: 0.3,
+                delay: 0.1
               }}
             >
               <p className='font-montserrat text-xl font-light text-stone-300 md:mt-4 md:block md:text-2xl/relaxed mb-8 md:mb-12'>
@@ -102,8 +102,8 @@ const HomePageHero = (props: Props) => {
               animate={{ y: 0, opacity: 1 }}
               transition={{
                 ease: "easeInOut",
-                duration: 0.5,
-                delay: 0.5
+                duration: 0.3,
+                delay: 0.2
               }}
             >
               <Link

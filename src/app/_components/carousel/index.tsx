@@ -38,11 +38,11 @@ export function ImageCarousel(props: CarouselProps) {
         title={Title}
         description={Description}
       />
-      <div className='-rotate-6 pt-24 pb-48 scale-110'>
+      <div className='-rotate-6 py-16 md:pt-24 md:pb-48 scale-110'>
         <Swiper
           freeMode={true}
           grabCursor={true}
-            slidesPerView={2}
+            slidesPerView={1.5}
           loop={true}
           modules={[Keyboard, FreeMode]}
           className="overflow-hidden transition-transform  translate-x-36 [&.swiper-initialized]:translate-x-0 duration-[1500ms] out-expo delay-100"
@@ -51,13 +51,13 @@ export function ImageCarousel(props: CarouselProps) {
           }}
           breakpoints={{
             768: {
-              slidesPerView: 3
+              slidesPerView: 2.6
             },
             1024: {
-              slidesPerView: 4
+              slidesPerView: 3.6
             },
             1440: {
-              slidesPerView: 5
+              slidesPerView: 4.6
             },
           }}
         >

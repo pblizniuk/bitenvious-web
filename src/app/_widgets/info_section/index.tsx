@@ -47,7 +47,7 @@ const InfoSectionWidget = (props: InfoSectionWidget) => {
             return (
               <div
                 key={item.id}
-                className={`border-l border-t p-8 ${index === 0 ? 'pt-16 lg:pt-24' : ''}`}
+                className={`border-l border-t p-8 ${index === 0 ? 'md:pt-16 lg:pt-24' : ''}`}
               >
                 {Title && (
                   <h3 className='mb-3 text-xl font-medium lg:text-2xl  relative'>

@@ -1,4 +1,5 @@
 import Post from '@/app/_components/post'
+import ScrollInView from '@/app/_animations/scroll_in_view'
 
 type PostsWidgetProps = {
   postsData: any[]
@@ -14,12 +15,16 @@ const PostsWidget = (props: PostsWidgetProps) => {
       <div className="max-w-[1440px] mx-auto grid md:grid-cols-2 md:gap-8 lg:gap-16">
         <div className="left">
         {leftSide && leftSide.map((post, i) => (
-          <Post key={i} post={post} />
+          <ScrollInView key={i}>
+            <Post post={post} />
+          </ScrollInView>
         ))}
         </div>
         <div className="right">
         {rightSide && rightSide.map((post, i) => (
-          <Post key={i} post={post} />
+          <ScrollInView key={i}>
+            <Post post={post} />
+          </ScrollInView>
         ))}
         </div>
       </div>
