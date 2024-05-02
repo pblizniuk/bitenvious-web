@@ -1,4 +1,4 @@
-import Image from '@/app/_components/strapi_image'
+import StrapiImage from '@/app/_components/strapi_image'
 import ScrollSwipeLeft from '@/app/_animations/scroll_swipe_left'
 
 type ProductScrollProps = {
@@ -28,7 +28,7 @@ const ProductScroll = (props: ProductScrollProps) => {
 
               return (
                 <div key={item.id} className='group cta w-[calc(100vw-max(48px,min(4.44vw,64px)))] max-w-[435px] md:w-scroll-column pr-6 md:px-6 shrink-0 first:ml-8 last:mr-8 snap-center relative'>
-                  <Image
+                  <StrapiImage
                     src={item.Image.url}
                     alt={item.Title}
                     width={220}

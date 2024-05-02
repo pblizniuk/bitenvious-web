@@ -4,7 +4,7 @@ import { getStrapiURL } from "@/lib/utils"
 
 export async function getData(endpoint: string) {
   const apiPath = `${getStrapiURL()}${endpoint}`
-  const response = await fetch(apiPath, { cache: 'no-store' })
+  const response = await fetch(apiPath, { next: { revalidate: 86400 } })
 
   if (!response.ok) {
     throw new Error('Failed to fetch page data')
