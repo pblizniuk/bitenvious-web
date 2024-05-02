@@ -22,7 +22,7 @@ export default async function About() {
 
   return (
     <main>
-      <PageTitle pageTitleContent={pageTitleContent} headingClassNames='bg-gradient-to-r from-pink-600 to-fuchsia-600 bg-clip-text text-transparent' />;
+      <PageTitle pageTitleContent={pageTitleContent} headingClassNames='bg-gradient-to-r from-pink-600 to-fuchsia-600 bg-clip-text text-transparent' />
       <PageLoad offset={50}>
         {AboutPageContent.map((block) => blockRenderer(block))}
       </PageLoad>
