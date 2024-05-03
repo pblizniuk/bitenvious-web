@@ -39,6 +39,7 @@ export const generateMetadata = async (props: Props) => {
           width: heroImage?.formats?.xxlarge?.width,
           height: heroImage?.formats?.xxlarge?.height,
           type: 'image/jpeg',
+          alt: `Post detail for ${title}`,
         },
         // {
         //   url: `${getStrapiURL()}${heroImage?.formats?.xlarge?.url}`,
