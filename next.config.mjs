@@ -4,7 +4,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'kind-hodgkin.216-225-194-227.plesk.page',
+        hostname: 'strapi.bitenvio.us',
         pathname: '/uploads/**/*',
       },
       {

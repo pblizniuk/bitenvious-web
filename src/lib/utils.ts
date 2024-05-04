@@ -39,7 +39,7 @@ export function flattenAttributes(data: any): any {
 }
 
 export function getStrapiURL() {
-  return process.env.NEXT_PUBLIC_STRAPI_URL ?? "https://kind-hodgkin.216-225-194-227.plesk.page";
+  return process.env.NEXT_PUBLIC_STRAPI_URL ?? "https://strapi.bitenvio.us";
 }
 
 export function getIsLocalAPI() {
