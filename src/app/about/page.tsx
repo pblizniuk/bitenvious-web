@@ -4,8 +4,8 @@ import PageLoad from '../_animations/page_load'
 import { blockRenderer } from '@/utils/block_renderer'
 
 export const metadata = {
-  title: 'About Us',
-  description: 'About us page',
+  title: 'About Us | Bitenvio.us',
+  description: 'About | Full Spectrum Digital Marketing Services',
 }
 
 export default async function About() {

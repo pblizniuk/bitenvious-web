@@ -40,6 +40,13 @@ export const metadata: Metadata = {
     url: 'https://bitenvio.us',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: '/assets/websites-apps-that-wow.jpg',
+        width: 1080,
+        height: 1080,
+      }
+    ]
   },
 }
 

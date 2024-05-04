@@ -3,12 +3,11 @@ import { Metadata } from 'next'
 import clsx from 'clsx'
 import StrapiImage from '@/app/_components/strapi_image'
 import Link from 'next/link'
-import TwoColumnAdvanced from '@/app/_widgets/two_column_advanced'
 import Parallax from '@/app/_animations/parallax'
 import PageLoad from '@/app/_animations/page_load'
 import { blockRenderer } from '@/utils/block_renderer'
 import BlocksRendererClient from '@/app/_components/block_renderer_client'
-import Image from 'next/image'
+import { getStrapiURL } from '@/lib/utils'
 
 type Props = {
   params: {
@@ -16,12 +15,56 @@ type Props = {
   }
 }
 
-export const generateMetadata = (props: Props): Metadata => {
+export const generateMetadata = async (props: Props) => {
   const { params } = props
   const { projectId } = params
+  const endpoint = `/api/projects/${projectId}?populate=deep,3`;
+  const data = await getData(endpoint)
+  const { title, subTitle, heroImage, slug } = data
+
   return {
-    title: projectId,
-    description: `Project detail for ${projectId}`,
+    title: `${title} | BitEnvious`,
+    description: `Project: ${subTitle}`,
+    openGraph: {
+      title: `${title} | BitEnvious`,
+      description: `Project detail for ${title}`,
+      type: 'article',
+      url: `https://www.bitenvio.us/projects/${slug}`,
+      images: [
+        {
+          url: `${getStrapiURL()}${heroImage?.formats?.xxlarge?.url}`,
+          secure_url: `${getStrapiURL()}${heroImage?.formats?.xxlarge?.url}`,
+          width: heroImage?.formats?.xxlarge?.width,
+          height: heroImage?.formats?.xxlarge?.height,
+          type: 'image',
+          alt: `${subTitle}| BitEnvious`,
+        },
+        {
+          url: `${getStrapiURL()}${heroImage?.formats?.xlarge?.url}`,
+          secure_url: `${getStrapiURL()}${heroImage?.formats?.xlarge?.url}`,
+          width: heroImage?.formats?.xlarge?.width,
+          height: heroImage?.formats?.xlarge?.height,
+          type: 'image',
+          alt: `${subTitle}| BitEnvious`,
+        },
+        {
+          url: `${getStrapiURL()}${heroImage?.formats?.large?.url}`,
+          secure_url: `${getStrapiURL()}${heroImage?.formats?.large?.url}`,
+          width: heroImage?.formats?.large?.width,
+          height: heroImage?.formats?.large?.height,
+          type: 'image',
+          alt: `${subTitle}| BitEnvious`,
+        },
+        {
+          url: `${getStrapiURL()}${heroImage?.formats?.medium?.url}`,
+          secure_url: `${getStrapiURL()}${heroImage?.formats?.medium?.url}`,
+          width: heroImage?.formats?.medium?.width,
+          height: heroImage?.formats?.medium?.height,
+          type: 'image/jpeg',
+          alt: `${subTitle}| BitEnvious`,
+        }
+      ]
+    }
   }
 }
 

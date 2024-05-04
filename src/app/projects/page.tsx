@@ -5,8 +5,8 @@ import PageLoad from '../_animations/page_load'
 import { blockRenderer } from '@/utils/block_renderer'
 
 export const metadata = {
-  title: 'Projects',
-  description: 'Web development project portfolio',
+  title: 'Projects Showcase | Bitenvio.us',
+  description: 'Web development project portfolio | Bitenvio.us',
 }
 
 export default async function Projects() {

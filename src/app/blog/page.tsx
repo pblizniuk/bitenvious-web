@@ -8,7 +8,7 @@ import PageLoad from '../_animations/page_load'
 import CategoriesMenu from '@/app/_widgets/categories_menu'
 
 export const metadata = {
-  title: 'Blog',
+  title: 'Blog | BitEnvious',
   description: 'Bits and pieces from the team at BitEnvious',
 }
 

@@ -16,8 +16,8 @@ export const generateMetadata = (props: Props): Metadata => {
   const { params } = props
   const { slug } = params
   return {
-    title: slug,
-    description: `Post detail for ${slug}`,
+    title: `${slug} | BitEnvious Blog`,
+    description: `Category detail for ${slug}`,
   }
 }
 
