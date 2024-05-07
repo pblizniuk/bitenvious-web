@@ -87,7 +87,7 @@ const Header = () => {
                   </li>
                 </ul>
               </nav>
-              <div className='flex items-center gap-8'>
+              <div className='flex items-center gap-8 relative'>
                 <div className='hidden sm:flex md:block'>
                   <Link
                     className='block rounded-full border border-white bg-transparent px-4 py-2 text-white shadow transition-all duration-500 group-[.scrolled]:border-stone-900 group-[.scrolled]:bg-stone-900 group-[.is-blog]:border-stone-900 group-[.is-blog]:bg-stone-900 font-semibold text-lg ease-in-out hover:shadow-lg hover:scale-105 group-[.scrolled]'
@@ -96,7 +96,7 @@ const Header = () => {
                     Get in Touch
                   </Link>
                 </div>
-                <span className='lg:hidden'><Sidebar /></span>
+                <span className='lg:hidden relative'><Sidebar /></span>
               </div>
             </div>
           </div>

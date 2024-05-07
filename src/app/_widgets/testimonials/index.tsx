@@ -47,9 +47,9 @@ const Testimonials = async (props: Props) => {
                       &quot;{testimonialContent}&quot;
                     </p>
                     {rating()}
-                    <div className="flex items-center">
+                    <div className="md:flex gap-3 items-center">
                       <p className="text-lg font-light">{clientName}</p>
-                      <p className="text-sm pl-3">{clientTitle}, {companyName}</p>
+                      <p className="text-sm">{clientTitle}, {companyName}</p>
                     </div>
                   </div>
                 </div>
@@ -69,9 +69,9 @@ const Testimonials = async (props: Props) => {
                       &quot;{testimonialContent}&quot;
                     </p>
                     {rating()}
-                    <div className="flex items-center">
+                    <div className="md:flex gap-3 items-center">
                       <p className="text-lg font-light">{clientName}</p>
-                      <p className="text-sm pl-3">{clientTitle}, {companyName}</p>
+                      <p className="text-sm">{clientTitle}, {companyName}</p>
                     </div>
                   </div>
                 </div>
