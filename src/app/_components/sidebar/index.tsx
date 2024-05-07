@@ -26,7 +26,7 @@ const Sidebar = () => {
         </svg>
       </div>
       <div
-        className={`-z-10 top-0 right-0 w-full bg-gradient-to-br from-stone-900 to-stone-700 py-4 px-3 fixed h-full ease-in-out duration-300 ${showSidebar ? "translate-x-0 " : "translate-x-full overflow-hidden"
+        className={`-z-10 top-0 right-0 w-full bg-gradient-to-br from-stone-900 to-stone-800 py-4 px-3 fixed h-full ease-in-out duration-300 ${showSidebar ? "translate-x-0 " : "translate-x-full overflow-hidden"
           }`}
       >
         <div className="flex flex-col justify-center h-full">

@@ -16,29 +16,29 @@ const Header = () => {
 
   return (
     <>
-      <header className={`${isBlogDetail ? 'is-blog' : ''} group fixed z-40 w-full bg-transparent transition-all duration-500 md:pt-12 [&.scrolled]:bg-white [&.scrolled]:pt-0 [&.scrolled]:shadow-md`}>
+      <header className={`${isBlogDetail ? 'is-blog bg-stone-50' : ''} group fixed z-40 w-full transition-all duration-500 md:pt-12 [&.scrolled]:bg-white [&.scrolled]:pt-0 [&.scrolled]:shadow-md`}>
         <ScrollIndicator showScrollIndicator={isBlogDetail} />
         <div className='mx-auto max-w-[1800px] p-2 sm:px-6 lg:px-8'>
           <div className='flex h-16 items-center justify-between'>
             <div className='flex-1 md:flex md:items-center md:gap-12'>
               <Link className='font-semibold-600 block text-black' href='/'>
                 <span className='sr-only'>Home</span>
-                <div className='relative flex items-center max-w-[225px]'>
+                <div className='relative flex items-center max-w-[225px] gap-3'>
                   <Image
                     src='/assets/logo-xl-new.png'
                     alt='logo'
                     width='50'
                     height='50'
-                    className='transition-all duration-500 hover:grayscale'
+                    className='transition-all duration-500'
                   />
                   <span
-                    className='pl-3 font-rock-salt text-2xl font-extrabold text-white transition-all group-[.scrolled]:text-black group-[.is-blog]:text-black'
+                    className='mix-blend-difference first-line:pl-3 font-rock-salt text-2xl font-extrabold text-white transition-all'
                   >
                     <Icon
                       name='ghostLogo'
                       height='40'
                       width='auto'
-                      className='fill-white transition-all group-[.scrolled]:fill-black'
+                      className=' fill-white transition-all '
                     />
                   </span>
                   {(isBlogDetail || isBlogHome || isBlogCategory) && (

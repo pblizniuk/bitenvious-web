@@ -28,14 +28,17 @@ const ShareButtons = () => {
     <div>
       <div>Share:</div>
       <div className='my-2 grid grid-cols-4 gap-1'>
-        <Link
-          href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(href)}`}
-          rel="noreferrer"
-          target='_blank'
-          className="facebook social"
-          >
-          <FontAwesomeIcon icon={faFacebook} size="2x" className='text-stone-600' />
-        </Link>
+        <div>
+          <Link
+            href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(href)}`}
+            rel="noreferrer"
+            target='_blank'
+            className="facebook social"
+            >
+            <FontAwesomeIcon icon={faFacebook} size="2x" className='text-stone-600' />
+          </Link>
+        </div>
+        <div>
         <Link
         href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(href)}`}
         rel="noreferrer"
@@ -44,6 +47,8 @@ const ShareButtons = () => {
         >
           <FontAwesomeIcon icon={faXTwitter} size="2x" className='text-stone-600' />
         </Link>
+        </div>
+        <div>
         <Link
           href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(href)}`}
           rel="noreferrer"
@@ -52,15 +57,18 @@ const ShareButtons = () => {
           >
           <FontAwesomeIcon icon={faLinkedin} size="2x" className='text-stone-600' />
         </Link>
-        <span
-        className='relative cursor-pointer'
+        </div>
+        <div>
+        <button
+        className='relative cursor-pointer text-left'
           rel="noreferrer"
           >
             <span
               className={`absolute -top-12 right-[50%] translate-x-1/2 whitespace-nowrap p-2 bg-lime-400 text-white text-md rounded-sm ${copied ? 'visible' : 'invisible'}`}
             >Link copied</span>
           <FontAwesomeIcon icon={faLink} size="2x" className='text-stone-600' onClick={copyToClipboard}/>
-        </span>
+        </button>
+        </div>
       </div>
     </div>
   );

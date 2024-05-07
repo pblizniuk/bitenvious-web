@@ -15,8 +15,7 @@ const ScrollIndicator = (props:ScrollIndicatorProps) => {
   if(!props.showScrollIndicator) return null
   return (
     <>
-      {/* <div className="scroll-indicator h-1 bg-gradient-to-r from-fuchsia-600 to-pink-600 w-0" id="myBar"></div> */}
-      <motion.div className="progress-bar fixed top-0 left-0 right-0 h-1 origin-left bg-gradient-to-r from-fuchsia-600 to-pink-600 z-50" style={{ scaleX }} />
+      <motion.div className="progress-bar fixed top-0 left-0 right-0 h-1 origin-left bg-fuchsia-600 z-50" style={{ scaleX }} />
     </>
   )
 }
