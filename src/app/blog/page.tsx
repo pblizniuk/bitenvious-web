@@ -1,5 +1,5 @@
 
-import { getData } from '@/utils/fetch_page'
+import { getDataNoCache } from '@/utils/fetch_page'
 import PageTitle from '@/app/_components/page_title'
 import TitleSectionWidget from '@/app/_widgets/title_section'
 import CTAWidget from '@/app/_widgets/cta'
@@ -14,7 +14,7 @@ export const metadata = {
 
 export default async function Blog() {
   const endpoint = '/api/posts?populate[heroImage][fields][0]=formats&fields[0]=title&fields[2]=slug&pagination[pageSize]=20&pagination[page]=1&publicationState=live&locale[0]=en&fields[1]=publishedDate&populate[category][fields][0]=Name&populate[category][fields][1]=slug&sort=publishedDate:DESC'
-  const { data: postsData } = await getData(endpoint)
+  const { data: postsData } = await getDataNoCache(endpoint)
   const pageTitleContent = {
     Title: 'Blog',
     Description: 'Industry insights and updates',

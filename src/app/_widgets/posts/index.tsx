@@ -1,4 +1,3 @@
-'use client'
 import Post from '@/app/_components/post'
 import ScrollInView from '@/app/_animations/scroll_in_view'
 

@@ -1,4 +1,4 @@
-import { getData } from '@/utils/fetch_page'
+import { getDataNoCache } from '@/utils/fetch_page'
 import { Metadata } from 'next'
 import PageLoad from '@/app/_animations/page_load'
 import PostsWidget from '@/app/_widgets/posts'
@@ -25,7 +25,7 @@ export default async function Category(props: Props) {
   const { params } = props
   const { slug } = params
   const endpoint = `/api/categories?populate=deep,3&filters[$and][0][slug][$eq]=${slug}`
-  const { data } = await getData(endpoint)
+  const { data } = await getDataNoCache(endpoint)
   const { Name, description, slug:categorySlug, posts } = data[0]
   const { categoryGradient } = categoryHelper(categorySlug)
   const sortedPosts = posts.data.sort((a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime())
