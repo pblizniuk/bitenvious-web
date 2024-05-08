@@ -64,6 +64,30 @@ export const generateMetadata = async (props: Props) => {
           height: heroImage?.formats?.medium?.height,
           type: 'image/jpeg',
           alt: `Post detail for ${title}`,
+        },
+        {
+          url: `${getStrapiURL()}${heroImage?.formats?.small?.url}`,
+          secure_url: `${getStrapiURL()}${heroImage?.formats?.small?.url}`,
+          width: heroImage?.formats?.small?.width,
+          height: heroImage?.formats?.small?.height,
+          type: 'image/jpeg',
+          alt: `Post detail for ${title}`,
+        },
+        {
+          url: `${getStrapiURL()}${heroImage?.formats?.thumbnail?.url}`,
+          secure_url: `${getStrapiURL()}${heroImage?.formats?.thumbnail?.url}`,
+          width: heroImage?.formats?.thumbnail?.width,
+          height: heroImage?.formats?.thumbnail?.height,
+          type: 'image/jpeg',
+          alt: `Post detail for ${title}`,
+        },
+        {
+          url: `${getStrapiURL()}${heroImage?.url}`,
+          secure_url: `${getStrapiURL()}${heroImage?.url}`,
+          width: heroImage?.width,
+          height: heroImage?.height,
+          type: 'image/jpeg',
+          alt: `Post detail for ${title}`,
         }
       ],
       article: {
