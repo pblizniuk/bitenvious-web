@@ -9,6 +9,7 @@ import WhoWeAreWidget from "@/app/_widgets/who_we_are";
 import CoreTeamWidget from "@/app/_widgets/core_team";
 import TwoColumnAdvanced from "@/app/_widgets/two_column_advanced";
 import ProjectsWidget from "@/app/_widgets/projects";
+import BlogTeaser from "@/app/_widgets/blog_teaser";
 
 export function blockRenderer(block: any) {
   switch (block.__component) {
@@ -33,7 +34,9 @@ export function blockRenderer(block: any) {
     case "page-elements.two-column-advanced":
       return <TwoColumnAdvanced {...block} />
     case "page-elements.projects":
-      return <ProjectsWidget />
+      return <ProjectsWidget {...block} />
+    case "page-elements.blog-teaser":
+      return <BlogTeaser {...block} />
     default:
       return null;
   }
