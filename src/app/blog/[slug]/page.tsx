@@ -120,7 +120,7 @@ export default async function PostDetails(props: Props) {
                 <Author {...author} categoryGradient={categoryGradient} />
               )}
               <div>
-                <div className='flex gap-8 md:block'>
+                <div className='grid grid-cols-2 gap-2 md:block'>
                   {timeToRead && (
                     <div className='mb-2 md:mb-8'>
                       <div>Read time:</div>
@@ -134,7 +134,7 @@ export default async function PostDetails(props: Props) {
                     </div>
                   )}
                   {category && (
-                    <div className='mb-2 md:mb-8'>
+                    <div className='mb-2 md:mb-8 col-span-2'>
                       <div>Category:</div>
                       <div className='my-2 text-lg font-medium lg:text-xl'>
                         <Link href={`/blog/category/${category.slug}`}>

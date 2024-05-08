@@ -33,7 +33,7 @@ const Project = ({ project }) => {
           </Link>
           <div className='text-lg md:text-xl mb-4'>{servicesProvided}</div>
           <div className='mt-8'>{technologies.length && technologies.map((technology, i) => (
-            <span key={i} className="inline-block border border-stone-500 bg-opacity-60 py-1 px-4 rounded-full text-stone-500 mr-2">
+            <span key={i} className="inline-block border border-stone-500 bg-opacity-60 py-1 px-4 rounded-full text-stone-500 mr-2 mb-2">
               {technology}
             </span>
           ))}</div>

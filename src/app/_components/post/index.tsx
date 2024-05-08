@@ -26,11 +26,11 @@ const Post = ({ post }) => {
         />
         <div className="absolute inset-0 p-4 md:p-8 text-white flex flex-col z-10">{/* ease-in-view transition-all translate-y-12  [&.visible]:translate-y-0 out-expo duration-500 */}
           <div className="relative">
-            <h3 className="text-xl md;text-3xl lg:text-4xl mb-3">{title}</h3>
-            <p className="text-sm md:text-xl">{formattedDate}</p>
+            <h3 className="text-lg md:text-xl lg:text-4xl mb-3 leading-tight">{title}</h3>
+            <p className="text-sm md:text-xl mb-3">{formattedDate}</p>
           </div>
           <div className="mt-auto">
-            {category.Name && <span className={`bg-gradient-to-br ${categoryGradient} py-1 px-4 rounded-sm text-white text-md md:text-xl mr-2`}>{category.Name}</span>}
+            {category.Name && <span className={`bg-gradient-to-br ${categoryGradient} py-1 px-4 rounded-sm text-white text-sm md:text-xl mr-2`}>{category.Name}</span>}
           </div>
         </div>
       </Link>
