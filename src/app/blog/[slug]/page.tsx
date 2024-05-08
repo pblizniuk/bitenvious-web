@@ -1,5 +1,4 @@
-import { getData } from '@/utils/fetch_page'
-import { Metadata } from 'next'
+import { getData, getDataNoCache } from '@/utils/fetch_page'
 import StrapiImage from '@/app/_components/strapi_image'
 import RelatedPosts from '@/app/_components/related_posts'
 import PageLoad from '@/app/_animations/page_load'
@@ -104,7 +103,7 @@ export default async function PostDetails(props: Props) {
   const { params } = props
   const { slug } = params
   const endpoint = `/api/posts/${slug}?populate=deep,3`;
-  const data = await getData(endpoint)
+  const data = await getDataNoCache(endpoint)
   const { title, content, heroImage, timeToRead, publishedDate, author, category, id } = data
   const { categoryGradient } = categoryHelper(category?.slug)
   const formattedPublishedDate = new Date(publishedDate).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })
