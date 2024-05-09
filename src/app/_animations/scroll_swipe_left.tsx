@@ -1,16 +1,16 @@
 "use client"
-import { motion, useScroll, useSpring, useTransform } from "framer-motion"
+import { cubicBezier, motion, useScroll, useSpring, useTransform } from "framer-motion"
 
 export default function ScrollSwipeLeft({ children }: { children: React.ReactNode }) {
-  const offset = 300
+  const offset = 150
   return (
     <motion.div
       initial={{ x:offset }}
       whileInView="visible"
       viewport={{ once: true }}
       transition={{
-        ease: "easeInOut",
-        duration: 1,
+        ease: cubicBezier(0.5, 1, 0.89, 1),
+        duration: 1.5,
         delay: 0.5,
       }}
       variants={{

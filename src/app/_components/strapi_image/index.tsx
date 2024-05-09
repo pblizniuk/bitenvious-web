@@ -10,6 +10,7 @@ type StrapiImageProps = {
   sizes?: string;
   style?: React.CSSProperties;
   loading?: "lazy" | "eager";
+  quality?: number;
 }
 
 export function StrapiImage({
@@ -20,7 +21,8 @@ export function StrapiImage({
   style,
   width,
   className,
-  loading
+  loading,
+  quality
 }: Readonly<StrapiImageProps>) {
   if (!src) return null;
   const imageUrl = getStrapiMedia(src);
@@ -36,6 +38,7 @@ export function StrapiImage({
       sizes={sizes}
       style={style}
       loading={loading}
+      quality={quality || 75}
     />
   );
 }

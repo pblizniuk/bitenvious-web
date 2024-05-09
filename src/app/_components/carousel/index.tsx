@@ -71,8 +71,8 @@ export function ImageCarousel(props: CarouselProps) {
                   <Image
                     src={image.url}
                     alt={image.alternativeText}
-                    width={0}
-                    height={0}
+                    width={400}
+                    height={400}
                     sizes="100vw"
                     style={{ width: '100%', height: 'auto' }}
                     loading="lazy"

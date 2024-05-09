@@ -14,7 +14,6 @@ type ProductScrollProps = {
 }
 
 const ProductScroll = (props: ProductScrollProps) => {
-
   const { productScroll } = props
 
   return (
@@ -31,8 +30,8 @@ const ProductScroll = (props: ProductScrollProps) => {
                   <StrapiImage
                     src={item.Image.url}
                     alt={item.Title}
-                    width={220}
-                    height={220}
+                    width={385}
+                    height={647}
                     className='mb-6 block w-full transform overflow-hidden rounded-lg border object-cover object-top shadow-sm'
                   />
                   <div className="overflow-hidden">
