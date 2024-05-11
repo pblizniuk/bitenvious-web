@@ -4,8 +4,8 @@ import PageLoad from '../_animations/page_load'
 import { blockRenderer } from '@/utils/block_renderer'
 
 export const metadata = {
-  title: 'Services | Bitenvio.us',
-  description: 'Full Spectrum Digital Marketing Services',
+  title: 'Professional Web Design & Digital Marketing Services | BitEnvious',
+  description: 'Explore top-tier web design, digital marketing, and strategic consulting services at BitEnvious. Boost your brand with our expert solutions tailored for success in Knoxville and beyond.',
 }
 
 export default async function Services() {

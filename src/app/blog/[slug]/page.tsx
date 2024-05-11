@@ -24,13 +24,13 @@ export const generateMetadata = async (props: Props) => {
   const { title, heroImage, publishedDate, author, category } = data
 
   return {
-    title: `${title} | BitEnvious Blog`,
+    title: `${title} | Strategic Web Design & Digital Marketing in Knoxville, TN | BitEnvious`,
     description: `Post detail for ${title}`,
     openGraph: {
       title: `${title} | BitEnvious Blog`,
       description: `Post detail for ${title}`,
       type: 'article',
-      url: `https://www.bitenvio.us/blog/${slug}`,
+      url: `https://bitenvio.us/blog/${slug}`,
       images: [
         {
           url: `${getStrapiURL()}${heroImage?.formats?.xxlarge?.url}`,

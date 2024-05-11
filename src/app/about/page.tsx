@@ -4,8 +4,7 @@ import PageLoad from '../_animations/page_load'
 import { blockRenderer } from '@/utils/block_renderer'
 
 export const metadata = {
-  title: 'About Us | Bitenvio.us',
-  description: 'About | Full Spectrum Digital Marketing Services',
+  title: 'Strategic Web Design & Digital Marketing Alliance in Knoxville, TN | About BitEnvious',
 }
 
 export default async function About() {

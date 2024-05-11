@@ -29,7 +29,7 @@ export const generateMetadata = async (props: Props) => {
       title: `${title} | BitEnvious`,
       description: `Project detail for ${title}`,
       type: 'article',
-      url: `https://www.bitenvio.us/projects/${slug}`,
+      url: `https://bitenvio.us/projects/${slug}`,
       images: [
         {
           url: `${getStrapiURL()}${heroImage?.formats?.xxlarge?.url}`,

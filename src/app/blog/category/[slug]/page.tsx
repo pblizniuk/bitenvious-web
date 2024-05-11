@@ -16,7 +16,7 @@ export const generateMetadata = (props: Props): Metadata => {
   const { params } = props
   const { slug } = params
   return {
-    title: `${slug} | BitEnvious Blog`,
+    title: `${slug} Archives | Strategic Web Design & Digital Marketing in Knoxville, TN | BitEnvious`,
     description: `Category detail for ${slug}`,
   }
 }

@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
   const messageData = {
     from: 'Contact Form <info@bitenvio.us>',
     to: 'paulblizniuk@gmail.com',
-    subject: 'New Contact Iquiry from Bitenvio.us!',
+    subject: 'New Contact Iquiry from BitEnvious!',
     text: `Hello,
 
     You have a new form entry from:

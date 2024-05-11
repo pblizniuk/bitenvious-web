@@ -8,8 +8,8 @@ import PageLoad from '../_animations/page_load'
 import CategoriesMenu from '@/app/_widgets/categories_menu'
 
 export const metadata = {
-  title: 'Blog | BitEnvious',
-  description: 'Bits and pieces from the team at BitEnvious',
+  title: 'News, Trends & Marketing Insights, Design & Development Tips | BitEnvious Blog',
+  description: 'Stay ahead of the curve with BitEnvious blog, featuring the latest trends, strategies, and tips in digital marketing, web design, and brand identity. Read our expert insights today!',
 }
 
 export default async function Blog() {

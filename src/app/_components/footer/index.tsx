@@ -20,7 +20,7 @@ const Footer = () => {
               className='transition-all duration-500 hover:grayscale'
             />
             <span
-              className='pl-3 font-rock-salt text-2xl text-stone-50 transition-all'
+              className='font-rock-salt text-2xl text-stone-50 transition-all'
             >
               BitEnvious
             </span>

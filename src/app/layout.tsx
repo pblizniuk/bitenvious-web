@@ -31,12 +31,12 @@ const rockSalt = Rock_Salt({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.bitenvio.us'),
-  title: 'Digital Marketing Alliance | Bitenvio.us',
-  description: 'Full Spectrum Digital Marketing Alliance',
+  metadataBase: new URL('https://bitenvio.us'),
+  title: 'Strategic Web Design & Digital Marketing Alliance in Knoxville, TN | BitEnvious',
+  description: 'BitEnvious: Knoxville, TN-based web design alliance offering strategic consulting, web design, digital marketing, and brand identity design services. Elevate your brand with our expert solutions!',
   openGraph: {
-    title: 'Digital Marketing Alliance | Bitenvio.us',
-    description: 'Full Spectrum Digital Marketing Alliance',
+    title: 'Strategic Web Design & Digital Marketing Alliance in Knoxville, TN | BitEnvious',
+    description: 'BitEnvious: Knoxville, TN-based web design alliance offering strategic consulting, web design, digital marketing, and brand identity design services. Elevate your brand with our expert solutions!',
     url: 'https://bitenvio.us',
     locale: 'en_US',
     type: 'website',

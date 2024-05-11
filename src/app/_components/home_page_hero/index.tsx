@@ -116,21 +116,12 @@ const HomePageHero = (props: Props) => {
           </div>
         </div>
         <div className='relative m-auto w-full text-center md:p-12 md:text-right lg:my-24 lg:px-16 flex justify-center md:block'>
-
-          {/* <div className='relative h-[360px] w-[360px] z-30'>
-            <StrapiImage
-              src={url}
-              alt={Title}
-              width={360}
-              height={360}
-            />
-            </div> */}
           <div className='relative h-[360px] w-[360px] z-30'>
             <div className='absolute top-[55%] left-0 -translate-y-1/2 z-30'>
               <div className=' animate-levitate animate-infinite animate-duration-[10000ms] animate-ease-in-out z-20'>
                 <Image
                   src='/assets/pill-pink.png'
-                  alt='Pill'
+                  alt='bit'
                   width={198}
                   height={198}
                   className='drop-shadow-lg'
@@ -141,7 +132,7 @@ const HomePageHero = (props: Props) => {
               <div className='animate-levitate-reverse animate-infinite animate-duration-[10000ms] animate-ease-in-out'>
                 <Image
                   src='/assets/pill-green.png'
-                  alt='Pill'
+                  alt='bit'
                   width={206}
                   height={206}
                   className='drop-shadow-lg'
@@ -149,10 +140,10 @@ const HomePageHero = (props: Props) => {
               </div>
             </div>
             <div className='absolute bottom-3 right-6 z-10'>
-              <div className='animate-levitate animate-infinite animate-duration-[10000ms] animate-ease-in-out animate-delay-5000'>
+              <div className='animate-levitate animate-infinite animate-duration-[10000ms] animate-ease-in-out'>
                 <Image
                   src='/assets/pill-orange.png'
-                  alt='Pill'
+                  alt='bit'
                   width={170}
                   height={170}
                   className='drop-shadow-lg'

@@ -12,7 +12,7 @@ import Link from 'next/link'
 
 const ShareButtons = () => {
   const pathname = usePathname();
-  const href = `https://www.bitenvio.us${pathname}`
+  const href = `https://bitenvio.us${pathname}`
 
   const [copied, setCopied] = useState(false)
 
