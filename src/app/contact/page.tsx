@@ -4,10 +4,14 @@ import ContactForm from '@/app/_components/contact_form'
 import CalendlyEmbed from '@/app/_components/calendly_embed'
 import Link from 'next/link'
 
+export const metadata = {
+  Title: 'Contact BitEnvious: Strategic Web Design & Digital Marketing in Knoxville, TN',
+  Description: 'Ready to elevate your business? Contact BitEnvious in Knoxville, TN, today to discuss your web design, digital marketing, or strategic consulting needs.',
+}
 export default function Contact() {
   const pageTitleContent = {
-    Title: 'Contact BitEnvious: Strategic Web Design & Digital Marketing in Knoxville, TN',
-    Description: 'Ready to elevate your business? Contact BitEnvious in Knoxville, TN, today to discuss your web design, digital marketing, or strategic consulting needs.',
+    Title: 'Contact Us',
+    Description: 'Want to talk? Let\'s chat now',
   }
 
   return (
