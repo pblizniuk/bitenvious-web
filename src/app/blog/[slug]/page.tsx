@@ -106,7 +106,7 @@ export default async function PostDetails(props: Props) {
   const data = await getDataNoCache(endpoint)
   const { title, content, heroImage, timeToRead, publishedDate, author, category, id } = data
   const { categoryGradient } = categoryHelper(category?.slug)
-  const formattedPublishedDate = new Date(publishedDate).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })
+  // const formattedPublishedDate = new Date(publishedDate).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })
   return (
     <PageLoad offset={100}>
       <main>
@@ -150,12 +150,12 @@ export default async function PostDetails(props: Props) {
                       <div className='md:mb-2 text-md font-medium lg:text-xl'>{`${timeToRead} min`}</div>
                     </div>
                   )}
-                  {publishedDate && (
+                  {/* {publishedDate && (
                     <div className='mb-2 md:mb-8'>
                       <div>Date:</div>
                       <div className='md:mb-2 text-md font-medium lg:text-xl'>{formattedPublishedDate}</div>
                     </div>
-                  )}
+                  )} */}
                   {category && (
                     <div className='mb-2 md:mb-8 col-span-2'>
                       <div>Category:</div>

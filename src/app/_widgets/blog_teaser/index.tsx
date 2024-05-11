@@ -22,7 +22,7 @@ if (data.length === 0) { return null }
       <div className='grid md:grid-cols-3 gap-2 md:gap-8 m-4'>
         {data && data.map((post, i) => {
           const { title, heroImage, publishedDate, category } = post
-          const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+          // const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
           const { url } = heroImage.formats.medium
           const postUrl = `/blog/${post.slug}`
           const { categoryGradient } = categoryHelper(category.slug)
@@ -42,8 +42,8 @@ if (data.length === 0) { return null }
               />
               <div className="absolute inset-0 p-4 md:p-8 text-white flex flex-col z-10">
                 <div className="relative">
-                  <h3 className="text-md lg:text-xl mb-3">{title}</h3>
-                  <p className="text-sm lg:text-lg font-sm font-light">{formattedDate}</p>
+                  <h3 className="text-md lg:text-2xl mb-3">{title}</h3>
+                  {/* <p className="text-sm lg:text-lg font-sm font-light">{formattedDate}</p> */}
                 </div>
                 <div className="mt-auto">
                   {category && <span key={i} className={`bg-gradient-to-br ${categoryGradient} py-1 px-4 rounded-sm text-white mr-2 whitespace-nowrap`}>{category.Name}</span>}
