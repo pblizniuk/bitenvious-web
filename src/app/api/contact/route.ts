@@ -11,9 +11,9 @@ export async function POST(req: NextRequest) {
   const client = mailgun.client({ username: 'api', key: API_KEY })
   const { name, email, phone, company, message } = await req.json()
   const messageData = {
-    from: 'Contact Form <info@bitenvio.us>',
+    from: '<info@bitenvio.us>:Contact Form Submission',
     to: 'paulblizniuk@gmail.com',
-    subject: 'New Contact Iquiry from BitEnvious!',
+    subject: 'BitEnvio.us: Contact Form Submission',
     text: `Hello,
 
     You have a new form entry from:

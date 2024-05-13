@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 import { getData } from '@/utils/fetch_page'
 
-export const revalidate = 604800 // 1 week
+export const revalidate = 86400 // 24 hrs
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const postsEndpoint = '/api/posts?fields[0]=slug&pagination[pageSize]=200&pagination[page]=1&publicationState=live'
   const { data: postsData } = await getData(postsEndpoint)

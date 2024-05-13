@@ -38,6 +38,11 @@ export const ContactForm = () => {
     } catch (err: any) {
       console.error('Err', err)
     } finally {
+      setName('')
+      setEmail('')
+      setPhone('')
+      setCompany('')
+      setMessage('')
       setIsSubmitting(false)
     }
   }

@@ -42,7 +42,7 @@ export default function Contact() {
                     <Link
                       href='mailto:info@bitenvio.us'
                       target=''
-                      className='x-link fs-p link-contact leading-6'
+                      className='x-link fs-p link-contact leading-6 text-pink-600'
                     >
                       info@bitenvio.us
                     </Link>
@@ -54,11 +54,11 @@ export default function Contact() {
                   </h3>
                   <div className='mb-4 flex flex-col last:mb-0 xl:flex-row xl:items-end xl:gap-3'>
                     <Link
-                      href='tel:+18478770375'
+                      href='tel:+18652217515'
                       target=''
-                      className='leading-6'
+                      className='leading-6 text-pink-600'
                     >
-                      847.877.0375
+                      865.221.7515
                     </Link>
                   </div>
                 </div>
