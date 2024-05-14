@@ -138,8 +138,11 @@ export default async function ProjectDetails(props: Props) {
                   <h4 className='text-2xl mb-2'>Technologies</h4>
                   <p className='mb-4'>{technologiesUsed}</p>
                 </div>
-
-                <div className='mt-8 mb-4 col-span-2 text-center md:text-left'><Link href={projectUrl} target='_blank' className='inline-block rounded-full border px-6 py-2 text-white shadow transition-all duration-500  border-stone-900 bg-stone-900 font-semibold text-lg'>View Live</Link></div>
+                {projectUrl && (
+                  <div className='mt-8 mb-4 col-span-2 text-center md:text-left'>
+                    <Link href={projectUrl} target='_blank' className='inline-block rounded-full border px-6 py-2 text-white shadow transition-all duration-500  border-stone-900 bg-stone-900 font-semibold text-lg'>View Live</Link>
+                  </div>
+                )}
               </div>
             </div>
             <div className='project-detail col-span-3 md:px-12 lg:px-16'>
