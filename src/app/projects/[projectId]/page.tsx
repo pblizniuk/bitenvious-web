@@ -84,7 +84,7 @@ export default async function ProjectDetails(props: Props) {
       <section className={`m-auto flex h-[80vh] w-screen bg-gradient-to-br overflow-clip ${introGradientColor ?? ''}`}>
         <div className='mx-auto mt-32 size-full max-w-screen-2xl'>
           <PageLoad offset={50}>
-            <div className='flex p-8 md:p-12 lg:px-16'>
+            <div className='flex p-8 md:p-12 md:pb-0 lg:pt-20 lg:px-16'>
               <div className='mt-auto max-w-3xl'>
                 <h1 className='text-2xl font-normal md:text-5xl text-white'>
                   {title}

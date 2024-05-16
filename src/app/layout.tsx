@@ -32,10 +32,10 @@ const rockSalt = Rock_Salt({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://bitenvio.us'),
-  title: 'Strategic Web Design & Digital Marketing Alliance in Knoxville, TN | BitEnvious',
+  title: 'Strategic Web Design & Digital Marketing Services in Knoxville, TN | BitEnvious',
   description: 'BitEnvious: Knoxville, TN-based web design alliance offering strategic consulting, web design, digital marketing, and brand identity design services. Elevate your brand with our expert solutions!',
   openGraph: {
-    title: 'Strategic Web Design & Digital Marketing Alliance in Knoxville, TN | BitEnvious',
+    title: 'Strategic Web Design & Digital Marketing Services in Knoxville, TN | BitEnvious',
     description: 'BitEnvious: Knoxville, TN-based web design alliance offering strategic consulting, web design, digital marketing, and brand identity design services. Elevate your brand with our expert solutions!',
     url: 'https://bitenvio.us',
     locale: 'en_US',

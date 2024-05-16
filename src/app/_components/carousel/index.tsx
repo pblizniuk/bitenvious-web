@@ -32,6 +32,14 @@ export function ImageCarousel(props: CarouselProps) {
   const { Title, Description, Images } = props;
   const { data } = Images
 
+if (data.length === 0) return null
+
+let shuffled = data
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value)
+
+
   return (
     <section className="carousel">
       <TitleSectionWidget
@@ -62,7 +70,7 @@ export function ImageCarousel(props: CarouselProps) {
           }}
         >
           {data?.length > 0 &&
-            data?.map((image: Image) => (
+            shuffled?.map((image: Image) => (
               <SwiperSlide
                 key={image.id}
                 className="flex-auto justify-center items-center p-3 w-[50vw] md:w-[30vw] max-w-[465px] overflow-hidden"

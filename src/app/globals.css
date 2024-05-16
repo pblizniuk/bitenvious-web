@@ -164,8 +164,8 @@ h6 {
     @apply w-full h-auto mb-8 md:mb-16;
   }
 
-  li {
-    @apply mb-4 md:mb-8;
+  ul ol, li {
+    @apply mb-4 md:mb-6;
   }
 
   ol {

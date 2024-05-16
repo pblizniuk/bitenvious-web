@@ -4,7 +4,7 @@ import { getData } from '@/utils/fetch_page'
 
 
 const Projects = async () => {
-  const endpoint = '/api/projects?fields[2]=technologiesUsed&fields[3]=servicesProvided&populate[teaserImage][fields][0]=formats&fields[0]=title&fields[1]=slug&fields[4]=introGradientColor'
+  const endpoint = '/api/projects?fields[2]=technologiesUsed&fields[3]=servicesProvided&populate[teaserImage][fields][0]=formats&fields[0]=title&fields[1]=slug&fields[4]=introGradientColor&sort=projectYear:DESC'
   const { data } = await getData(endpoint)
 
   return (

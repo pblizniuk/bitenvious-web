@@ -4,7 +4,7 @@ import PageLoad from '../_animations/page_load'
 import { blockRenderer } from '@/utils/block_renderer'
 
 export const metadata = {
-  title: 'Strategic Web Design & Digital Marketing Alliance in Knoxville, TN | About BitEnvious',
+  title: 'Strategic Web Design & Digital Marketing Services in Knoxville, TN | About BitEnvious',
   description: 'Discover how BitEnvious is redefining strategic consulting and digital marketing. Learn about our mission, values, and the team that makes it all happen.'
 }
 
