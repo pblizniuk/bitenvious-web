@@ -21,7 +21,6 @@ export default async function Home() {
         <HomePageHero Title={Title} Description={Description} url={url} />
       </section>
       <PageLoad offset={100}>
-        <FeaturedProject />
       {blocks.map((block) => blockRenderer(block))}
       </PageLoad>
     </main>
