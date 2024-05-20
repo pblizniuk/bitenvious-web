@@ -2,6 +2,7 @@ import { getData } from '../utils/fetch_page'
 import PageLoad from '@/app/_animations/page_load'
 import HomePageHero from '@/app/_components/home_page_hero'
 import { blockRenderer } from '@/utils/block_renderer'
+import FeaturedProject from '@/app/_widgets/featured_project'
 
 export default async function Home() {
   const endpoint = '/api/homepage?populate=deep,6'
@@ -20,6 +21,7 @@ export default async function Home() {
         <HomePageHero Title={Title} Description={Description} url={url} />
       </section>
       <PageLoad offset={100}>
+        <FeaturedProject />
       {blocks.map((block) => blockRenderer(block))}
       </PageLoad>
     </main>

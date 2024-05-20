@@ -164,8 +164,12 @@ h6 {
     @apply w-full h-auto mb-8 md:mb-16;
   }
 
-  ul ol, li {
+  li {
     @apply mb-4 md:mb-6;
+  }
+
+  ul, ol {
+    @apply mb-4 md:mb-6 lg:mb-12;
   }
 
   ol {
@@ -183,4 +187,24 @@ h6 {
 
 .progress-bar {
   transform-origin: 0%;
+}
+
+.pretty-list {
+  @apply mb-4 md:mb-6 lg:mb-12 ml-5;
+
+  & > li {
+    position: relative;
+
+    &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 6px;
+    top: 9px;
+    left: -20px;
+    background-color: #f70b7f;
+    border-radius: 3px;
+  }
+  }
 }

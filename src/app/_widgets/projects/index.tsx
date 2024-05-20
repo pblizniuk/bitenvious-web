@@ -1,5 +1,4 @@
 import Project from '@/app/_components/project'
-import Link from 'next/link'
 import { getData } from '@/utils/fetch_page'
 
 

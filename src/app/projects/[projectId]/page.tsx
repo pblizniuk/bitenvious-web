@@ -124,11 +124,11 @@ export default async function ProjectDetails(props: Props) {
                 </div>
                 <div>
                 <h4 className='text-2xl mb-2'>Services</h4>
-                  <ul className='mb-4'>
-                    {services && services.map((service: string, i) => (
-                      <li key={i}>{service}</li>
-                    ))}
-                  </ul>
+                <ul className='mb-4'>
+                  {services && services.map((service: string, i) => (
+                    <li key={i}>{service}</li>
+                  ))}
+                </ul>
                 </div>
                 <div>
                   <h4 className='text-2xl mb-2'>Project Year</h4>

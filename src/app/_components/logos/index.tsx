@@ -1,4 +1,4 @@
-import Icon from '../../_components/icons'
+import Icon from '@/app/_components/icons'
 
 const Logos = () => {
   const iconClasses = 'h-[35px] w-[35px] fill-current text-white md:h-[45px] md:w-[45px] mix-blend-overlay transition-all'

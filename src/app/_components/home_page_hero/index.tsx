@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
 import Link from 'next/link'
-import Logos from '@/app/_components/logos'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
@@ -14,7 +13,6 @@ type Props = {
 const HomePageHero = (props: Props) => {
   const { Title, Description, url } = props
   return (
-    // <ParticlesWrapper>
     <div className='flex relative w-screen overflow-hidden flex-col bg-gradient-to-br from-stone-800 to-stone-900 pt-32 md:pt-60'>
       <div className='md:m-auto max-w-[1460px] sm:grid md:grid-cols-2 lg:grid-cols-3'>
         <div className='p-8 lg:py-24 lg:col-span-2'>
@@ -62,37 +60,37 @@ const HomePageHero = (props: Props) => {
             </motion.div>
           </div>
         </div>
-        <div className='relative m-auto w-full text-center md:p-12 md:text-right lg:my-24 lg:px-16 flex justify-center md:block'>
+        <div className='relative m-auto w-full text-center pl-0 pt-12 md:p-12 md:text-right lg:my-24 lg:px-16 flex justify-center md:block'>
           <div className='relative h-[360px] w-[360px] z-30'>
-            <div className='absolute top-[55%] left-0 -translate-y-1/2 z-30'>
+            <div className='absolute top-[48%] left-0 -translate-y-1/2 z-30'>
               <div className=' animate-levitate animate-infinite animate-duration-[10000ms] animate-ease-in-out z-20'>
                 <Image
                   src='/assets/pill-pink.png'
                   alt='bit'
-                  width={198}
-                  height={198}
+                  width={230}
+                  height={230}
                   className='drop-shadow-lg'
                 />
               </div>
             </div>
-            <div className='absolute top-3 right-3 z-20'>
+            <div className='absolute -top-12 -right-12 z-20'>
               <div className='animate-levitate-reverse animate-infinite animate-duration-[10000ms] animate-ease-in-out'>
                 <Image
                   src='/assets/pill-green.png'
                   alt='bit'
-                  width={206}
-                  height={206}
+                  width={240}
+                  height={240}
                   className='drop-shadow-lg'
                 />
               </div>
             </div>
-            <div className='absolute bottom-3 right-6 z-10'>
+            <div className='absolute bottom-3 -right-2 z-10'>
               <div className='animate-levitate animate-infinite animate-duration-[10000ms] animate-ease-in-out'>
                 <Image
                   src='/assets/pill-orange.png'
                   alt='bit'
-                  width={170}
-                  height={170}
+                  width={210}
+                  height={210}
                   className='drop-shadow-lg'
                 />
               </div>
@@ -101,18 +99,17 @@ const HomePageHero = (props: Props) => {
             <div className='animate-pulse-subtle absolute bottom-0 end-0 right-[25px] z-0 h-[180px] w-[180px] rounded-full bg-orange-500 object-contain opacity-50 blur-3xl delay-2000'></div>
             <div className='animate-pulse-subtle absolute end-0 top-0 z-0 h-[180px] w-[180px] rounded-full bg-green-500 object-contain opacity-50 blur-3xl delay-3000'></div>
             <div className='animate-pulse animate-duration-[5000ms] absolute end-0 top-0 z-0 h-[360px] w-[360px] rounded-full bg-stone-500 object-contain opacity-20 blur-3xl'></div>
-            <div className='animate-pulse animate-duration-[5000ms] absolute bottom-0 h-[10px] w-[340px] rounded-full bg-stone-900 object-contain opacity-80 blur-sm'></div>
+            <div className='animate-pulse animate-duration-[5000ms] absolute bottom-0 h-[10px] w-[360px] rounded-full bg-stone-900 object-contain opacity-80 blur-sm'></div>
           </div>
         </div>
       </div>
       {/* <div className="absolute -bottom-36 right-48 w-96 h-96 bg-lime-400 rounded-full blur-3xl opacity-50 z-0 animate-blob mix-hard-light"></div>
       <div className="absolute -bottom-36 right-36 w-96 h-96 bg-orange-400 rounded-full blur-3xl opacity-50 z-0 animate-blob mix-hard-light"></div>
       <div className="absolute -bottom-36 -right-0 w-96 h-96 bg-pink-400 rounded-full blur-3xl opacity-50 z-0 animate-blob mix-hard-light"></div> */}
-      <div className='md:ml-auto mt-auto flex max-w-[1460px] basis-full flex-col lg:self-end p-3'>
+      {/* <div className='md:ml-auto mt-auto flex max-w-[1460px] basis-full flex-col lg:self-end p-3'>
         <Logos />
-      </div>
+      </div> */}
     </div>
-    // </ParticlesWrapper>
 
   )
 }

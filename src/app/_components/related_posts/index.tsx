@@ -16,7 +16,7 @@ type RelatedPostsProps = {
 const RelatedPosts = async (props: RelatedPostsProps) => {
   const { category: parentCategory, parentPostId } = props
   const categoryName = parentCategory.Name
-  const endpoint = `/api/posts?filters[$and][0][category][Name][$eq]=${categoryName}&filters[$and][0][id][$ne]=${parentPostId}&pagination[pageSize]=3&populate=deep,2`
+  const endpoint = `/api/posts?filters[$and][0][category][Name][$eq]=${categoryName}&filters[$and][0][id][$ne]=${parentPostId}&pagination[pageSize]=1&populate=deep,2`
   const { data } = await getData(endpoint)
   const { categoryGradient } = categoryHelper(parentCategory.slug)
 
@@ -36,7 +36,7 @@ if (data.length === 0) { return null }
             <Link
               key={i}
               href={postUrl}
-              className="group block relative after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-br from-black to-transparent after:opacity-80 rounded-md overflow-hidden cursor-pointer shadow-md shadow-stone-300"> {}
+              className="group block relative after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-br from-black to-transparent after:opacity-80 rounded-md overflow-hidden cursor-pointer shadow-md shadow-stone-300 max-h-[350px]"> {}
               <StrapiImage
                 src={url}
                 alt={title}
