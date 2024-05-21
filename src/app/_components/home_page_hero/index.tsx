@@ -3,7 +3,7 @@ import React from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-
+export const revalidate = 0
 type Props = {
   Title: string
   Description: string
