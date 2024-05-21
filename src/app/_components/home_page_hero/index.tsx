@@ -13,7 +13,7 @@ type Props = {
 const HomePageHero = (props: Props) => {
   const { Title, Description, url } = props
   return (
-    <div className='flex relative w-screen overflow-hidden flex-col bg-gradient-to-br from-stone-800 to-stone-900 pt-32 md:pt-60'>
+    <div className='flex relative w-screen min-h-screen overflow-hidden flex-col bg-gradient-to-br from-stone-800 to-stone-900 pt-32 md:pt-60'>
       <div className='md:m-auto max-w-[1460px] sm:grid md:grid-cols-2 lg:grid-cols-3'>
         <div className='p-8 lg:py-24 lg:col-span-2'>
           <div className='mx-auto max-w-3xl'>
@@ -60,7 +60,7 @@ const HomePageHero = (props: Props) => {
             </motion.div>
           </div>
         </div>
-        <div className='relative m-auto w-full text-center pl-0 pt-12 md:p-12 md:text-right lg:my-24 lg:px-16 flex justify-center md:block'>
+        <div className='relative m-auto w-full text-center pl-0 pt-12 md:p-12 md:text-right lg:my-24 lg:pr-16 lg:pl-0 flex justify-center md:block'>
           <div className='relative h-[360px] w-[360px] z-30'>
             <div className='absolute top-[48%] left-0 -translate-y-1/2 z-30'>
               <div className=' animate-levitate animate-infinite animate-duration-[10000ms] animate-ease-in-out z-20'>
@@ -87,7 +87,7 @@ const HomePageHero = (props: Props) => {
             <div className='absolute bottom-3 -right-2 z-10'>
               <div className='animate-levitate animate-infinite animate-duration-[10000ms] animate-ease-in-out'>
                 <Image
-                  src='/assets/pill-orange-2.png'
+                  src='/assets/pill-3.png'
                   alt='bit'
                   width={210}
                   height={210}
