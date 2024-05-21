@@ -92,7 +92,6 @@ const HomePageHero = (props: Props) => {
                   width={210}
                   height={210}
                   className='drop-shadow-lg'
-                  overrideSrc="/assets/pill-orange.png"
                 />
               </div>
             </div>
