@@ -87,7 +87,7 @@ const HomePageHero = (props: Props) => {
             <div className='absolute bottom-3 -right-2 z-10'>
               <div className='animate-levitate animate-infinite animate-duration-[10000ms] animate-ease-in-out'>
                 <Image
-                  src='/assets/pill-orange.png'
+                  src='/assets/pill-orange-2.png'
                   alt='bit'
                   width={210}
                   height={210}
