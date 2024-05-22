@@ -1,6 +1,6 @@
 
 import ScrollInView from '@/app/_animations/scroll_in_view'
-import { getData } from '@/utils/fetch_page'
+import { getDataNoCache } from '@/utils/fetch_page'
 import StrapiImage from '@/app/_components/strapi_image'
 import Link from 'next/link'
 import TitleSectionWidget from '@/app/_widgets/title_section'
@@ -8,7 +8,7 @@ import TitleSectionWidget from '@/app/_widgets/title_section'
 const FeaturedProject = async (Props) => {
   const { title: sectionTitle } = Props
   const endpoint = '/api/projects?fields[2]=technologiesUsed&fields[3]=servicesProvided&populate[teaserImage][fields][0]=formats&fields[0]=title&fields[1]=slug&fields[4]=introGradientColor&sort=projectYear:DESC'
-  const { data } = await getData(endpoint)
+  const { data } = await getDataNoCache(endpoint)
   const { title, slug, servicesProvided, technologiesUsed, teaserImage, introGradientColor } = data?.[0]
   const technologies = technologiesUsed?.split(', ') || []
   const services = servicesProvided?.split(', ') || []
