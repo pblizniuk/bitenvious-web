@@ -38,7 +38,7 @@ export function blockRenderer(block: any) {
       return <ProjectsWidget {...block} />
     case "page-elements.blog-teaser":
       return <BlogTeaser {...block} />
-    case "page-elements.featured_project":
+    case "page-elements.featured-project":
       return <FeaturedProject {...block} />
     default:
       return null;

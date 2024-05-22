@@ -3,9 +3,10 @@ import ScrollInView from '@/app/_animations/scroll_in_view'
 import { getData } from '@/utils/fetch_page'
 import StrapiImage from '@/app/_components/strapi_image'
 import Link from 'next/link'
+import TitleSectionWidget from '@/app/_widgets/title_section'
 
-
-const FeaturedProject = async () => {
+const FeaturedProject = async (Props) => {
+  const { title: sectionTitle } = Props
   const endpoint = '/api/projects?fields[2]=technologiesUsed&fields[3]=servicesProvided&populate[teaserImage][fields][0]=formats&fields[0]=title&fields[1]=slug&fields[4]=introGradientColor&sort=projectYear:DESC'
   const { data } = await getData(endpoint)
   const { title, slug, servicesProvided, technologiesUsed, teaserImage, introGradientColor } = data?.[0]
@@ -15,9 +16,11 @@ const FeaturedProject = async () => {
   return (
     <ScrollInView>
     <section className="featured_project">
-      <div className='m-auto mt:12 lg:mt-24 max-w-[1340px] sm:grid md:grid-cols-3 gap-8 lg:gap-16 p-4'>
+    <TitleSectionWidget
+        title={sectionTitle}
+      />
+      <div className='m-auto max-w-[1340px] sm:grid md:grid-cols-3 gap-8 lg:gap-16 p-4 border-b'>
           <div>
-          <h2 className="text-xl font-normal md:text-4xl mb-4">Featured Project</h2>
           <div className="text-xl font-normal lg:text-3xl mb-3">{title}</div>
           <ul className='mb-4 pretty-list'>
                     {services && services.map((service: string, i) => (
