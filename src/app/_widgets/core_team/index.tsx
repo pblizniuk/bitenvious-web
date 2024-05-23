@@ -42,8 +42,8 @@ const CoreTeamWidget = () => {
             </div>
           </div>
         </div>
-        <div className='md:border-b p-6 md:hidden lg:block border-stone-700'>
-        <div className='about-logo group relative flex items-center justify-center w-full h-full'>
+        {/* <div className='md:border-b p-6 md:hidden lg:block border-stone-700'>
+          <div className='about-logo group relative flex items-center justify-center w-full h-full'>
             <div className="relative">
               <Image
                 src='/assets/logo-xl-new.png'
@@ -74,7 +74,7 @@ const CoreTeamWidget = () => {
               className='transition-all grayscale hover:grayscale-0 duration-700 relative z-20 w-full h-full object-cover object-top shadow-sm'
             />
           </div>
-        </div>
+        </div> */}
         <div className='py-6 md:p-6'>
           <div className='rounded-xl overflow-hidden h-full w-full'>
             <Image
@@ -95,7 +95,7 @@ const CoreTeamWidget = () => {
           </dl>
         </div>
         <div className='p-6 md:hidden lg:block'>
-        <div className='about-logo group relative flex items-center justify-center w-full h-full'>
+          <div className='about-logo group relative flex items-center justify-center w-full h-full'>
             <div className="relative">
               <Image
                 src='/assets/logo-xl-new.png'
