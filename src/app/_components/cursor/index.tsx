@@ -36,14 +36,12 @@ const Cursor = () => {
     }
 
     document.addEventListener('mousemove', onMouseMove)
-    // console.log('mounting')
     document.querySelectorAll('a, button').forEach((el) => {
       el.addEventListener('mouseenter', onMouseEnter)
       el.addEventListener('mouseleave', onMouseLeave)
     })
 
     return () => {
-      // console.log('unmounting')
       document.removeEventListener('mousemove', onMouseMove)
       document.querySelectorAll('a, button').forEach((el) => {
         el.removeEventListener('mouseenter', onMouseEnter)

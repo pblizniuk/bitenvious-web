@@ -10,7 +10,6 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import Cursor from './_components/cursor'
 import { GoogleAnalytics } from '@next/third-parties/google'
 
-
 config.autoAddCss = false;
 const montserrat = Montserrat({
   weight: ['300', '400', '500', '600', '700'],
@@ -86,10 +85,6 @@ export default function RootLayout({
         strategy='afterInteractive'
         src='/scripts/dom_scripts.js'
       />
-      {/* <Script
-        strategy='beforeInteractive'
-        src='https://unpkg.co/gsap@3/dist/gsap.min.js'
-      /> */}
       <body
         className={`bg-stone-50 overflow-x-clip ${montserrat.className} ${montserrat.variable} ${outfit.variable}  ${rockSalt.variable} min-h-screen text-stone-900 relative`}
       >

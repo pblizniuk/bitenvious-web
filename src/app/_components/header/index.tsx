@@ -5,7 +5,6 @@ import Icon from '@/app/_components/icons'
 import { usePathname } from 'next/navigation'
 import ScrollIndicator from '@/app/_components/scroll_indicator'
 import Sidebar from '@/app/_components/sidebar'
-import { getIsLocalAPI } from '@/lib/utils'
 
 const Header = () => {
   const pathname = usePathname()
@@ -13,6 +12,12 @@ const Header = () => {
   const isBlogCategory = pathname.indexOf('/blog/category/') !== -1
   const isBlogDetail = pathname.indexOf('/blog/') !== -1 && pathname.indexOf('/blog/category/') === -1
   const navItemClasses = 'menu__link font-semibold text-lg text-white transition-all duration-500 group-[.scrolled]:text-black group-[.is-blog]:text-black'
+  const navLinks = [
+    { id: 1, name: 'About', path: '/about' },
+    { id: 2, name: 'Services', path: '/services' },
+    { id: 3, name: 'Projects', path: '/projects' },
+    { id: 3, name: 'Blog', path: '/blog' }
+  ]
 
   return (
     <>
@@ -53,7 +58,22 @@ const Header = () => {
             <div className='md:flex md:items-center md:gap-12'>
               <nav aria-label='Global' className='menu hidden lg:block'>
                 <ul className='menu__list flex flex-wrap items-center gap-10 text-base before:bg-white group-[.scrolled]:before:bg-gradient-to-r from-fuchsia-600 to-pink-600 group-[.is-blog]:before:bg-gradient-to-r'>
-                  <li>
+                  {
+                    navLinks?.map(link => {
+                      const isActive = pathname === link.path
+                      return (
+                        <li key={link.id}>
+                        <Link
+                          className={`${navItemClasses} ${isActive ? 'active' : ''}`}
+                          href={link.path}
+                        >
+                          {link.name}
+                        </Link>
+                      </li>
+                      )
+                    })
+                  }
+                  {/* <li>
                     <Link
                       className={navItemClasses}
                       href='/about'
@@ -84,7 +104,7 @@ const Header = () => {
                     >
                       Blog
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </nav>
               <div className='flex items-center gap-8 relative'>
