@@ -5,6 +5,7 @@ import Icon from '@/app/_components/icons'
 import { usePathname } from 'next/navigation'
 import ScrollIndicator from '@/app/_components/scroll_indicator'
 import Sidebar from '@/app/_components/sidebar'
+import { navLinks } from '@/lib/data'
 
 const Header = () => {
   const pathname = usePathname()
@@ -12,12 +13,6 @@ const Header = () => {
   const isBlogCategory = pathname.indexOf('/blog/category/') !== -1
   const isBlogDetail = pathname.indexOf('/blog/') !== -1 && pathname.indexOf('/blog/category/') === -1
   const navItemClasses = 'menu__link font-semibold text-lg text-white transition-all duration-500 group-[.scrolled]:text-black group-[.is-blog]:text-black'
-  const navLinks = [
-    { id: 1, name: 'About', path: '/about' },
-    { id: 2, name: 'Services', path: '/services' },
-    { id: 3, name: 'Projects', path: '/projects' },
-    { id: 3, name: 'Blog', path: '/blog' }
-  ]
 
   return (
     <>

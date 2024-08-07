@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { navLinks } from '@/lib/data'
 
 const Footer = () => {
   const year = new Date().getFullYear()
@@ -27,38 +28,19 @@ const Footer = () => {
           </Link>
           <nav aria-label='Global' className='menu'>
             <ul className='menu__list flex flex-wrap items-center gap-10 text-base before:bg-white group-[.scrolled]:before:bg-gradient-to-r from-purple-700 to-pink-600'>
-              <li>
-                <Link
-                  className={navItemClasses}
-                  href='/about'
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className={navItemClasses}
-                  href='/services'
-                >
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className={navItemClasses}
-                  href='/projects'
-                >
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className={navItemClasses}
-                  href='/blog'
-                >
-                  Blog
-                </Link>
-              </li>
+
+              {navLinks?.map(link => {
+                return (
+                  <li key={link.id}>
+                    <Link
+                      className={navItemClasses}
+                      href={link.path}
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                )
+              })}
             </ul>
           </nav>
           {/* <!-- Dark mode switcher --> */}

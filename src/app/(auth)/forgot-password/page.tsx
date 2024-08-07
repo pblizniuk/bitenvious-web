@@ -1,3 +1,3 @@
 export default function ForgotPassword() {
-  return <div>forgot password page</div>
+  return <div className="flex flex-grow">forgot password page</div>
 }
