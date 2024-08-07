@@ -35,7 +35,7 @@ const HomePageHero = (props: Props) => {
               transition={{
                 ease: "easeInOut",
                 duration: 0.3,
-                delay: 0.1
+                delay: 0.05
               }}
             >
               <p className='font-montserrat text-xl font-light text-stone-300 md:mt-4 md:block md:text-2xl/relaxed mb-8 md:mb-12'>
@@ -48,7 +48,7 @@ const HomePageHero = (props: Props) => {
               transition={{
                 ease: "easeInOut",
                 duration: 0.3,
-                delay: 0.2
+                delay: 0.1
               }}
             >
               <Link
