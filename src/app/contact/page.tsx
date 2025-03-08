@@ -60,11 +60,11 @@ export default function Contact() {
                   </h3>
                   <div className="mb-4 flex flex-col last:mb-0 xl:flex-row xl:items-end xl:gap-3">
                     <Link
-                      href="tel:+18652217515"
+                      href="tel:+18478770375"
                       target=""
                       className="leading-6 text-pink-600"
                     >
-                      865.221.7515
+                      847.877.0375
                     </Link>
                   </div>
                 </div>
