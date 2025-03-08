@@ -22,7 +22,7 @@ export const ContactForm = () => {
           email,
           phone,
           company,
-          message
+          message,
         }),
         headers: {
           'content-type': 'application/json',
@@ -32,8 +32,7 @@ export const ContactForm = () => {
         setSubmitted(true)
         setTimeout(() => {
           setSubmitted(false)
-        }
-          , 5000)
+        }, 5000)
       }
     } catch (err: any) {
       console.error('Err', err)
@@ -50,7 +49,7 @@ export const ContactForm = () => {
   if (isSubmitting) {
     return (
       <motion.div
-        className='text-center'
+        className="text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -61,13 +60,13 @@ export const ContactForm = () => {
   }
   return submitted ? (
     <motion.div
-        className='text-center'
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
+      className="text-center"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <h1
-        className="text-center font-semibold text-3xl
+        className="text-center text-3xl font-semibold
       "
       >
         Thank you for your message!
@@ -75,11 +74,11 @@ export const ContactForm = () => {
     </motion.div>
   ) : (
     <motion.form
-    onSubmit={onSubmit}
-    className='grid md:grid-cols-2 gap-4 md:gap-8 items-start'
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
+      onSubmit={onSubmit}
+      className="grid items-start gap-4 md:grid-cols-2 md:gap-8"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
     >
       <div>
         <input
@@ -87,8 +86,8 @@ export const ContactForm = () => {
           value={name}
           onChange={(e) => setName(e.target.value)}
           type="text"
-          className='focus:ring-primary-500 focus:border-primary-500 focus:ring-primary-500 focus:border-primary-500 shadow-sm-light block  w-full rounded-lg border border-gray-500 p-5 text-sm placeholder-gray-400 shadow-sm'
-          placeholder='Name*'
+          className="focus:ring-primary-500 focus:border-primary-500 focus:ring-primary-500 focus:border-primary-500 shadow-sm-light block  w-full rounded-lg border border-gray-500 p-5 text-sm placeholder-gray-400 shadow-sm"
+          placeholder="Name*"
         />
       </div>
       <div>
@@ -97,41 +96,40 @@ export const ContactForm = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           type="email"
-          className='focus:ring-primary-500 focus:border-primary-500 focus:ring-primary-500 focus:border-primary-500 shadow-sm-light block  w-full rounded-lg border  border-gray-500 p-5 text-sm placeholder-gray-400 shadow-sm'
-          placeholder='Email*'
+          className="focus:ring-primary-500 focus:border-primary-500 focus:ring-primary-500 focus:border-primary-500 shadow-sm-light block  w-full rounded-lg border  border-gray-500 p-5 text-sm placeholder-gray-400 shadow-sm"
+          placeholder="Email*"
         />
       </div>
       <div>
         <input
-          type='tel'
-          className='focus:ring-primary-500 focus:border-primary-500 focus:ring-primary-500 focus:border-primary-500 shadow-sm-light block  w-full rounded-lg border  border-gray-500 p-5 text-sm placeholder-gray-400 shadow-sm'
-          placeholder='Phone*'
+          type="tel"
+          className="focus:ring-primary-500 focus:border-primary-500 focus:ring-primary-500 focus:border-primary-500 shadow-sm-light block  w-full rounded-lg border  border-gray-500 p-5 text-sm placeholder-gray-400 shadow-sm"
+          placeholder="Phone*"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
         />
       </div>
       <div>
         <input
-          type='text'
-          className='focus:ring-primary-500 focus:border-primary-500 focus:ring-primary-500 focus:border-primary-500 shadow-sm-light block  w-full rounded-lg border  border-gray-500 p-5 text-sm placeholder-gray-400 shadow-sm'
-          placeholder='Company'
+          type="text"
+          className="focus:ring-primary-500 focus:border-primary-500 focus:ring-primary-500 focus:border-primary-500 shadow-sm-light block  w-full rounded-lg border  border-gray-500 p-5 text-sm placeholder-gray-400 shadow-sm"
+          placeholder="Company"
           value={company}
           onChange={(e) => setCompany(e.target.value)}
         />
       </div>
-      <div className='sm:col-span-2'>
+      <div className="sm:col-span-2">
         <textarea
-          className='focus:ring-primary-500 focus:border-primary-500 focus:ring-primary-500 focus:border-primary-500 shadow-sm-light block  w-full rounded-lg border  border-gray-500 p-5 text-sm placeholder-gray-400 shadow-sm'
-          placeholder='Message*'
+          className="focus:ring-primary-500 focus:border-primary-500 focus:ring-primary-500 focus:border-primary-500 shadow-sm-light block  w-full rounded-lg border  border-gray-500 p-5 text-sm placeholder-gray-400 shadow-sm"
+          placeholder="Message*"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           rows={10}
         ></textarea>
-
       </div>
       <button
-        type='submit'
-        className='font-semibold text-lg block transform rounded-full border-2 border-stone-900 bg-stone-900 px-8 py-4 text-white shadow transition duration-300 hover:scale-105'
+        type="submit"
+        className="block transform rounded-full border-2 border-stone-900 bg-stone-900 px-8 py-4 text-lg font-semibold text-white shadow transition duration-300 hover:scale-105"
       >
         Send Message
       </button>

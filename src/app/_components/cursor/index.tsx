@@ -6,19 +6,19 @@ import { usePathname } from 'next/navigation'
 const Cursor = () => {
   const mouse = {
     x: useMotionValue(0),
-    y: useMotionValue(0)
+    y: useMotionValue(0),
   }
 
   const smoothingOptions = { damping: 30, stiffness: 200, mass: 0.1 }
 
   const smoothMouse = {
     x: useSpring(mouse.x, smoothingOptions),
-    y: useSpring(mouse.y, smoothingOptions)
+    y: useSpring(mouse.y, smoothingOptions),
   }
 
   const [isHovering, setIsHovering] = useState(false)
   const cursorSize = !isHovering ? 28 : 96
-  const pathname = usePathname();
+  const pathname = usePathname()
 
   useEffect(() => {
     const onMouseMove = (event: MouseEvent) => {
@@ -48,15 +48,18 @@ const Cursor = () => {
         el.removeEventListener('mouseleave', onMouseLeave)
       })
     }
-  }, [cursorSize, isHovering])
+  }, [cursorSize, isHovering, mouse.x, mouse.y])
 
   useEffect(() => {
     setIsHovering(false)
   }, [pathname])
 
-
   return (
-    <motion.div className='cursor hidden lg:block fixed bg-white top-1/2 left-1/2 z-50 mix-blend-difference rounded-full pointer-events-none h-7 w-7' animate={{ width: cursorSize, height: cursorSize }} style={{ left: smoothMouse.x, top: smoothMouse.y }} />
+    <motion.div
+      className="cursor pointer-events-none fixed left-1/2 top-1/2 z-50 hidden h-7 w-7 rounded-full bg-white mix-blend-difference lg:block"
+      animate={{ width: cursorSize, height: cursorSize }}
+      style={{ left: smoothMouse.x, top: smoothMouse.y }}
+    />
   )
 }
 

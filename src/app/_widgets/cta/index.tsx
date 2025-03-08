@@ -11,12 +11,14 @@ const CTAWidget = (props: CTAWidgetProps) => {
   const { Title, ButtonText, ButtonLink } = props
 
   return (
-    <div className='group mx-auto max-w-[1440px] flex flex-col items-center content-center my-8 lg:my-16 p-12 md:py-16 lg:py-24 border-t'>
-      <div className='text-center max-w-[700px]'>
-        <h3 className='block font-thin text-stone-900 text-3xl md:text-4xl lg:text-5xl mt-auto mb-8 p-2 lg:leading-relaxed'>{Title}</h3>
+    <div className="group mx-auto my-8 flex max-w-[1440px] flex-col content-center items-center border-t p-12 md:py-16 lg:my-16 lg:py-24">
+      <div className="max-w-[700px] text-center">
+        <h3 className="mb-8 mt-auto block p-2 text-3xl font-thin text-stone-900 md:text-4xl lg:text-5xl lg:leading-relaxed">
+          {Title}
+        </h3>
         {ButtonText && ButtonLink && (
           <Link
-            className='inline-block rounded-full border-2 px-6 py-3 text-xl font-semibold text-white shadow border-gray-900 bg-gray-900 mb-auto lg:w-2/4'
+            className="mb-auto inline-block rounded-full border-2 border-gray-900 bg-gray-900 px-6 py-3 text-xl font-semibold text-white shadow lg:w-2/4"
             href={ButtonLink}
           >
             {ButtonText}

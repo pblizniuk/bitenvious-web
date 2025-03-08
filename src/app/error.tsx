@@ -1,17 +1,17 @@
-"use client";
-import { useEffect } from "react"
+'use client'
+import { useEffect } from 'react'
 
 export default function Error({
   error,
 }: {
-  error: Error & { digest?: string },
+  error: Error & { digest?: string }
 }) {
   useEffect(() => {
-    console.error(error);
-  }, [error]);
+    console.error(error)
+  }, [error])
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100">
       <div className="space-y-4">
         <BugIcon className="h-24 w-24 text-pink-500" />
         <h1 className="text-4xl font-bold text-gray-900">
@@ -20,10 +20,10 @@ export default function Error({
         <p className="text-lg text-gray-700">
           This is an error page. Please try again later.
         </p>
-        <p className="text-pink-800 italic">{error.message}</p>
+        <p className="italic text-pink-800">{error.message}</p>
       </div>
     </div>
-  );
+  )
 }
 
 function BugIcon({ className }: { className?: string }) {
@@ -52,5 +52,5 @@ function BugIcon({ className }: { className?: string }) {
       <path d="M22 13h-4" />
       <path d="M17.2 17c2.1.1 3.8 1.9 3.8 4" />
     </svg>
-  );
+  )
 }

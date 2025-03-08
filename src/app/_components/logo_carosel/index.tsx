@@ -7,11 +7,11 @@ import 'swiper/css'
 import 'swiper/css/free-mode'
 
 type LogoCarouselProps = {
-  Title: string,
-  Description: string,
+  Title: string
+  Description: string
   Images: {
     data: []
-  },
+  }
   options?: SwiperOptions
 }
 
@@ -27,7 +27,8 @@ type Image = {
  * @returns The rendered image carousel.
  */
 export function LogoCarousel(props: LogoCarouselProps) {
-  const iconClasses = 'h-[35px] w-[35px] fill-current text-white md:h-[45px] md:w-[45px] mix-blend-overlay transition-all opacity-20'
+  const iconClasses =
+    'h-[35px] w-[35px] fill-current text-white md:h-[45px] md:w-[45px] mix-blend-overlay transition-all opacity-20'
   const listClasses = ''
 
   return (
@@ -36,33 +37,33 @@ export function LogoCarousel(props: LogoCarouselProps) {
         title={Title}
         description={Description}
       /> */}
-      <div className='pb-2'>
+      <div className="pb-2">
         <Swiper
           freeMode={{
-            momentum: false
+            momentum: false,
           }}
           grabCursor={true}
           slidesPerView={2}
           loop={true}
-          autoplay= {{
+          autoplay={{
             delay: 0,
-            disableOnInteraction: true
+            disableOnInteraction: true,
           }}
           speed={5000}
           modules={[Keyboard, FreeMode, Autoplay]}
-          className="overflow-hidden transition-transform  translate-x-36 [&.swiper-initialized]:translate-x-0 duration-[1500ms] out-expo delay-100"
+          className="out-expo translate-x-36  overflow-hidden transition-transform delay-100 duration-[1500ms] [&.swiper-initialized]:translate-x-0"
           keyboard={{
-            enabled: true
+            enabled: true,
           }}
           breakpoints={{
             768: {
-              slidesPerView: 3
+              slidesPerView: 3,
             },
             1024: {
-              slidesPerView: 5
+              slidesPerView: 5,
             },
             1440: {
-              slidesPerView: 6
+              slidesPerView: 6,
             },
           }}
           // autoplay: {
@@ -74,72 +75,67 @@ export function LogoCarousel(props: LogoCarouselProps) {
         >
           <SwiperSlide className={listClasses}>
             <Icon
-              name='reactjs'
-              color='white'
-              size='50'
+              name="reactjs"
+              color="white"
+              size="50"
               className={iconClasses}
             />
           </SwiperSlide>
           <SwiperSlide className={listClasses}>
             <Icon
-              name='nextjs'
-              color='white'
-              size='50'
+              name="nextjs"
+              color="white"
+              size="50"
               className={iconClasses}
             />
           </SwiperSlide>
           <SwiperSlide className={listClasses}>
             <Icon
-              name='strapi'
-              color='white'
-              size='40'
+              name="strapi"
+              color="white"
+              size="40"
               className={iconClasses}
             />
           </SwiperSlide>
           <SwiperSlide className={listClasses}>
             <Icon
-              name='wordpress'
-              color='white'
-              size='50'
+              name="wordpress"
+              color="white"
+              size="50"
               className={iconClasses}
             />
           </SwiperSlide>
           <SwiperSlide className={listClasses}>
             <Icon
-              name='woocommerce'
-              color='white'
-              size='50'
+              name="woocommerce"
+              color="white"
+              size="50"
               className={iconClasses}
             />
           </SwiperSlide>
           <SwiperSlide className={listClasses}>
             <Icon
-              name='tailwind'
-              color='white'
-              size='50'
+              name="tailwind"
+              color="white"
+              size="50"
               className={iconClasses}
             />
           </SwiperSlide>
           <SwiperSlide className={listClasses}>
             <Icon
-              name='chatgpt'
-              color='white'
-              size='50'
+              name="chatgpt"
+              color="white"
+              size="50"
               className={iconClasses}
             />
           </SwiperSlide>
           <SwiperSlide className={listClasses}>
-            <Icon
-              name='css3'
-              color='white'
-              size='50'
-              className={iconClasses}
-            />
+            <Icon name="css3" color="white" size="50" className={iconClasses} />
           </SwiperSlide>
         </Swiper>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default LogoCarousel;
+export default LogoCarousel

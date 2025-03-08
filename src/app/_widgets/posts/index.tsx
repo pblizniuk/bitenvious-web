@@ -11,29 +11,32 @@ const PostsWidget = (props: PostsWidgetProps) => {
   const rightSide = postsData.filter((post, i) => i % 2 !== 0)
 
   return (
-    <section className="posts px-4 my-8 md:my-16">
-      <div className="max-w-[1440px] mx-auto md:grid-cols-2 md:gap-8 lg:gap-16 hidden md:grid">
+    <section className="posts my-8 px-4 md:my-16">
+      <div className="mx-auto hidden max-w-[1440px] md:grid md:grid-cols-2 md:gap-8 lg:gap-16">
         <div className="left">
-          {leftSide && leftSide.map((post, i) => (
-            <ScrollInView key={i}>
-              <Post post={post} />
-            </ScrollInView>
-          ))}
+          {leftSide &&
+            leftSide.map((post, i) => (
+              <ScrollInView key={i}>
+                <Post post={post} />
+              </ScrollInView>
+            ))}
         </div>
         <div className="right">
-          {rightSide && rightSide.map((post, i) => (
+          {rightSide &&
+            rightSide.map((post, i) => (
+              <ScrollInView key={i}>
+                <Post post={post} />
+              </ScrollInView>
+            ))}
+        </div>
+      </div>
+      <div className="md:hidden">
+        {postsData &&
+          postsData.map((post, i) => (
             <ScrollInView key={i}>
               <Post post={post} />
             </ScrollInView>
           ))}
-        </div>
-      </div>
-      <div className='md:hidden'>
-        {postsData && postsData.map((post, i) => (
-          <ScrollInView key={i}>
-            <Post post={post} />
-          </ScrollInView>
-        ))}
       </div>
     </section>
   )

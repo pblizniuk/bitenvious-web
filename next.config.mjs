@@ -25,8 +25,8 @@ const nextConfig = {
         pathname: '/assets/**/*',
       },
       {
-        protocol: "https",
-        hostname: "placehold.co",
+        protocol: 'https',
+        hostname: 'placehold.co',
       },
     ],
   },

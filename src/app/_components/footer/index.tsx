@@ -4,38 +4,34 @@ import { navLinks } from '@/lib/data'
 
 const Footer = () => {
   const year = new Date().getFullYear()
-  const navItemClasses = 'menu__link font-semibold text-lg text-white transition-all duration-500'
+  const navItemClasses =
+    'menu__link font-semibold text-lg text-white transition-all duration-500'
+
   return (
-    <footer className='bg-gradient-to-r from-stone-800 to-stone-900 relative w-full'>
-      <div className='mx-auto w-full max-w-screen-xl p-4 md:py-16'>
-        <div className='sm:flex sm:items-center sm:justify-between'>
+    <footer className="relative w-full bg-gradient-to-r from-stone-800 to-stone-900">
+      <div className="mx-auto w-full max-w-screen-xl p-4 md:py-16">
+        <div className="sm:flex sm:items-center sm:justify-between">
           <Link
-            href='/'
-            className='relative mb-4 flex items-center space-x-3 sm:mb-0 rtl:space-x-reverse'
+            href="/"
+            className="relative mb-4 flex items-center space-x-3 sm:mb-0 rtl:space-x-reverse"
           >
             <Image
-              src='/assets/logo-xl.png'
-              alt='logo'
-              width='50'
-              height='50'
-              className='transition-all duration-500 hover:grayscale'
+              src="/assets/logo-xl-new.png"
+              alt="logo"
+              width="50"
+              height="50"
+              className="transition-all duration-500 hover:grayscale"
             />
-            <span
-              className='font-rock-salt text-2xl text-stone-50 transition-all'
-            >
+            <span className="font-rock-salt text-2xl text-stone-50 transition-all">
               BitEnvious
             </span>
           </Link>
-          <nav aria-label='Global' className='menu'>
-            <ul className='menu__list flex flex-wrap items-center gap-10 text-base before:bg-white group-[.scrolled]:before:bg-gradient-to-r from-purple-700 to-pink-600'>
-
-              {navLinks?.map(link => {
+          <nav aria-label="Global" className="menu">
+            <ul className="menu__list flex flex-wrap items-center gap-10 from-purple-700 to-pink-600 text-base before:bg-white group-[.scrolled]:before:bg-gradient-to-r">
+              {navLinks?.map((link) => {
                 return (
                   <li key={link.id}>
-                    <Link
-                      className={navItemClasses}
-                      href={link.path}
-                    >
+                    <Link className={navItemClasses} href={link.path}>
                       {link.name}
                     </Link>
                   </li>
@@ -76,15 +72,15 @@ const Footer = () => {
           </button> */}
           {/* <!-- Dark mode switcher end --> */}
         </div>
-        <div className='my-8 sm:mx-auto lg:my-16' />
-        <div className='text-sm block text-stone-500 text-center'>
+        <div className="my-8 sm:mx-auto lg:my-16" />
+        <div className="block text-center text-sm text-stone-500">
           © {year}{' '}
-          <Link href='/' className='hover:underline'>
+          <Link href="/" className="hover:underline">
             BitEnvious, LLC
           </Link>
           .&nbsp;All Rights Reserved.
           <br />
-          Proudly made in God's Country, TN
+          Proudly made in God&rsquo;s Country, TN
         </div>
       </div>
     </footer>

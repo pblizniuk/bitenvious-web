@@ -1,11 +1,11 @@
-import { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import Icon from "@/app/_components/icons";
+import { useState } from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
+import Icon from '@/app/_components/icons'
 
 const Sidebar = () => {
-  const [showSidebar, setShowSidebar] = useState(false);
-  const navItemListClasses = `my-8 text-white ${showSidebar ? "translate-x-0 transition-all ease-in-out duration-500 " : "-translate-x-full"}`
+  const [showSidebar, setShowSidebar] = useState(false)
+  const navItemListClasses = `my-8 text-white ${showSidebar ? 'translate-x-0 transition-all ease-in-out duration-500 ' : '-translate-x-full'}`
   const navItemClasses = `relative font-normal text-3xl transition-all duration-500 text-white`
   const closeSidebar = () => setShowSidebar(false)
 
@@ -14,28 +14,43 @@ const Sidebar = () => {
       <div className="z-90">
         <svg
           onClick={() => setShowSidebar(!showSidebar)}
-          className="flex items-center cursor-pointer right-10 top-6 text-white group-[.scrolled]:text-stone-900 group-[.is-blog]:text-stone-900"
+          className="right-10 top-6 flex cursor-pointer items-center text-white group-[.is-blog]:text-stone-900 group-[.scrolled]:text-stone-900"
           fill="currentColor"
           viewBox="0 0 100 80"
           width="40"
           height="27"
         >
-          <rect width="100" height="9" className={`transition-all ease-in-out duration-500 ${showSidebar ? "rotate-45 origin-[5%_30%] text-pink-600" : ""}`}></rect>
-          <rect y="33" width="100" height="9" className={`transition-all ease-in-out duration-500 ${showSidebar ? "w-0 opacity-0" : ""}`}></rect>
-          <rect y="66" width="100" height="9" className={`transition-all ease-in-out duration-500 ${showSidebar ? "-rotate-45 origin-[15%_70%] text-pink-600" : ""}`}></rect>
+          <rect
+            width="100"
+            height="9"
+            className={`transition-all duration-500 ease-in-out ${showSidebar ? 'origin-[5%_30%] rotate-45 text-pink-600' : ''}`}
+          ></rect>
+          <rect
+            y="33"
+            width="100"
+            height="9"
+            className={`transition-all duration-500 ease-in-out ${showSidebar ? 'w-0 opacity-0' : ''}`}
+          ></rect>
+          <rect
+            y="66"
+            width="100"
+            height="9"
+            className={`transition-all duration-500 ease-in-out ${showSidebar ? 'origin-[15%_70%] -rotate-45 text-pink-600' : ''}`}
+          ></rect>
         </svg>
       </div>
       <div
-        className={`-z-10 top-0 right-0 w-full bg-gradient-to-br from-stone-900 to-stone-800 py-4 px-3 fixed h-full ease-in-out duration-300 ${showSidebar ? "translate-x-0 " : "translate-x-full overflow-hidden"
-          }`}
+        className={`fixed right-0 top-0 -z-10 h-full w-full bg-gradient-to-br from-stone-900 to-stone-800 px-3 py-4 duration-300 ease-in-out ${
+          showSidebar ? 'translate-x-0 ' : 'translate-x-full overflow-hidden'
+        }`}
       >
-        <div className="flex flex-col justify-center h-full">
-          <nav aria-label='Global' className='mobile-menu'>
+        <div className="flex h-full flex-col justify-center">
+          <nav aria-label="Global" className="mobile-menu">
             <ul className="overflow-clip">
               <li className={`${navItemListClasses} delay-100`}>
                 <Link
                   className={navItemClasses}
-                  href='/about'
+                  href="/about"
                   onClick={closeSidebar}
                 >
                   About
@@ -44,7 +59,7 @@ const Sidebar = () => {
               <li className={`${navItemListClasses} delay-200`}>
                 <Link
                   className={navItemClasses}
-                  href='/services'
+                  href="/services"
                   onClick={closeSidebar}
                 >
                   Services
@@ -53,7 +68,7 @@ const Sidebar = () => {
               <li className={`${navItemListClasses} delay-300`}>
                 <Link
                   className={navItemClasses}
-                  href='/projects'
+                  href="/projects"
                   onClick={closeSidebar}
                 >
                   Projects
@@ -62,17 +77,17 @@ const Sidebar = () => {
               <li className={`${navItemListClasses} delay-500`}>
                 <Link
                   className={navItemClasses}
-                  href='/blog'
+                  href="/blog"
                   onClick={closeSidebar}
                 >
                   Blog
                 </Link>
               </li>
               <li className={`${navItemListClasses} delay-700`}>
-                <div className='sm:hidden'>
+                <div className="sm:hidden">
                   <Link
-                    className='block rounded-full border bg-transparent px-6 py-3 text-white shadow transition-all duration-500  border-white font-semibold text-lg text-center'
-                    href='/contact'
+                    className="block rounded-full border border-white bg-transparent px-6 py-3 text-center text-lg font-semibold  text-white shadow transition-all duration-500"
+                    href="/contact"
                     onClick={closeSidebar}
                   >
                     Get in Touch
@@ -84,7 +99,7 @@ const Sidebar = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Sidebar;
+export default Sidebar

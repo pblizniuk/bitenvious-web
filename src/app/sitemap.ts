@@ -3,12 +3,13 @@ import { getData } from '@/utils/fetch_page'
 
 export const revalidate = 86400 // 24 hrs
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const postsEndpoint = '/api/posts?fields[0]=slug&pagination[pageSize]=200&pagination[page]=1&publicationState=live'
+  const postsEndpoint =
+    '/api/posts?fields[0]=slug&pagination[pageSize]=200&pagination[page]=1&publicationState=live'
   const { data: postsData } = await getData(postsEndpoint)
   const categoriesEndpoint = `/api/categories?fields[0]=slug`
   const { data: categoryData } = await getData(categoriesEndpoint)
   const projectsEndpoint = '/api/projects?fields[0]=slug'
-  const {data: projectsData} = await getData(projectsEndpoint)
+  const { data: projectsData } = await getData(projectsEndpoint)
 
   const posts = postsData.map((post) => {
     return {
@@ -77,6 +78,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     ...posts,
     ...categories,
-    ...projects
+    ...projects,
   ]
 }

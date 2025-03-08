@@ -8,11 +8,11 @@ import 'swiper/css/free-mode'
 import TitleSectionWidget from '@/app/_widgets/title_section'
 
 type CarouselProps = {
-  Title: string,
-  Description: string,
+  Title: string
+  Description: string
   Images: {
     data: []
-  },
+  }
   options?: SwiperOptions
 }
 
@@ -28,44 +28,39 @@ type Image = {
  * @returns The rendered image carousel.
  */
 export function ImageCarousel(props: CarouselProps) {
-
-  const { Title, Description, Images } = props;
+  const { Title, Description, Images } = props
   const { data } = Images
 
-if (data.length === 0) return null
+  if (data.length === 0) return null
 
-let shuffled = data
-    .map(value => ({ value, sort: Math.random() }))
+  let shuffled = data
+    .map((value) => ({ value, sort: Math.random() }))
     .sort((a, b) => a.sort - b.sort)
     .map(({ value }) => value)
 
-
   return (
     <section className="carousel">
-      <TitleSectionWidget
-        title={Title}
-        description={Description}
-      />
-      <div className='-rotate-6 py-16 md:pt-24 md:pb-48 scale-110'>
+      <TitleSectionWidget title={Title} description={Description} />
+      <div className="-rotate-6 scale-110 py-16 md:pb-48 md:pt-24">
         <Swiper
           freeMode={true}
           grabCursor={true}
-            slidesPerView={1.5}
+          slidesPerView={1.5}
           loop={true}
           modules={[Keyboard, FreeMode]}
-          className="overflow-hidden transition-transform  translate-x-36 [&.swiper-initialized]:translate-x-0 duration-[1500ms] out-expo delay-100"
+          className="out-expo translate-x-36  overflow-hidden transition-transform delay-100 duration-[1500ms] [&.swiper-initialized]:translate-x-0"
           keyboard={{
-            enabled: true
+            enabled: true,
           }}
           breakpoints={{
             768: {
-              slidesPerView: 2.6
+              slidesPerView: 2.6,
             },
             1024: {
-              slidesPerView: 3.6
+              slidesPerView: 3.6,
             },
             1440: {
-              slidesPerView: 4.6
+              slidesPerView: 4.6,
             },
           }}
         >
@@ -73,7 +68,7 @@ let shuffled = data
             shuffled?.map((image: Image) => (
               <SwiperSlide
                 key={image.id}
-                className="flex-auto justify-center items-center p-3 w-[50vw] md:w-[30vw] max-w-[465px] overflow-hidden"
+                className="w-[50vw] max-w-[465px] flex-auto items-center justify-center overflow-hidden p-3 md:w-[30vw]"
               >
                 <div key={image.id}>
                   <Image
@@ -92,7 +87,7 @@ let shuffled = data
         </Swiper>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default ImageCarousel;
+export default ImageCarousel

@@ -1,13 +1,11 @@
-import Link from "next/link";
+import Link from 'next/link'
 
 export default function NotFoundRoot() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100">
       <div className="space-y-4">
         <BugIcon className="h-24 w-24 text-pink-500" />
-        <h1 className="text-4xl font-bold text-gray-900">
-          Oops!
-        </h1>
+        <h1 className="text-4xl font-bold text-gray-900">Oops!</h1>
         <p className="text-lg text-gray-700">
           This page has left the building.
         </p>
@@ -19,7 +17,7 @@ export default function NotFoundRoot() {
         </Link>
       </div>
     </div>
-  );
+  )
 }
 
 function BugIcon({ className }: { className?: string }) {
@@ -48,5 +46,5 @@ function BugIcon({ className }: { className?: string }) {
       <path d="M22 13h-4" />
       <path d="M17.2 17c2.1.1 3.8 1.9 3.8 4" />
     </svg>
-  );
+  )
 }

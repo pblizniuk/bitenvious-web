@@ -26,16 +26,25 @@ export default async function Category(props: Props) {
   const { slug } = params
   const endpoint = `/api/categories?populate=deep,3&filters[$and][0][slug][$eq]=${slug}`
   const { data } = await getDataNoCache(endpoint)
-  const { Name, description, slug:categorySlug, posts } = data[0]
+  const { Name, description, slug: categorySlug, posts } = data[0]
   const { categoryGradient } = categoryHelper(categorySlug)
-  const sortedPosts = posts.data.sort((a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime())
+  const sortedPosts = posts.data.sort(
+    (a, b) =>
+      new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime(),
+  )
 
   return (
     <main>
-      <PageTitle pageTitleContent={{ Title: Name || 'Blog', Description: description || 'Industry insights and updates' }} headingClassNames={`bg-gradient-to-r ${categoryGradient} bg-clip-text text-transparent`} />
+      <PageTitle
+        pageTitleContent={{
+          Title: Name || 'Blog',
+          Description: description || 'Industry insights and updates',
+        }}
+        headingClassNames={`bg-gradient-to-r ${categoryGradient} bg-clip-text text-transparent`}
+      />
       <PageLoad offset={100}>
         <PostsWidget postsData={sortedPosts} />
-        <CategoriesMenu title='Explore Other Categories' />
+        <CategoriesMenu title="Explore Other Categories" />
       </PageLoad>
     </main>
   )

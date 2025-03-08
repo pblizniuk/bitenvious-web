@@ -1,16 +1,16 @@
-import Image from "next/image";
-import { getStrapiMedia } from "@/lib/utils";
+import Image from 'next/image'
+import { getStrapiMedia } from '@/lib/utils'
 
 type StrapiImageProps = {
-  src: string;
-  alt: string;
-  height: number;
-  width: number;
-  className?: string;
-  sizes?: string;
-  style?: React.CSSProperties;
-  loading?: "lazy" | "eager";
-  quality?: number;
+  src: string
+  alt: string
+  height: number
+  width: number
+  className?: string
+  sizes?: string
+  style?: React.CSSProperties
+  loading?: 'lazy' | 'eager'
+  quality?: number
 }
 
 export function StrapiImage({
@@ -22,11 +22,11 @@ export function StrapiImage({
   width,
   className,
   loading,
-  quality
+  quality,
 }: Readonly<StrapiImageProps>) {
-  if (!src) return null;
-  const imageUrl = getStrapiMedia(src);
-  const imageFallback = `https://placehold.co/${width}x${height}`;
+  if (!src) return null
+  const imageUrl = getStrapiMedia(src)
+  const imageFallback = `https://placehold.co/${width}x${height}`
 
   return (
     <Image
@@ -40,7 +40,7 @@ export function StrapiImage({
       loading={loading}
       quality={quality || 75}
     />
-  );
+  )
 }
 
-export default StrapiImage;
+export default StrapiImage

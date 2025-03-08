@@ -6,7 +6,8 @@ import { blockRenderer } from '@/utils/block_renderer'
 
 export const metadata = {
   title: 'Projects Showcase | BitEnvious',
-  description: 'Web development project portfolio - see some of our success stories and let us help you realize your vision. | BitEnvious',
+  description:
+    'Web development project portfolio - see some of our success stories and let us help you realize your vision. | BitEnvious',
 }
 
 export default async function Projects() {
@@ -14,14 +15,17 @@ export default async function Projects() {
   const data = await getData(endpoint)
   const { title = '', description = '', blocks } = data
 
-    const pageTitleContent = {
+  const pageTitleContent = {
     Title: title,
-    Description: description
+    Description: description,
   }
 
   return (
     <main>
-      <PageTitle pageTitleContent={pageTitleContent} headingClassNames='bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent' />
+      <PageTitle
+        pageTitleContent={pageTitleContent}
+        headingClassNames="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent"
+      />
       <PageLoad offset={50}>
         {blocks.map((block) => blockRenderer(block))}
       </PageLoad>

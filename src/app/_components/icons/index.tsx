@@ -25,24 +25,24 @@ type IconProps = {
 
 const Icon = (props: IconProps) => {
   const { width, height, size, name } = props
-  const sizing = size ? {width: size, height: size} : {width, height}
+  const sizing = size ? { width: size, height: size } : { width, height }
 
   return (
     <>
-      {name === 'nextjs' && nextjs({ ...props, ...sizing }, )}
-      {name === 'reactjs' && reactjs({ ...props, ...sizing }, )}
-      {name === 'tailwind' && tailwind({ ...props, ...sizing }, )}
-      {name === 'woocommerce' && woocommerce({ ...props, ...sizing }, )}
-      {name === 'wordpress' && wordpress({ ...props, ...sizing }, )}
-      {name === 'chatgpt' && chatgpt({ ...props, ...sizing }, )}
-      {name === 'strapi' && strapi({ ...props, ...sizing }, )}
-      {name === 'ghostLogo' && ghostLogo({ ...props, ...sizing }, )}
-      {name === 'digitalMarketing' && digitalMarketing({ ...props, ...sizing }, )}
-      {name === 'development' && development({ ...props, ...sizing }, )}
-      {name === 'design' && design({ ...props, ...sizing }, )}
-      {name === 'other' && other({ ...props, ...sizing }, )}
-      {name === 'brandIdentity' && brandIdentity({ ...props, ...sizing }, )}
-      {name === 'css3' && css3({ ...props, ...sizing }, )}
+      {name === 'nextjs' && nextjs({ ...props, ...sizing })}
+      {name === 'reactjs' && reactjs({ ...props, ...sizing })}
+      {name === 'tailwind' && tailwind({ ...props, ...sizing })}
+      {name === 'woocommerce' && woocommerce({ ...props, ...sizing })}
+      {name === 'wordpress' && wordpress({ ...props, ...sizing })}
+      {name === 'chatgpt' && chatgpt({ ...props, ...sizing })}
+      {name === 'strapi' && strapi({ ...props, ...sizing })}
+      {name === 'ghostLogo' && ghostLogo({ ...props, ...sizing })}
+      {name === 'digitalMarketing' && digitalMarketing({ ...props, ...sizing })}
+      {name === 'development' && development({ ...props, ...sizing })}
+      {name === 'design' && design({ ...props, ...sizing })}
+      {name === 'other' && other({ ...props, ...sizing })}
+      {name === 'brandIdentity' && brandIdentity({ ...props, ...sizing })}
+      {name === 'css3' && css3({ ...props, ...sizing })}
     </>
   )
 }

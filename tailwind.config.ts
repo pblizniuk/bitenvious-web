@@ -11,9 +11,9 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        'montserrat': ['"Montserrat"', ...defaultTheme.fontFamily.sans],
+        montserrat: ['"Montserrat"', ...defaultTheme.fontFamily.sans],
         'rock-salt': ['"Rock Salt"', ...defaultTheme.fontFamily.sans],
-        'outfit': ['"Outfit"', ...defaultTheme.fontFamily.sans],
+        outfit: ['"Outfit"', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         'custom-gray': '#7d7d7d',
@@ -29,7 +29,8 @@ const config: Config = {
         'out-expo': 'cubic-bezier(0.19, 1, 0.22, 1)',
       },
       animation: {
-        'pulse-subtle': 'pulse-subtle 10s cubic-bezier(0.4, 0, 0.6, 1) infinite;',
+        'pulse-subtle':
+          'pulse-subtle 10s cubic-bezier(0.4, 0, 0.6, 1) infinite;',
         blob: 'blob 8s infinite',
         levitate: 'levitate infinite',
         'levitate-reverse': 'levitate-reverse infinite',
@@ -81,8 +82,8 @@ const config: Config = {
             transform: 'translate(0px, 0px)',
           },
         },
-      }
-    }
+      },
+    },
   },
   plugins: [require('tailwindcss-animated')],
   'editor.quickSuggestions': {
@@ -90,12 +91,16 @@ const config: Config = {
   },
   safelist: [
     {
-      pattern: /from-(slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(400|500|600|700|800|900)/
+      pattern:
+        /from-(slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(400|500|600|700|800|900)/,
     },
     {
-      pattern: /to-(slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(400|500|600|700|800|900)/
-    },{
-      pattern: /text-(slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(400|500|600|700|800|900)/
+      pattern:
+        /to-(slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(400|500|600|700|800|900)/,
+    },
+    {
+      pattern:
+        /text-(slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(400|500|600|700|800|900)/,
     },
   ],
 }

@@ -1,6 +1,6 @@
 import { env } from 'process'
-import { flattenAttributes } from "@/lib/utils"
-import { getStrapiURL } from "@/lib/utils"
+import { flattenAttributes } from '@/lib/utils'
+import { getStrapiURL } from '@/lib/utils'
 
 export async function getData(endpoint: string) {
   const apiPath = `${getStrapiURL()}${endpoint}`
@@ -10,9 +10,9 @@ export async function getData(endpoint: string) {
     throw new Error('Failed to fetch page data')
   }
 
-  const data = await response.json();
-  const flattenedData = flattenAttributes(data);
-  return flattenedData;
+  const data = await response.json()
+  const flattenedData = flattenAttributes(data)
+  return flattenedData
 }
 
 export async function getDataNoCache(endpoint: string) {
@@ -23,7 +23,7 @@ export async function getDataNoCache(endpoint: string) {
     throw new Error('Failed to fetch page data')
   }
 
-  const data = await response.json();
-  const flattenedData = flattenAttributes(data);
-  return flattenedData;
+  const data = await response.json()
+  const flattenedData = flattenAttributes(data)
+  return flattenedData
 }

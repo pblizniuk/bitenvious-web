@@ -11,8 +11,8 @@
   --light-pink: #fd47ac;
   --lime: rgb(132 204 22);
   --light-lime: rgb(163 230 53);
-  --orange: #F67F15;
-  --light-orange: #FC9D24;
+  --orange: #f67f15;
+  --light-orange: #fc9d24;
   --highlight: #000000;
   --highlight-text: #ffffff;
 }
@@ -105,29 +105,29 @@ h6 {
   }
 }
 
- .be-scroll {
-    scrollbar-color: var(--light-lime) transparent;
-    scrollbar-width: auto
+.be-scroll {
+  scrollbar-color: var(--light-lime) transparent;
+  scrollbar-width: auto;
 }
 
 .be-scroll::-webkit-scrollbar {
-    background: 0 0;
-    height: 6px
+  background: 0 0;
+  height: 6px;
 }
 
 .be-scroll::-webkit-scrollbar-track-piece:start {
-    margin-left: max(48px,min(4.44vw,64px))
+  margin-left: max(48px, min(4.44vw, 64px));
 }
 
 .be-scroll::-webkit-scrollbar-track-piece:end {
-    margin-right: max(48px,min(4.44vw,64px))
+  margin-right: max(48px, min(4.44vw, 64px));
 }
 
 .be-scroll::-webkit-scrollbar-thumb {
-    background: var(--light-lime);
-    /* border: none; */
-    border-radius: 3px;
-    height: 3px
+  background: var(--light-lime);
+  /* border: none; */
+  border-radius: 3px;
+  height: 3px;
 }
 
 .writing-tb {
@@ -141,40 +141,41 @@ h6 {
   }
 
   & h2 {
-    @apply text-2xl md:text-3xl/snug font-medium mb-4 md:mb-8 md:block
+    @apply mb-4 text-2xl font-medium md:mb-8 md:block md:text-3xl/snug;
   }
 
   & h3 {
-    @apply text-xl md:text-3xl mb-4 md:mb-8;
+    @apply mb-4 text-xl md:mb-8 md:text-3xl;
   }
 
   & h4 {
-    @apply text-lg lg:text-2xl mb-4 md:mb-8;
+    @apply mb-4 text-lg md:mb-8 lg:text-2xl;
   }
 
   & h5 {
-    @apply text-base md:text-lg mb-4 md:mb-8;
+    @apply mb-4 text-base md:mb-8 md:text-lg;
   }
 
   & blockquote {
-    @apply p-4 mb-12 md:mb-24 mt-8 md:mt-16 border-l-4 border-pink-600 text-xl md:text-3xl font-bold leading-relaxed text-gray-900;
+    @apply mb-12 mt-8 border-l-4 border-pink-600 p-4 text-xl font-bold leading-relaxed text-gray-900 md:mb-24 md:mt-16 md:text-3xl;
   }
 
   & img {
-    @apply w-full h-auto mb-8 md:mb-16;
+    @apply mb-8 h-auto w-full md:mb-16;
   }
 
   li {
     @apply mb-4 md:mb-6;
   }
 
-  ul, ol {
+  ul,
+  ol {
     @apply mb-4 md:mb-6 lg:mb-12;
   }
 
   ol {
     & li {
-      @apply list-decimal list-inside;
+      @apply list-inside list-decimal;
     }
   }
 }
@@ -190,21 +191,21 @@ h6 {
 }
 
 .pretty-list {
-  @apply mb-4 md:mb-6 lg:mb-12 ml-5;
+  @apply mb-4 ml-5 md:mb-6 lg:mb-12;
 
   & > li {
     position: relative;
 
     &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 7px;
-    height: 6px;
-    top: 9px;
-    left: -20px;
-    background-color: #f70b7f;
-    border-radius: 3px;
-  }
+      content: '';
+      display: block;
+      position: absolute;
+      width: 7px;
+      height: 6px;
+      top: 9px;
+      left: -20px;
+      background-color: #f70b7f;
+      border-radius: 3px;
+    }
   }
 }
